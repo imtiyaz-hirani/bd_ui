@@ -1,0 +1,69 @@
+{
+    "PAYMENTS": {
+      "PAYMENT_MESSAGE_DETAILS": {
+        "HEADER_TITLE": "Payment Message",
+        "HEADER_TITLE_TO_APPROVE": "To approve",
+        "TABS": {
+          "OVERVIEW": "Overview",
+          "LIFECYCLE": "Lifecycle"
+        },
+        "SECTIONS": {
+          "DETAILS": {
+            "HEADER_TITLE": "Details",
+            "LABELS": {
+              "IMPORT_TYPE": "Mode",
+              "COMPANY_NAME": "Company Name",
+              "COMPANY_BANK": "Company Bank",
+              "INBOUND_CONNECTOR": "Inbound Connector",
+              "OUTBOUND_CONNECTOR": "Outbound Connector",
+              "TOTAL_TXN": "No of Transactions",
+              "SUM_TXN": "Sum of Transactions"
+            }
+          },
+          "ACTIVITY_LIFECYCLE": {
+            "HEADER_TITLE": "Activity Lifecycle",
+            "HEADER_LINK": "Go to list"
+          },
+          "PAYMENT_ITEMS": {
+            "HEADER_TITLE": "Payment Items",
+            "HEADER_LINK": "Go to list",
+            "CHARTS": {
+              "PAYMENT_PARTNERS_CHART": {
+                "TITLE": "Top 5 Payment Partners",
+                "NAME": "Payment Partner"
+              },
+              "PAYMENT_ITEMS_AMOUNT_RANGE_CHART": {
+                "TITLE": "Range of amounts",
+                "NAME": "Payment Item"
+              }
+            }
+          },
+          "REMARKS": {
+            "HEADER_TITLE": "Remarks",
+            "HEADER_LINK": "View all"
+          }
+        },
+        "BUTTONS": {
+          "APPROVE": "Approve",
+          "REJECT": "Reject",
+          "DELETE": "Delete",
+          "CHANGE_EXECUTION_DATE": "Change Execution Date",
+          "REGENERATE_PAYMENT": "Regenerate Payment"
+        },
+        "MESSAGES": {
+          "DELETE_SUCCESS_MESSAGE": "Payment message deleted successfully",
+          "APPROVE_SUCCESS_MESSAGE": "Payment message approved successfully",
+          "REJECT_SUCCESS_MESSAGE": "Payment message rejected successfully",
+          "SEND_SUCCESS_MESSAGE": "Payment message sent successfully",
+          "CONFIRM_APPROVE_MESSAGE": "Do you want to approve payment message ?",
+          "CONFIRM_REJECT_MESSAGE": "Do you want to reject payment message?",
+          "CONFIRM_SEND_MESSAGE": "Do you want to send payment message?",
+          "CONFIRM_DELETE_MESSAGE": "Are you sure you want to delete the payment message?",
+          "DELETE_FAILURE_MESSAGE": "Failed to delete payment message",
+          "STATUS_UPDATE_ERROR_MESSAGE": "Failed to update status for payment message",
+          "LIFECYCLE_DATA_ERROR_MESSAGE": "Error fetching lifecycle data",
+          "REGENERATE_PAYMENT_SUCCESS_MESSAGE": "Payment regenerated successfully"
+        }
+      }
+    }
+  }

@@ -1,0 +1,275 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "vendor-frontend-ui": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/vendor-frontend-ui",
+      "sourceRoot": "projects/vendor-frontend-ui/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/vendor-frontend-ui",
+            "index": "projects/vendor-frontend-ui/src/index.html",
+            "main": "projects/vendor-frontend-ui/src/main.ts",
+            "polyfills": "projects/vendor-frontend-ui/src/polyfills.ts",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles/"
+              ]
+            },
+            "tsConfig": "projects/vendor-frontend-ui/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/vendor-frontend-ui/src/favicon.ico",
+              "projects/vendor-frontend-ui/src/assets",
+              "projects/vendor-frontend-ui/src/silent-refresh.html",
+              {
+                "glob": "**/*",
+                "input": "./assets/styles/",
+                "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "./assets/css/",
+                "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "./assets/fonts/",
+                "output": "./assets/fonts"
+              },
+              {
+                "glob": "**/*",
+                "input": "./assets/images/",
+                "output": "./assets/images"
+              }
+            ],
+            "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
+              "projects/vendor-frontend-ui/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/vendor-frontend-ui/src/environments/environment.ts",
+                  "with": "projects/vendor-frontend-ui/src/environments/environment.prod.ts"
+                }
+              ],
+              "baseHref": "/vendor-frontend-ui/",
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "12mb",
+                  "maximumError": "15mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "10kb",
+                  "maximumError": "25kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "vendor-frontend-ui:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "vendor-frontend-ui:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "vendor-frontend-ui:build"
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/vendor-frontend-ui/e2e/protractor.conf.js",
+            "devServerTarget": "vendor-frontend-ui:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "vendor-frontend-ui:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "sandbox": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/sandbox",
+      "sourceRoot": "projects/sandbox/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/sandbox",
+            "index": "projects/sandbox/src/index.html",
+            "main": "projects/sandbox/src/main.ts",
+            "polyfills": "projects/sandbox/src/polyfills.ts",
+            "tsConfig": "projects/sandbox/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "projects/sandbox/src/favicon.ico",
+              "projects/sandbox/src/assets",
+              {
+                "glob": "**/*",
+                "input": "./assets/styles/",
+                "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "./assets/css/",
+                "output": "./assets"
+              },
+              {
+                "glob": "**/*",
+                "input": "./assets/fonts/",
+                "output": "./assets/fonts"
+              },
+              {
+                "glob": "**/*",
+                "input": "./assets/images/",
+                "output": "./assets/images"
+              }
+            ],
+            "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
+              "projects/sandbox/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/sandbox/src/environments/environment.ts",
+                  "with": "projects/sandbox/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "sandbox:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sandbox:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "sandbox:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/sandbox/src/test.ts",
+            "polyfills": "projects/sandbox/src/polyfills.ts",
+            "tsConfig": "projects/sandbox/tsconfig.spec.json",
+            "karmaConfig": "projects/sandbox/karma.conf.js",
+            "assets": [
+              "projects/sandbox/src/favicon.ico",
+              "projects/sandbox/src/assets"
+            ],
+            "styles": [
+              "node_modules/font-awesome/css/font-awesome.css",
+              "projects/sandbox/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/sandbox/tsconfig.app.json",
+              "projects/sandbox/tsconfig.spec.json",
+              "projects/sandbox/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/sandbox/e2e/protractor.conf.js",
+            "devServerTarget": "sandbox:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "sandbox:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "vendor-frontend-ui",
+  "cli": {
+    "analytics": false
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "CONNECTOR_SETTINGS": {
+    "connector":"Connector Settings",
+    "test_success": "Connection established successfully",
+    "test_failed": "Connection to host server has failed",
+    "resource_deleted":"Configuration Deleted Successfully",
+    "connectorDetails":"Details",
+    "fileName":"Connector Details",
+    "recordExist":"Record already exist",
+    "connectorExist":"Connector with same details already exist",
+    "minimumAdapter":"At least one additional configuration is required to save Connector setup",
+    "minimumSwiftAdapter":"At least one inbound and outbound configuration is required to save Connector setup",
+    "GRID":{
+      "columns":{
+        "connectorName":"Connector Name",
+        "communicationAdapter":"Communication Adapter",
+        "protocol":"Protocol",
+        "ACTIONS": "Actions",
+        "Test":"Test Connection"
+      }
+    },
+    "headers":{
+      "details":"Connector Details",
+      "adaptersetting":"Adapter Setting",
+      "protocolSetting":"Protocol Setting"
+    },
+    "FORM":{
+      "communicationAdapter" : {
+        "dataField":"communicationAdapter",
+        "captionCode":"Communication Adapter",
+        "placeholder": "Select Adapter",
+        "validation_msgs":{
+          "req_msg":"Communication Adapter is required.",
+          "str_msg":""
+        }
+      },
+      "protocol" : {
+        "dataField":"protocol",
+        "captionCode":"Protocol",
+        "placeholder":"Select Protocol",
+        "validation_msgs":{
+          "req_msg":"Protocol is required.",
+          "str_msg":""
+        }
+      },
+      "connectorName" : {
+        "dataField":"connectorName",
+        "captionCode":"Connector Name",
+        "placeholder": "Enter connector name e.g. EBICS_HSBCDEHH",
+        "validation_msgs":{
+          "req_msg":"Connector Name is required.",
+          "str_msg":"Connector Name max length is 70.",
+          "ptrn_msg": "Only alphanumeric and this (.,_-) char set allowed in Connector Name."
+        }
+      },
+      "companyBIC" : {
+        "dataField":"companyBIC",
+        "captionCode":"Company BIC",
+        "placeholder": "e.g. SERRDEHH/ SERRDEHHXXX",
+        "validation_msgs":{
+          "req_msg":"Company BIC is required.",
+          "str_msg":"Company BIC should be 8 or 11 Char long.",
+          "ptrn_msg": "Company BIC validation fails, space and special chars are not allowed.",
+          "iso_code_msg": "Company BIC validation fails, invalid ISO country code."
+        }
+      },
+      "hostName" : {
+        "dataField":"hostName",
+        "captionCode":"Host",
+        "placeholder": "e.g. ftps.serrala.com",
+        "validation_msgs":{
+          "req_msg":"Host Name is required.",
+          "str_msg":"Host Name max length is 200."
+        }
+      },
+      "userName" : {
+        "dataField":"userName",
+        "captionCode":"User Name",
+        "placeholder": "FTP user name",
+        "validation_msgs":{
+          "req_msg":"",
+          "str_msg":"User Name max length is 200."
+        }
+      },
+      "hostPassword" : {
+        "dataField":"hostPassword",
+        "captionCode":"Password",
+        "placeholder": "FTP password",
+        "validation_msgs":{
+          "req_msg":"",
+          "str_msg":"Password max length is 200."
+        }
+      },
+      "port" : {
+        "dataField":"port",
+        "captionCode":"Port",
+        "placeholder": "e.g. 8081",
+        "validation_msgs":{
+          "req_msg":"Port is required.",
+          "str_msg":"Port max length is 8.",
+          "ptrn_msg": "Only numeric char set allowed in Port."
+        }
+      },
+      "uploadDestination" : {
+        "dataField":"uploadDestination",
+        "captionCode":"Upload Destination",
+        "placeholder": "e.g. //server/SERRDEHH/UPLOAD",
+        "validation_msgs":{
+          "req_msg":"Upload Destination is required.",
+          "str_msg":"Upload Destination max length is 200."
+        }
+      },
+      "downloadDestination" : {
+        "dataField":"downloadDestination",
+        "captionCode":"Download Destination",
+        "placeholder": "e.g. //server/SERRDEHH/DOWNLOAD",
+        "validation_msgs":{
+          "req_msg":"Download Destination is required.",
+          "str_msg":"Download Destination max length is 200."
+        }
+      },
+      "downloadErrorDestination" : {
+        "dataField":"downloadErrorDestination",
+        "captionCode":"Download Error Destination",
+        "placeholder": "e.g. //server/SERRDEHH/DOWNLOAD",
+        "validation_msgs":{
+          "req_msg":"Download Error Destination is required.",
+          "str_msg":"Download Error Destination max length is 200."
+        }
+      },
+      "archiveDestination" : {
+        "dataField":"archiveDestination",
+        "captionCode":"Archive Destination ",
+        "placeholder": "e.g. //server/SERRDEHH/ARCHIVE",
+        "validation_msgs":{
+          "req_msg":"",
+          "str_msg":"Archive Path max length is 200."
+        }
+      },
+      "fileEncoding" : {
+        "dataField":"fileEncoding",
+        "captionCode":"File Encoding",
+        "validation_msgs":{
+          "req_msg":"Encoding Type is required.",
+          "str_msg":""
+        }
+      },
+      "fileActLAUKey" : {
+        "dataField":"fileActLAUKey",
+        "captionCode":"LAU Key",
+        "placeholder": " LAU Key as set up in L2BA",
+        "validation_msgs":{
+          "req_msg":"",
+          "str_msg":"One character cannot be repeated more times than half of the password length in LAU key.",
+          "ptrn_msg": "LAU key validation failed, check if key length is 17 to 32 characters and contains letters(both Upper and lower case) and numbers, no space allowed.",
+          "hint":"Use 17 to 32 characters (Upper and lower case, numbers and optional special characters) without space."
+        }
+      },
+      "messageCategory":{
+        "dataField":"messageCategory",
+        "captionCode":"Message Category",
+        "placeholder":"Select Message Category",
+        "validation_msgs":{
+          "req_msg":"Message Category is required."
+        }
+      },
+      "messageIdentifier":{
+        "dataField":"messageIdentifier",
+        "captionCode":"Message Identifier",
+        "placeholder":"Message Identifier",
+        "validation_msgs":{
+          "req_msg":"Message Identifier is required."
+        }
+      },
+      "informationCategory":{
+        "dataField":"informationCategory",
+        "captionCode":"Information Category",
+        "placeholder":"Select Information Category",
+        "validation_msgs":{
+          "req_msg":"Information Category is required."
+        }
+      },
+      "formats":{
+        "dataField":"formats",
+        "captionCode":"Formats",
+        "placeholder":"formats",
+        "validation_msgs":{
+          "req_msg":"Formats is required."
+        }
+      },
+      "senderBIC":{
+        "dataField":"senderBIC",
+        "captionCode":"Sender BIC",
+        "placeholder":"Select Sender BIC",
+        "validation_msgs":{
+          "req_msg":"Sender BIC is required."
+        }
+      },
+      "serviceCode":{
+        "dataField":"serviceCode",
+        "captionCode":"Service Code",
+        "placeholder":"Select Sender BIC",
+        "validation_msgs":{
+          "req_msg":"Service Code is required.",
+          "str_msg":"Service Code max length is 32."
+
+        }
+      },
+      "outboundConnector":{
+        "captionCode":"Outbound Connector",
+        "placeholder":"Outbound Connector",
+        "validation_msgs":{
+          "req_msg":""
+        }
+      },
+      "regex":{
+        "captionCode":"Reg Ex",
+        "placeholder":"e.g. *.001.*",
+        "validation_msgs":{
+          "req_msg":""
+        }
+      },
+      "radioOptions":{
+        "Test":"Test",
+        "download_delete":"Download and Delete",
+        "download_archive":"Download and Archive"
+      },
+      "additionalSettings":{
+        "header_inbound":"Inbound configuration",
+        "header_outbound":"Outbound configuration",
+        "input":"Input Condition",
+        "derived":"Derived Values",
+        "messageIdentifier":"Message Identifier",
+        "senderBic":"Sender Bic",
+        "fileEncodingType":"File Encoding",
+        "InfoCat":"Information Category",
+        "formatObject":"Format",
+        "outboundConnector":"Outbound Connector",
+        "serviceCode":"Service Code",
+        "regex":"Regex",
+        "adapterSpecific":"Additional configuration",
+        "adapters":"Adapters"
+      }
+    }
+  }
+}

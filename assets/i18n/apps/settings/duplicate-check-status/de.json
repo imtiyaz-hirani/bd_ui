@@ -1,0 +1,18 @@
+{
+  "SETTINGS":{
+      "DUPLICATECHECKSTATUS":{
+          "MAIN_TITLE": "Duplicate check - payment items",
+          "PARAMETERS_SETTING":"Parameters to be setup",
+          "ERROR": "Error",
+          "WARNING": "Warning",
+          "TIME_PERIOD":"Time Period",
+          "TIME_PERIOD_TITLE": "New payment items are checked against existing payment items no older than this time period",
+          "MESSAGES": {
+            "SAVE_SUCCESSFULL": "Duplicate check status has been saved successfully.",
+            "SELECT_TIME_PERIOD": "Please select Time Period.",
+            "SELECT_ERROR_WARNING": "Please select Error or Warning parameter for saving the setup."
+          }
+          }
+
+      }
+}

@@ -1,0 +1,53 @@
+.insights-container-wrapper {
+    .insights-container {
+      height: auto;
+      border-radius: 3px;
+      border-width: 1px;
+      border-style: solid;
+    }
+    
+    .insights-content {
+      font-size: map_get($serra-font, font-size);
+      font-weight: $font-weight;
+      font-family: map_get($serra-font, font-family);
+      line-height: map_get($serra-font, line-height);
+      letter-spacing: map_get($serra-font, letter-spacing);
+      color: $bright-gray;
+    }
+    
+    .insights-time-display {
+      font-size: map_get($serra-body2-font, font-size);
+      font-weight: $font-weight;
+      font-family: map_get($serra-font, font-family);
+      line-height: map_get($serra-body2-font, line-height);
+      letter-spacing: map_get($serra-font, letter-spacing);
+      color: $shuttle-gray;
+      padding-top: 3px;
+    }
+    
+    .insights-action-link {
+      font-size: map_get($serra-body2-font, font-size);
+      font-weight: $font-weight;
+      font-family: map_get($serra-font, font-family);
+      line-height: map_get($serra-body2-font, line-height);;
+      letter-spacing: map_get($serra-font, letter-spacing);
+      color: $serra-hyperlink-light;
+    }
+    
+    .INFORMATION{
+      background-color: $serra-insights-bg-info;
+      border-color: $serra-insights-border-info;
+    }
+    
+    .HISTORICAL{
+      background-color: $serra-insights-bg-warn;
+      border-color: $serra-insights-border-warn;
+    }
+    
+    .ERROR_AND_WARNING{
+      background-color: $serra-insights-bg-alert;
+      border-color: $serra-insights-border-alert;
+    }
+    
+  }
+  

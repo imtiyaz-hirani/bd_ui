@@ -1,0 +1,51 @@
+{
+    "PAYMENTS": {
+      "PAYMENT_ITEM_DETAILS": {
+        "HEADER_TITLE": "Payment Item",
+        "HEADER_TITLE_TO_APPROVE": "To approve",
+        "TABS": {
+          "OVERVIEW": "Overview",
+          "DETAILS": "Details",
+          "LIFECYCLE": "Lifecycle"
+        },
+        "SECTIONS": {
+          "DETAILS": {
+            "HEADER_TITLE": "Details",
+            "HEADER_LINK": "Edit",
+            "LABELS": {
+              "FILE_ID": "File ID",
+              "INTERNAL_REF_ID": "Internal Reference ID",
+              "EXECUTION_DATE": "Execution Date",
+              "COMPANY_NAME": "Company Name",
+              "COMPANY_BANK": "Company Bank",
+              "PARTNER_NAME": "Partner Name",
+              "PARTNER_BANK": "Partner Bank"
+            }
+          },
+          "LIFECYCLE": {
+            "HEADER_TITLE": "Lifecycle",
+            "HEADER_LINK": "View all"
+          }
+        },
+        "BUTTONS": {
+          "APPROVE": "Approve",
+          "REJECT": "Reject",
+          "DELETE": "Delete",
+          "DELETE_ITEM": "Delete Item",
+          "REMOVE_ITEM": "Remove Item"
+        },
+        "MESSAGES": {
+          "DELETE_SUCCESS_MESSAGE": "Payment is deleted successfully",
+          "APPROVE_SUCCESS_MESSAGE": "Payment is approved successfully",
+          "REJECT_SUCCESS_MESSAGE": "Payment is rejected successfully",
+          "SEND_SUCCESS_MESSAGE": "Payment is sent successfully",
+          "CONFIRM_APPROVE_MESSAGE": "Do you want to approve payment ?",
+          "CONFIRM_REJECT_MESSAGE": "Do you want to reject payment ?",
+          "CONFIRM_SEND_MESSAGE": "Do you want to send payment ?",
+          "CONFIRM_DELETE_MESSAGE": "Are you sure you want to delete the payment {{ id }}?",
+          "DELETE_FAILURE_MESSAGE": "Failed to delete the payment",
+          "LIFECYCLE_DATA_ERROR_MESSAGE": "Error fetching lifecycle data"
+        }
+      }
+    }
+  }

@@ -1,0 +1,22 @@
+{
+  "PAYMENTS": {
+    "QUICK_PAY": {
+      "PAYMENT_ITEMS": "Payment items",
+      "BUTTONS": {
+        "CONTINUE": "Continue",
+        "CANCEL": "Cancel",
+        "CLEAR": "Clear"
+      },
+      "TITLE": "Quick Pay",
+      "FIELDS": {
+        "I": "I",
+        "SOMEBODY": "Somebody",
+        "CURRENCY": "Currency",
+        "AMOUNT": "Amount",
+        "WANTTO": "want to",
+        "PAYTO": "pay to",
+        "MESSAGE": "Write a note for beneficiary"
+      }
+    }
+  }
+}

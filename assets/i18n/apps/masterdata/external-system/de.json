@@ -1,0 +1,24 @@
+{
+  "MASTERDATA": {
+    "externalSystem": {
+      "headerTitle": "External Systems",
+      "filename": "ExternalSystems_Data",
+      "details": "Details",
+      "grid": {
+        "columns": {
+          "erpType": "ERP Type",
+          "name": "Name",
+          "description": "Description",
+          "isActive": "Active Flag",
+          "actions": "Actions"
+        },
+        "messages": {
+          "deleteSuccess": "External system deleted successfully",
+          "deleteError": "Error deleting external system",
+          "confirmDeleteDialogHeader": "Warning",
+          "confirmDeleteDialogContent": "Are you sure you want to delete external system - {{name}} ?"
+        }
+      }
+    }
+  }
+}

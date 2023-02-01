@@ -1,0 +1,414 @@
+.power-panel-wrapper {
+    position: fixed;
+    right: 0;
+    z-index: 1001;
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+      
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $serra-sidebar-scrollbar-track;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $serra-sidebar-scrollbar-thumb;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: $serra-sidebar-scrollbar-hover;
+    }
+
+    .power-panel-container {
+        #power-panel-sidebar {
+            overflow: hidden;
+
+            background-color: $serra-power-panel-bg;
+            transition: 0.5s;
+            &.e-dock.e-close {
+                .power-panel-details {
+                    display: none;
+                }
+            }
+            &.e-dock.e-open {
+                .power-panel-details {
+                    display: block;
+                    overflow-y: scroll;
+                    height: 100vh;
+                }
+            }
+        }
+        .power-panel-inner {
+            position: relative;
+            .serra-icon{
+                i.se-serra {
+                    color: $serra-bot-icon;
+                    font-size: 24px;
+                    height: 24px;
+                    width: 24px;
+                    text-align: center;
+                    padding: 8px;
+                }
+            }
+            ejs-textbox {
+                &.search-filter {
+                    .e-float-input.e-control-wrapper {
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            .power-panel-nav {
+                margin-top: 12px;
+            }
+            .top-container {
+                width: 100%;
+                .icon-pinning { 
+                    position: absolute;
+                    top: 22px;
+                    right: 30px;
+                    cursor: pointer;
+                    z-index: 100;
+                    i, em {
+                        font-size: 15px;
+                        color: $serra-power-panel-icon-color;
+                        &.se-pinned {
+                            display: none;
+                        }
+                    }
+                }
+                .icon-pinning.pinned {
+                    i, em {
+                        &.se-pinned {
+                            display: block;
+                        }
+                        &.se-pin-off {
+                            display: none;
+                        }
+                    }
+                }
+                .widget-container {
+                    margin-top: 15px;
+                    // margin-bottom: 27px;
+                    .app-version-details {
+                        font-size: 11px;
+                        line-height: normal;
+                        color: $serra-version-details-color;
+                    }
+
+                    .widget-header {
+                        margin-bottom: 12px;
+                        .widget-title {
+                            font-weight: bold;
+                        }
+                        .widget-header--title {
+                            margin-right: 30px;
+                            .widget-settings {
+                                font-size: 12px;
+                                height: 14px;
+                                line-height: 14px;
+                                vertical-align: middle;
+                                margin-top: 8px;
+                                a {
+                                    cursor: pointer;
+                                    text-decoration: none;
+                                }
+                                
+                            }
+                            i, em {
+                                font-size: 15px;
+                                color: $serra-widget-icon-color;
+                                cursor: pointer;
+                                &.se-add-circle {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                    .main-title {
+                        margin-top: 5px;
+                        margin-bottom: 18px;
+                    }
+                    .widget-details {
+                        border-radius: 3px;
+                        border: solid 1px $serra-power-panel-widget-border-color;
+                        
+                        ;
+                        background-color: $serra-power-panel-widget-item-bg;
+                        .item {
+                            font-size: 12px;
+                            line-height: 1.33;
+                            padding: 12px;
+                            border-bottom: solid 1px $serra-power-panel-widget-border-color;
+                            .date-time {
+                                color: $serra-power-panel-widget-date-color;
+                                margin: 6px 0;
+                            }
+                            &.highlight-urgent {
+                                border-left: 2px solid $serra-widget-urgent;
+                            }
+                            .link {
+                                cursor: pointer;
+                                color: $serra-widget-link;
+                            }
+                        }
+                        .item:last-child {
+                            border-bottom: none;
+                        }
+                        &.communication-details {
+                            .item {
+                                cursor: pointer;
+                                .desc {
+                                    width: 80%;
+                                }
+                                .name {
+                                    margin-bottom: 2px;
+                                }
+                                .profile-pic {
+                                    width: 25px;
+                                    height: 25px;
+                                    line-height: 25px;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    margin-left: auto;
+                                    img {
+                                        max-width: 100%;
+                                        height: auto;
+                                        width: auto;
+                                    }
+                                }
+
+                            }
+                        }
+                    }
+                    
+                }
+
+                .widget-wrapper {
+                    &.help-widget, &.my-tasks-widget, &.notifications-widget, &.search-widget,
+                    &.communications-widget, &.add-tasks-widget {
+                        .widget-container {
+                            .widget-details, .help-guide {
+                                border-radius: 0px;
+                                border: none;
+                                background-color: transparent;
+                                .item {
+                                    font-size: 12px;
+                                    line-height: 1.33;
+                                    border-radius: 3px;
+                                    border: 0px;
+                                    background-color: $serra-power-panel-widget-item-bg;
+                                    margin-bottom: 8px;
+                                    padding: 12px;
+                                    &.highlight-urgent {
+                                        border-left: 2px solid $serra-widget-urgent;
+                                    }
+                                }
+                                .widget-card{
+                                    margin-bottom: 20px;
+                                    .day {
+                                        margin-bottom: 10px;
+                                        .date {
+                                            margin-bottom: 10px;
+                                            font-weight: bold;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .help-widget {
+                    .widget-container {
+                        .widget-header {
+                            margin-bottom: 24px;
+                            .main-title {
+                                margin-bottom: 10px;
+                            }
+                        }
+                        .widget-details {
+                            min-height: calc(100vh - 480px);
+                            margin-bottom: 30px;
+                        }
+                        .help-guide {
+                            .item {
+                                cursor: pointer;
+                                div {
+                                    height: 20px;
+                                    padding: 2px;
+                                    > * {
+                                        line-height: 21px;
+                                        vertical-align: middle;
+                                    }
+                                    i, em {
+                                        font-size: 18px;
+                                        margin-right: 6px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .sidebar-nav {
+                    position: relative;
+                    font-size: 14px;
+                    margin-bottom: 0;
+                    padding-left: 0;
+                    list-style: none;
+                    // width: 50px;
+    
+                    li {
+                        padding: 3px 5px;
+                        margin: 6px 0;
+                        cursor: pointer;
+                        line-height: 34px;
+                        width: 50px;
+    
+                        .icon {
+                            position: relative;
+                            i, em {
+                                font-size: 24px;
+                                height: 24px;
+                                width: 24px;
+                                line-height: 40px;
+                                text-align: center;
+                                padding: 8px;
+                                vertical-align: middle;
+                                line-height: 1;
+                                font-weight: normal;
+                                font-style: normal;
+                                text-transform: none;
+                                white-space: nowrap;
+                                border-radius: 5px;
+                                color: $serra-power-panel-icon-color;
+                            }
+                            .notifications-unseen {
+                                position: absolute;
+                                display: inline-block;
+                                background-color: $serra-notification-bg-color;
+                                border-radius: 100%;
+                                width: 16px;
+                                height: 16px;
+                                line-height: 16px;
+                                text-align: center;
+                                font-size: 8px;
+                                color: #fff;
+                                top: -8px;
+                                right: 5px;
+                            }
+                        }
+                        &:hover {
+                            .icon i, em {
+                                background-color: $serra-power-panel-icon-hover-color;
+                            }
+                        }
+                        &.active {
+                            .icon i, em {
+                                background-color: $serra-sidebar-active-icon-bg;
+                                color: $serra-sidebar-active-icon-color;
+                                box-shadow: 0 5px 8px 0 rgba(60, 64, 73, 0.25);
+                            }
+                            .notifications-unseen {
+                                background-color: $serra-primary-content;
+                                color: #fff;
+                            }
+                        }
+                        
+                    }
+                }
+                .power-panel-details {
+                    width: 100%;
+                }
+            }
+            
+            .bottom-container {
+                bottom: 0;
+                position: fixed;
+                height: 50px;
+                padding: 10px 5px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                background: #fff;
+                
+                &> app-chat-footer {
+                    width: 100%;
+                    .footer-input-parent{
+                        width: 100%;
+                        align-items: baseline;
+                    }
+                    i, em {
+                        cursor: pointer;
+                        color: $serra-power-panel-icon-color;
+                        font-size: 24px;
+                        height: 24px;
+                        width: 24px;
+                        line-height: 40px;
+                        text-align: center;
+                        padding: 8px;
+                        vertical-align: middle;
+                        line-height: 1;
+                        border-radius: 5px;
+                        
+                    }
+                    .serra-icon {
+                        i, em {
+                            cursor: pointer;
+                            color: $serra-power-panel-icon-color;
+                            font-size: 24px;
+                            height: 24px;
+                            width: 24px;
+                            line-height: 40px;
+                            text-align: center;
+                            padding: 8px;
+                            vertical-align: middle;
+                            line-height: 1;
+                            border-radius: 5px;
+                            &.se-serra {
+                                color: $serra-bot-icon;
+                            }
+                        }
+                        &.active {
+                            i.se-serra, i.se-serra-bot-active {
+                                background-color: $serra-sidebar-active-icon-bg;
+                                color: $serra-sidebar-active-icon-color;
+                            }
+                        }
+                    }
+                    .serra-search {
+                        width: 100%;
+                        padding: 0 12px 0 36px;
+                    }
+                }
+                
+            }
+        }
+
+        .e-sidebar.e-right.e-open {
+            transition: 0.5s;
+            box-shadow: 0 8px 16px 0 rgba(60, 64, 73, 0.1), 0 0 1px 0 rgba(60, 64, 73, 0.15);
+            
+            .bottom-container {
+                border-top: 1px solid $serra-power-panel-widget-border-color;
+                transition: 0.2s cubic-bezier(0.4, 0, 0.4, 1);
+            }
+        }
+    }
+}
+
+
+@media (max-height: 360px) {
+    .power-panel-wrapper .power-panel-container {
+        #power-panel-sidebar {
+            min-height: auto;
+            overflow-y: scroll;
+            .bottom-container {
+                bottom: auto;
+                position: relative;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+<div id="overview-widget" class="widget-wrapper" [class]="widgetType == WIDGETS.SEARCH ? 'search-widget' : ''">
+    <div class="widget-container mb-0">
+        <div class="row ">
+            <div class="col-12 widget-header">
+                <div class="widget-header--title">
+                    <div class="d-flex flex-row">
+                        <h5 class="widget-title main-title">{{ 'CORE.powerpanel.search' | translate }}</h5>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <ejs-textbox class="search-filter" placeholder="{{ 'CORE.powerpanel.placeholder.search' | translate }}" floatLabelType="Auto"
+                    (input)="searchFilter($event)"></ejs-textbox>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-bold mb-2">
+                    Recently Accessed
+                </div>
+                <div class="widget-details">
+                    <div class="item">
+                        Payment File AM94850
+                    </div>
+                    <div class="item">
+                        Payment File AM94850
+                    </div>
+                    <div class="item">
+                        Payment File AM94850
+                    </div>
+                    <div class="item">
+                        Payment File AM94850
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>

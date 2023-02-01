@@ -1,0 +1,371 @@
+{
+  "MASTERDATA": {
+    "customer": {
+      "fileName": "Customer_Data",
+      "headerTitle": "Customers",
+      "addFormHeaderTitle": "Add",
+      "details": "Details",
+      "customerDetails": "Customer Details",
+      "taxID": "Tax ID",
+      "customerAccountDetails": "Customer Account Details",
+      "contactDetails": "Contact Details",
+      "externalSystemCustomer": "External System Customer",
+      "addAccount": "Add Account Number",
+      "isContactPrimary": "Primary Contact : Yes",
+      "isContactNotPrimary": "Primary Contact : No",
+      "grid": {
+        "columns": {
+          "id": "ID",
+          "customerShortName": "Short Name",
+          "name": "Name",
+          "tradeName": "Trade Name",
+          "alternateName": "Alternate Name",
+          "industryCode": "Industry",
+          "details": "Details",
+          "customerAccountGroup": "Customer Account Group",
+          "customerStatus": "Customer Status",
+          "businessRegistrationNumber": "Business Registration Number",
+          "businessRegistrationType": "Business Registration Type",
+          "paymentTerm": "Payment Term",
+          "remark": "Remark",
+          "primaryContactInformation": "Primary Contact Information",
+          "activeFlag": "Active Flag",
+          "partyId": "Party ID",
+          "IBAN": "IBAN",
+          "accountNumber": "Account Number",
+          "contactName": "Contact Name",
+          "contactPhone": "Contact Phone",
+          "contactEmail": "Contact Email",
+          "actions": "Actions"
+        },
+        "messages": {
+          "deleteSuccess": "Customer deleted successfully",
+          "deleteError": "Error deleting customer",
+          "confirmDeleteDialogHeader": "Warning",
+          "confirmDeleteDialogContent": "Are you sure you want to delete customer - {{name}} ?"
+        }
+      },
+      "fields": {
+        "businessRegistrationNumber": {
+          "caption": "Business Registration Number",
+          "validation_msgs": {
+            "maxlength_msg": "Business Registration Number cannot be more than 30 characters"
+          }
+        },
+        "businessRegistrationType": {
+          "caption": "Business Registration Type",
+          "validation_msgs": {
+            "maxlength_msg": ""
+          }
+        },
+        "paymentTerm": {
+          "caption": "Payment Term",
+          "validation_msgs": {
+            "maxlength_msg": "Payment Term cannot be more than 75 characters"
+          }
+        },
+        "remark": {
+          "caption": "Remark",
+          "validation_msgs": {
+            "req_msg": "This field is required",
+            "maxlength_msg": "Remark cannot be more than 100 characters"
+          }
+        },
+        "shortName": {
+          "caption": "Short Name",
+          "hintText": "Enter new name or select from existing",
+          "validation_msgs": {
+            "req_msg": "Short name is required"
+          }
+        },
+        "name": {
+          "caption": "Name",
+          "validation_msgs": {
+            "req_msg": "Name is required",
+            "maxlength_msg": "Name cannot be more than 100 characters"
+          }
+        },
+        "alternateName": {
+          "caption": "Alternate Name",
+          "validation_msgs": {
+            "maxlength_msg": "Alternate Name cannot be more than 100 characters"
+          }
+        },
+        "tradeName": {
+          "caption": "Trade Name",
+          "validation_msgs": {
+            "maxlength_msg": "Trade Name cannot be more than 100 characters"
+          }
+        },
+        "industryCode": {
+          "caption": "Primary Industry Code",
+          "validation_msgs": {
+            "req_msg": "Primary Industry Code is required",
+            "maxlength_msg": "Primary Industry Code cannot be more than 10 characters"
+          }
+        },
+        "customerAccountGroup": {
+          "caption": "Customer Account Group",
+          "validation_msgs": {
+            "req_msg": "Customer Account Group is required",
+            "maxlength_msg": "Customer Account Group cannot be more than 10 characters"
+          }
+        },
+        "details": {
+          "caption": "Details",
+          "validation_msgs": {
+            "req_msg": "",
+            "maxlength_msg": "Details cannot be more than 100 characters"
+          }
+        },
+        "taxDetails": {
+          "country": {
+            "caption": "Country",
+            "validation_msgs": {
+              "maxlength_msg": "Type cannot be more than 2 characters"
+            }
+          },
+          "typeOfTax": {
+            "caption": "Type Of Tax",
+            "validation_msgs": {
+              "maxlength_msg": "Type cannot be more than 5 characters"
+            }
+          },
+          "taxJurisdiction": {
+            "caption": "Tax Jurisdiction",
+            "validation_msgs": {
+              "maxlength_msg": "Tax jurisdiction cannot be more than 7 characters"
+            }
+          },
+          "taxRegistrationNumber": {
+            "caption": "Tax Registration Number",
+            "validation_msgs": {
+              "maxlength_msg": "Tax registration number cannot be more than 30 characters"
+            }
+          }
+        },
+        "customerDetail": {
+          "addressLine1": {
+            "caption": "Address Line 1",
+            "validation_msgs": {
+              "maxlength_msg": "Address Line 1 cannot be more than 255 characters"
+            }
+          },
+          "addressLine2": {
+            "caption": "Address Line 2",
+            "validation_msgs": {
+              "maxlength_msg": "Address Line 2 cannot be more than 255 characters"
+            }
+          },
+          "addressLine3": {
+            "caption": "Address Line 3",
+            "validation_msgs": {
+              "maxlength_msg": "Address Line 3 cannot be more than 255 characters"
+            }
+          },
+          "country": {
+            "caption": "Country",
+            "validation_msgs": {
+              "req_msg": "Country is required",
+              "maxlength_msg": "Country cannot be more than 100 characters"
+            }
+          },
+          "province": {
+            "caption": "Province",
+            "validation_msgs": {
+              "maxlength_msg": "Province cannot be more than 100 characters"
+            }
+          },
+          "city": {
+            "caption": "City",
+            "validation_msgs": {
+              "maxlength_msg": "City cannot be more than 100 characters"
+            }
+          },
+          "postalCode": {
+            "caption": "Postal Code",
+            "validation_msgs": {
+              "maxlength_msg": "Postal Code cannot be more than 20 characters"
+            }
+          }
+        },
+        "customerAccountDetails": {
+          "IBAN": "IBAN",
+          "accountNumberType": {
+            "caption": "Type",
+            "validation_msgs": {
+              "req_msg": "Account number type is required"
+            }
+          },
+          "accountNumber": {
+            "caption": "Account Number",
+            "validation_msgs": {
+              "req_msg": "Account number is required",
+              "maxlength_msg": "Account number cannot be more than 50 characters",
+              "ptrn_msg": "Only numbers and alphabets are allowed in Account Number"
+            }
+          },
+          "description": {
+            "caption": "Name",
+            "validation_msgs": {
+              "req_msg": "Name is required",
+              "maxlength_msg": "Name cannot be more than 100 characters"
+            }
+          },
+          "currency": {
+            "caption": "Currency",
+            "validation_msgs": {
+              "req_msg": "Currency is required"
+            }
+          },
+          "bic": {
+            "caption": "BIC",
+            "validation_msgs": {
+              "req_msg": "BIC code is required."
+            }
+          },
+          "bank": {
+            "caption": "Bank Name",
+            "validation_msgs": {
+              "req_msg": "Bank name is required"
+            }
+          },
+          "bankCountry": {
+            "caption": "Bank Country",
+            "validation_msgs": {
+              "req_msg": "Bank Country is required"
+            }
+          },
+          "bankCity": {
+            "caption": "Bank City",
+            "validation_msgs": {
+              "req_msg": "Bank City is required"
+            }
+          },
+          "postalCode": {
+            "caption": "Postal Code",
+            "validation_msgs": {
+              "req_msg": "Postal Code is required"
+            }
+          }
+        },
+        "contacts": {
+          "phoneType": {
+            "caption": "Contact Number Type",
+            "validation_msgs": {
+              "req_msg": "Contact type is required"
+            }
+          },
+          "emailType": {
+            "caption": "Contact Email Type",
+            "validation_msgs": {
+              "req_msg": "Email type is required"
+            }
+          } ,
+          "phone": "Contact Number",
+          "emailID": "Email ID",
+          "DOB": {
+            "caption": "Date of Birth",
+            "validation_msgs": {
+              "req_msg": "Date of Birth is required"
+            }
+          },
+          "title": {
+            "caption": "Title",
+            "validation_msgs": {
+              "maxlength_msg": "Title cannot be more than 10 characters"
+            }
+          },
+          "firstName": {
+            "caption": "First Name",
+            "validation_msgs": {
+              "req_msg": "First name is required",
+              "str_msg": "First Name cannot be more than 50 characters"
+            }
+          },
+          "middleName": {
+            "caption": "Middle Name",
+            "validation_msgs": {
+              "str_msg": "Middle Name cannot be more than 50 characters"
+            }
+          },
+          "lastName": {
+            "caption": "Last Name",
+            "validation_msgs": {
+              "str_msg": "Last Name cannot be more than 50 characters"
+            }
+          },
+          "designation": {
+            "caption": "Designation",
+            "validation_msgs": {
+              "str_msg": "Designation cannot be more than 100 characters"
+            }
+          },
+          "phoneNumber": {
+            "validation_msgs": {
+              "req_msg": "Contact Number is required",
+              "str_msg": "Contact Number cannot be more than 20 characters",
+              "str_pattern": "Contact Number must have a correct contact format."
+            }
+          },
+          "email": {
+            "validation_msgs": {
+              "req_msg": "Email id is required",
+              "str_msg": "Email id cannot be more than 100 characters",
+              "str_pattern": "Email id is invalid."
+            }
+          }            
+          },
+          "contactDetails": {
+            "title": "Title",
+            "firstName": "First Name",
+            "middleName": "Middle Name",
+            "lastName": "Last Name",
+            "designation": "Designation",
+            "isPrimary": "Is Primary",
+            "contactNumber": "Contact Number Type",
+            "contactPhone": "Contact Number",
+            "contactEmail": "Contact Email Type",
+            "emailId": "Email ID",
+            "contactInformationPanel": {
+              "primaryPhone": "Primary Phone",
+              "secondaryPhone": "Secondary Phone",
+              "whatsapp": "Whatsapp",
+              "fax": "Fax",
+              "other": "Other",
+              "primaryEmail": "Primary Email",
+              "secondaryEmail": "Secondary Email"
+            }
+          },
+          "externalSystemCustomer": {
+            "localCustomerID": {
+              "caption": "Local Customer ID",
+              "validation_msgs": {
+                "str_msg": "Local Customer ID cannot be more than 10 characters"
+              }
+            },
+            "externalSystem": {
+              "caption": "External System",
+              "validation_msgs": {
+                "str_msg": "External System cannot be more than 10 characters"
+              }
+            }
+          }
+        },
+        "messages": {
+          "contactConfirmDelete": "Final changes on record will be done after Save.",
+          "taxIdConfirmDelete": "Are you sure you want to delete selected record?",
+          "accountDetailsConfirmDelete": "Are you sure you want to delete selected record?",
+          "customerAddressDeleted": "Customer Address Deleted Successfully",
+          "taxIdDeleteSuccess": "Tax Id deleted successfully",
+          "accountDetailsDeleteSuccess": "Account details deleted successfully",
+          "customerContactDeleted": "Customer Contact Details Deleted Successfully",
+          "externalSystemDeleted": "Customer Contact Details Deleted Successfully",
+          "accountNumberDeleted": "Customer Contact Details Deleted Successfully",
+          "confirmBulkDeleteDialogContent": "Are you sure you want to delete these Customers?",
+          "bulkDeleteSuccess": "Customers deleted successfully",
+          "bulkDeleteError": "Error deleting Customers"
+        }
+      }
+    }
+  }

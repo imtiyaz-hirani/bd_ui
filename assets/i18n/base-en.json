@@ -1,0 +1,10 @@
+{
+  "$merge": {
+    "source": {
+      "$import": "core/en.json"
+    },
+    "with": {
+      "$import": "shared/en.json"
+    }
+  }
+}

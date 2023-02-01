@@ -1,0 +1,48 @@
+{
+  "COLLECTIONS": {
+    "accountingDocumentFiles": {
+      "headerTitle": "Accounting Document Files",
+      "importButtonLabel": "Import",
+      "fileName": "Accounting_Document_File_Details",
+      "grid": {
+        "columns": {
+          "fileId": "File ID",
+          "sourceFileName": "Source File Name",
+          "status": "Status",
+          "importDateAndTime": "Import Date and Time",
+          "externalSystemName": "External System Name",
+          "importType": "Import Type",
+          "inboundAdapter": "Inbound Adapter",
+          "numberOfRecords": "Number of Records",
+          "type": "ERP Type"
+        }
+      },
+      "manualImport": {
+        "headerTitle": "Accounting Document File Import",
+        "labels": {
+          "format": "Format",
+          "fileEncoding": "File Encoding",
+          "externalSystemName": "External System Name"
+        },
+        "uploaderText": "Drop files here or",
+        "uploaderLinkText": "Browse",
+        "fileSizeNote": "Note: Maximum allowed manual file size : 1 MB.",
+        "buttons": {
+          "clearAll": "Clear All",
+          "cancel": "Cancel",
+          "import": "Import"
+        },
+        "errorMessages": {
+          "formatRequired": "* Please select format",
+          "encodingRequired": "* Please select file encoding",
+          "externalSystemNameRequired": "* Please select external system name",
+          "getFormatListApiError": "Error getting format list",
+          "fileUploadApiError": "File import failed",
+          "fileUploadApiSuccess": "File uploaded successfully",
+          "fileSizeValidation": "File size should be 1 KB to 10 MB",
+          "invalidAccountingFile": "Upload valid accounting document file"
+        }
+      }
+    }
+  }
+}

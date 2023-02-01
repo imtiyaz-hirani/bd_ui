@@ -1,0 +1,7 @@
+@import '../variables/fonts';
+
+.graph-labels {
+    label {
+        font-size: map-get($serra-graph-label-font, font-size);
+    }
+}

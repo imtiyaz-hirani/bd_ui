@@ -1,0 +1,33 @@
+{
+    "MASTERDATA":{
+        "currency":{
+            "fileName":"Currency_Data",
+            "currency": "Currency",
+            "currencies": "Currencies",
+            "currencyCode": "Currency Code",
+            "currencyName": "Currency Name",
+            "decimalPlaces": "Decimal Places",
+            "isoCode": "ISO Code",
+            "columns": {
+                "currencyCode": {
+                    "validation_msgs": {
+                        "req_msg":"ISO Code is required.",
+                        "str_msg":"ISO Code required length is 3."
+                    }
+                },
+                "currencyName": {
+                    "validation_msgs": {
+                        "req_msg":"Currency Name is required.",
+                        "str_msg":"Currency Name Min length is 3 and Max length is 50."
+                    }
+                },
+                "decimalPlaces": {
+                    "validation_msgs": {
+                        "req_msg":"Decimal Places is required.",
+                        "str_msg":"Decimal Places required length is 1."
+                    }
+                }
+            }
+        }
+    }
+}

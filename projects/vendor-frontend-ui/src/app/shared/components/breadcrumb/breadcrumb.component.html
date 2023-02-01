@@ -1,0 +1,50 @@
+<ng-container *ngIf="breadcrumbData?.breadcrumb?.length > 0">
+    <div class="row">
+        <div class="col-12">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <ng-container *ngFor="let item of breadcrumbData?.breadcrumb; let lastIndex = last;">
+                        <ng-container *ngIf="!lastIndex else lastItem;">
+                            <li class="breadcrumb-item">
+                                <ng-container *ngIf="item?.routerLinkUrl; else notRouterLink;">
+                                    <a [routerLink]="item?.routerLinkUrl">
+                                        <ng-template *ngTemplateOutlet="labelTemplate; context: {$implicit: item}"></ng-template>
+                                    </a>
+                                </ng-container>
+                                <ng-template #notRouterLink>
+                                    <ng-container *ngIf="!item?.url; else externalUrl ">
+                                        <a class="no-cursor">
+                                            <ng-template *ngTemplateOutlet="labelTemplate; context: {$implicit: item}"></ng-template>
+                                        </a>
+                                    </ng-container>
+                                    <ng-template #externalUrl>
+                                        <a target="_blank" [href]="item?.url">
+                                            <ng-template *ngTemplateOutlet="labelTemplate; context: {$implicit: item}"></ng-template>
+                                        </a>
+                                    </ng-template>
+                                </ng-template>
+                            </li>
+                        </ng-container>
+                        <ng-template #lastItem>
+                            <li class="breadcrumb-item active">
+                                <a>
+                                    <ng-template *ngTemplateOutlet="labelTemplate; context: {$implicit: item}"></ng-template>
+                                </a>
+                            </li>
+                        </ng-template>
+                  </ng-container>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</ng-container>
+
+
+<ng-template #labelTemplate let-breadcrumbItem>
+    <ng-container *ngIf="breadcrumbItem?.isCustomLabel; else translateLabel">
+        {{ breadcrumbItem?.label }}
+    </ng-container>
+    <ng-template #translateLabel>
+        {{ breadcrumbItem?.label | translate }}
+    </ng-template>
+</ng-template>

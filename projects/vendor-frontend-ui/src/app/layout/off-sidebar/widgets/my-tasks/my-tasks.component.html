@@ -1,0 +1,48 @@
+<div id="my-tasks-widget" class="widget-wrapper" [class]="widgetType == WIDGETS.MY_TASKS ? 'my-tasks-widget' : ''">
+    <div class="widget-container">
+        <div class="row ">
+            <div class="col-12 widget-header">
+                <ng-container *ngIf="widgetType == WIDGETS.MY_TASKS; else elseOverviewWidget">
+                    <div class="widget-header--title">
+                        <div class="d-flex flex-row">
+                            <h5 class="widget-title main-title">{{ 'CORE.powerpanel.myTasks' | translate }} <span class="notifications-unseen">(3)</span></h5>
+                            <div class="widget-settings d-flex flex-row ml-auto">
+                                <div class="mr-2">
+                                    <a href="#">Clear</a>
+                                </div>
+                                <div>
+                                    <i class="se-control-panel"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <ejs-textbox class="search-filter" placeholder="{{ 'CORE.powerpanel.placeholder.search' | translate }}" floatLabelType="Auto"
+                        (input)="searchFilter($event)"></ejs-textbox>
+                    </div>
+                </ng-container>
+                <ng-template #elseOverviewWidget>
+                    <div class="d-flex flex-row">
+                        <div class="widget-title">{{ 'CORE.powerpanel.myTasks' | translate }}</div>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="widget-details">
+                    <div class="item highlight-urgent">
+                        Review 5 anomalies in Payment file 123
+                        <div class="link">Due Today</div>
+                    </div>
+                    <div class="item">
+                        Follow up with Bob for Payment item 243
+                    </div>
+                    <div class="item">
+                        Add Payment for recent invoices
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+@import "assets/styles/app/core/variables/variables";
+
+.accordion-panel {
+    .accordion-icon {
+        font-size: 30px;
+        color: $santas-gray;
+        cursor: pointer;
+    }
+    &.expanded {
+      .accordion-body {
+        max-height: 800px;
+        transition: max-height 0.5s ease-in;
+      }
+    }
+    &.collapsed {
+      .accordion-body {
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+      }
+    }
+  }
+    .card-header {
+      font-size: 16px;
+      font-weight: $font-weight-bold;
+      line-height: 20px;
+      letter-spacing: map_get($serra-font, letter-spacing);;
+      color: $serra-primary-content;
+    }
+    
+    .card-header a {
+      font-size: map_get($serra-font, font-size);
+      font-weight: map_get($serra-font, font-weight);
+      color: $serra-hyperlink-light;
+      text-decoration: none;
+      &:hover {
+        color: $serra-hyperlink-light;
+      }
+      &:active {
+        color: $serra-hyperlink-light;
+      }
+      cursor: pointer;
+    }
+    
+    .e-card-title i, .e-card-title em {
+      font-size: 24px;
+      color: $serra-button-disabled-color;
+      cursor: pointer;
+    }
+    
+    .row-label {
+      font-size: map_get($serra-font, font-size);
+      font-weight: $font-weight;
+      line-height: 21px;
+      letter-spacing: map_get($serra-font, letter-spacing);;
+      color: $shuttle-gray;
+    }
+    
+    .row-value {
+      font-size: 16px;
+      font-weight: $font-weight;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+      color: $serra-primary-content;
+    }
+    
+    .e-tab.e-fill .e-tab-header {
+      border-bottom: none;
+    }
+    
+    .e-tab.e-fill .e-tab-header .e-toolbar-item.e-active .e-tab-wrap {
+      border-radius: 3px;
+      background-color: $athens-gray;
+    }
+    
+    .e-tab .e-tab-header .e-toolbar-item .e-tab-text {
+      text-transform: none;
+      font-size: 16px;
+      font-weight: $font-weight;
+      line-height: 22px;
+      letter-spacing: map_get($serra-font, letter-spacing);;
+      color: $waterloo;
+    }
+    
+    .e-tab.e-fill .e-tab-header .e-toolbar-item.e-active .e-tab-text {
+      font-size: 16px;
+      font-weight: $font-weight-bold;
+      line-height: 20px;
+      letter-spacing: map_get($serra-font, letter-spacing);;
+      color: $serra-primary-content;
+    }
+    
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background-color: $cornflower-blue;
+      display: inline-block;
+    }
+    
+    .main-title-status {
+      font-size: map_get($serra-body2-font, font-size);
+      font-weight: map_get($serra-body2-font, font-weight);
+      line-height: 16px;
+      letter-spacing: map_get($serra-body2-font, letter-spacing);;
+      color: $bright-gray;
+    }
+    
+    .status-circle {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 12px;
+      &.blue-circle {
+        background-color: $malibu;
+      }
+      &.green-circle {
+        background-color: $granny-smith-apple;
+      }
+      &.yellow-circle {
+        background-color: $kournikova;
+      }
+      &.red-circle {
+        background-color: $deep-blush;
+      }
+      &.pink-circle {
+        background-color: $cranberry-pink;
+      }
+    }

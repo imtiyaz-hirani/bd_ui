@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <ng-container>
+      <!-- top navbar-->
+      <app-header class="topnavbar-wrapper"></app-header>
+      <!-- offsidebar-->
+      <app-sidebar class="leftsidebar" (toggledSidebar)="toggledSidebar($event)"></app-sidebar>
+      <app-off-sidebar class="rightsidebar" (toggledPowerPanel)="toggledPowerPanel($event)"></app-off-sidebar>
+      <!-- Main section-->
+      <section class="section-container" id="sectionContainer">
+        <!-- Page content-->
+        <div class="content-wrapper">
+          <!-- <app-breadcrumb></app-breadcrumb> -->
+          <app-serrala-breadcrumb></app-serrala-breadcrumb>
+          <router-outlet></router-outlet>
+          <!-- Added for Global Toaster -->
+          <div id="ej2Toast"></div> 
+        </div>
+      </section>
+      <!-- Page footer-->
+      <app-footer class="footer-container"></app-footer>
+    </ng-container>
+  </div>

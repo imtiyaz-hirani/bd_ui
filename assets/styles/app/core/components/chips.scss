@@ -1,0 +1,28 @@
+.e-chip-list.e-chip .e-chip-delete.e-dlt-btn::before, 
+.e-chip-list .e-chip .e-chip-delete.e-dlt-btn::before {
+    font-family: $icomoon-font-family;
+    content: $se-close;
+}
+
+.e-chip-list.e-chip .e-chip-delete, 
+.e-chip-list .e-chip .e-chip-delete {
+    color: $santas-gray;
+}
+
+.e-chip-list.e-chip .e-chip-text, 
+.e-chip-list .e-chip .e-chip-text {
+    line-height: 1.33;
+}
+.e-chip-list {
+    padding: 6px;
+}
+
+.tag-chips {
+    &.e-chip-list.e-chip, 
+    &.e-chip-list .e-chip {
+        border-radius: 2px;
+        line-height: 16px;
+        padding: 0px 6px;
+        height: 20px;
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "MASTERDATA": {
+    "fxRates": {
+      "fileName": "FX_Rates_Data",
+      "fxRates": "FX Rates",
+      "rateType": "Rate Type",
+      "referenceCurrency": "Reference Currency",
+      "effectiveDate": "Effective Date",
+      "format": "Format",
+      "partialCurrenciesImportSuccess": "FX Rates imported successfully for the currencies available in master data.",
+      "importSuccess": "FX Rates imported successfully.",
+      "fieldRequired": "{{field}} is required.",
+      "supportFileFormats": "Only supports XML and CSV file extension.",
+      "file": "File",
+      "fxRatesFileImport": "FX Rates File Import",
+      "fxRatesDetails": "FX Rates Details",
+      "secondaryCurrency": "Secondary Currency",
+      "conversionRate": "Conversion Rate",
+      "manualImport": "Manual Import",
+      "fxRatesOverrideConfirmationMessage": "FX Rates already available for given Rate Type and Effective Date. Do you want to override?",
+      "duplicateFileError": "File import failed: Duplicate file.",
+      "quotation": "Quotation",
+      "secondaryCurrencyConversionRate": "Secondary Currency Conversion Rate",
+      "decimalPlacesError": "Please enter value upto 10 decimal places.",
+      "decimalInvalidError": "Please enter the valid value.",
+      "enterFxRatesManually": "Enter FX Rates Manually"
+    }
+  }
+}

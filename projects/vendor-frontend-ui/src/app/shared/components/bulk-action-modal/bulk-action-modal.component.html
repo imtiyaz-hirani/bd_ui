@@ -1,0 +1,82 @@
+<ejs-dialog
+    class="bulk-action-dialog"
+    #bulkActionDialog
+    [visible]="false"
+    [position]="dialogPosition"
+    [width]='570'
+    isModal='true'
+    [height]="'auto'"
+    [minHeight]="400"
+    [header]="bulkActionModalObj?.headerText | translate"
+    [showCloseIcon]='false'>
+    <ng-template #content>
+        <div class="dialogContent row" *ngIf="bulkActionModalObj">
+            <div class="d-flex col-12 justify-content-start selection-info align-items-center mb-2 px-0">
+                <div class="selected-text">
+                    <span *ngIf="totalSelectedItems > 1;else elseBlock">
+                        {{ totalSelectedItems }} {{ 'SHARED.BULK_ACTION_MODAL.RECORDS_SELECTED' | translate }}.
+                    </span>
+                    <ng-template #elseBlock>
+                        {{ totalSelectedItems }} {{ 'SHARED.BULK_ACTION_MODAL.RECORD_SELECTED' | translate }}.
+                    </ng-template>
+                </div>
+                <div class="go-to-selection ml-2">
+                    <span class="e-link" (click)="goToSelectionClick()">{{ 'SHARED.BULK_ACTION_MODAL.GO_TO_SELECTION' | translate }}</span>
+                </div>
+            </div>
+            <div *ngIf="bulkActionModalObj?.invalidItems?.length > 0" class="col-12 error-section px-0">
+                <div class="row px-2">
+                    <div class="col-1">
+                        <span class="se-icon se-info-circle"></span>
+                    </div>
+                    <div class="col-11">
+                        <div class="mb-1">{{ bulkActionModalObj?.errorText | translate }}</div>
+                        <div class="mb-1">
+                            <span class="e-link" (click)="removeInvalidItems()">{{ 'SHARED.BULK_ACTION_MODAL.BUTTONS.REMOVE' | translate }}</span>
+                        </div>
+                        <span class="mb-1" *ngFor="let item of bulkActionModalObj?.invalidItems; index as i">
+                            <span *ngIf="i == bulkActionModalObj?.invalidItems.length - 1;else invalidItemElseBlock">
+                               {{ item }}
+                            </span>
+                            <ng-template #invalidItemElseBlock>
+                                {{ item }},
+                            </ng-template>
+                        </span>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-12 px-0" *ngIf="bulkActionModalObj?.invalidItems?.length === 0 && bulkActionModalObj?.validItems?.length !== 0">
+                <div class="mb-1">
+                    {{ bulkActionModalObj?.successText | translate }}
+                </div>
+                <span class="mb-1" *ngFor="let item of bulkActionModalObj?.validItems; index as i">
+                    <span *ngIf="i == bulkActionModalObj?.validItems?.length - 1;else validItemElseBlock">
+                        {{ item }}
+                    </span>
+                    <ng-template #validItemElseBlock>
+                        {{ item }},
+                    </ng-template>
+                </span>
+            </div>
+            <ng-content></ng-content>
+        </div>
+    </ng-template>
+    <ng-template #footerTemplate>
+        <div class="footer-section d-flex justify-content-between align-items-center">
+            <div class="footer-info-text" [style.visibility]="bulkActionModalObj?.validItems?.length == 0 || bulkActionModalObj?.invalidItems?.length !== 0 ? 'hidden': ''">
+                {{ bulkActionModalObj?.footerText | translate }}
+            </div>
+            <div class="d-flex">
+                <button ejs-button [isPrimary]="false" (click)="getConfirm('no')">
+                    {{ bulkActionModalObj?.footerActions?.no?.text | translate }}
+                </button>
+                <button ejs-button [isPrimary]="true" [disabled]="bulkActionModalObj?.invalidItems?.length !== 0 || bulkActionModalObj?.validItems?.length == 0" (click)="getConfirm('yes')">
+                    {{ bulkActionModalObj?.footerActions?.yes?.text | translate }}
+                </button>
+            </div>
+
+        </div>
+    </ng-template>
+</ejs-dialog>

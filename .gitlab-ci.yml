@@ -1,0 +1,111 @@
+include:
+  - project: 'common-services/devinternal/GitLabDeployScripts'
+    file: '/build-steps/build-config.yml'
+  - project: 'common-services/devinternal/GitLabDeployScripts'
+    file: '/environments/deploy-ho1900117.yml'
+  - project: 'cloud_java_devs/devinternal/GitLabDeployScripts'
+    file: '/vars/services-dind-registry.yml'
+
+
+stages:
+  - build-compile
+  #- test-unit
+  #- test-e2e
+  - build-prod
+  - publish_local
+  - update_DCKR0003
+
+
+variables:
+  APP_NAME: vendor-frontend-ui
+
+cache:
+  key: $CI_COMMIT_REF_SLUG
+  paths:
+    - node_modules/
+
+build-compile:
+  stage: build-compile
+  image: nexus.serrala.com:8085/serrala/node:12.16.0-stretch
+  script:
+    - npm install -g @angular/cli@9.x.x
+    - npm install
+    - npm run build:i18n:vendor-frontend-ui
+    - npm run build:vendor-frontend-ui:turbo
+  except:
+    - /^release/.*$/
+    - /^hotfix/.*$/
+    - master
+
+  #test-unit:
+  #  stage: test-unit
+  #  image: node:latest
+  #  script:
+  #  - npm install -g @angular/cli@6.0.0
+  #  - wget -P /usr/local/lib/ --header=$AUTH_HEADER http://hogit.hanseorga-ag.de/cloud_java_devs/devinternal/GitLabDeployScripts/raw/master/frontend/linux-x64-57_binding.node
+  #  - npm install node-sass --sass-binary-path=/usr/local/lib/linux-x64-57_binding.node
+  #  - npm install
+  #  - ng test
+  #  only:
+  #  - master
+
+  #test-e2e:
+  #  stage: test-e2e
+  #  image: node:latest
+  #  script:
+  #  - npm install -g @angular/cli@6.0.0
+  #  - npm install
+  #  - ng e2e
+  #  only:
+  #  - master
+
+build-prod:
+  stage: build-prod
+  image: nexus.serrala.com:8085/serrala/node:12.16.0-stretch
+  script:
+    - npm install -g @angular/cli@9.x.x
+    - npm install
+   # - npm update --no-save @alevate/common-lib @alevate/auth-lib @alevate/policies @alevate/user-manager
+    - npm run build:i18n:vendor-frontend-ui
+    - npm run build:vendor-frontend-ui:turbo
+    #- npm run test:coverage
+    #- npm run sonar
+    #- npm i run sonar
+  artifacts:
+    paths:
+      - dist/vendor-frontend-ui
+  only:
+    - /^release/.*$/
+    - /^hotfix/.*$/
+    - master
+
+deploy_release_production:
+  stage: publish_local
+  image: nexus.serrala.com:8085/serrala/docker:19.03.6
+  script:
+    - docker info
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD nexus.serrala.com:8086
+    - docker build -t nexus.serrala.com:8086/$DOCKER_REPO_NAME/$PACKAGE_NAME:$ACTUAL_VERSION .
+    - docker push nexus.serrala.com:8086/$DOCKER_REPO_NAME/$PACKAGE_NAME:$ACTUAL_VERSION
+  only:
+    - /^release/.*$/
+    - /^hotfix/.*$/
+
+deploy_master:
+  stage: publish_local
+  image: nexus.serrala.com:8085/serrala/docker:19.03.6
+  script:
+    - pwd
+    - echo 'local script'
+    - echo $ARTIFACT_NAME
+    - echo $APP_PORT
+    - echo $DOCKER_REPO_NAME
+    - echo $PACKAGE_NAME
+    - docker info
+    - docker login -u $DOCKER_USER -p $DOCKER_PASSWORD nexus.serrala.com:8090
+    - docker build -t nexus.serrala.com:8090/$DOCKER_REPO_NAME/$PACKAGE_NAME:latest .
+    - docker push nexus.serrala.com:8090/$DOCKER_REPO_NAME/$PACKAGE_NAME:latest
+    - docker tag nexus.serrala.com:8090/$DOCKER_REPO_NAME/$PACKAGE_NAME:latest nexus.serrala.com:8090/$DOCKER_REPO_NAME/$PACKAGE_NAME:$ACTUAL_VERSION
+    - docker push nexus.serrala.com:8090/$DOCKER_REPO_NAME/$PACKAGE_NAME:$ACTUAL_VERSION
+  only:
+    - master

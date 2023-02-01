@@ -1,0 +1,468 @@
+@import '../variables/variables';
+
+$icomoon-font-path: 'assets/fonts/icons' !default;
+
+@font-face {
+  font-family: $icomoon-font-family;
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?km6r3i');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?km6r3i#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?km6r3i') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?km6r3i') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?km6r3i##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+i, .icomoon-liga, em {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Enable Ligatures ================ */
+  letter-spacing: 0;
+  -webkit-font-feature-settings: "liga";
+  -moz-font-feature-settings: "liga=1";
+  -moz-font-feature-settings: "liga";
+  -ms-font-feature-settings: "liga" 1;
+  font-feature-settings: "liga";
+  -webkit-font-variant-ligatures: discretionary-ligatures;
+  font-variant-ligatures: discretionary-ligatures;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+  i, .icomoon-liga, span, em {
+    &[class*=" se-"], &[class*="se-"] {
+      font-family: '#{$icomoon-font-family}' !important;
+      speak: never;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+
+      /* Enable Ligatures ================ */
+      letter-spacing: 0;
+      -webkit-font-feature-settings: "liga";
+      -moz-font-feature-settings: "liga=1";
+      -moz-font-feature-settings: "liga";
+      -ms-font-feature-settings: "liga" 1;
+      font-feature-settings: "liga";
+      -webkit-font-variant-ligatures: discretionary-ligatures;
+      font-variant-ligatures: discretionary-ligatures;
+
+      /* Better Font Rendering =========== */
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+
+
+.se-sera-bot-active {
+  &:before {
+    content: $se-sera-bot-active; 
+  }
+}
+.se-zoom-in {
+  &:before {
+    content: $se-zoom-in; 
+  }
+}
+.se-zoom-out {
+  &:before {
+    content: $se-zoom-out; 
+  }
+}
+.se-add {
+  &:before {
+    content: $se-add; 
+  }
+}
+.se-add-circle {
+  &:before {
+    content: $se-add-circle; 
+  }
+}
+.se-alert-circle {
+  &:before {
+    content: $se-alert-circle; 
+  }
+}
+.se-alert-triangle {
+  &:before {
+    content: $se-alert-triangle; 
+  }
+}
+.se-alert-triangle-fill {
+  &:before {
+    content: $se-alert-triangle-fill; 
+  }
+}
+.se-arrow-back {
+  &:before {
+    content: $se-arrow-back; 
+  }
+}
+.se-arrow-downward {
+  &:before {
+    content: $se-arrow-downward; 
+  }
+}
+.se-arrow-drop-down {
+  &:before {
+    content: $se-arrow-drop-down; 
+  }
+}
+.se-arrow-drop-up {
+  &:before {
+    content: $se-arrow-drop-up; 
+  }
+}
+.se-arrow-forward {
+  &:before {
+    content: $se-arrow-forward; 
+  }
+}
+.se-arrow-left {
+  &:before {
+    content: $se-arrow-left; 
+  }
+}
+.se-arrow-right {
+  &:before {
+    content: $se-arrow-right; 
+  }
+}
+.se-arrow-upward {
+  &:before {
+    content: $se-arrow-upward; 
+  }
+}
+.se-bookmark {
+  &:before {
+    content: $se-bookmark; 
+  }
+}
+.se-bulk-actions {
+  &:before {
+    content: $se-bulk-actions; 
+  }
+}
+.se-calendar {
+  &:before {
+    content: $se-calendar; 
+  }
+}
+.se-call {
+  &:before {
+    content: $se-call; 
+  }
+}
+.se-cancel {
+  &:before {
+    content: $se-cancel; 
+  }
+}
+.se-chat {
+  &:before {
+    content: $se-chat; 
+  }
+}
+.se-check {
+  &:before {
+    content: $se-check; 
+  }
+}
+.se-check-circle {
+  &:before {
+    content: $se-check-circle; 
+  }
+}
+.se-check-circle-fill {
+  &:before {
+    content: $se-check-circle-fill; 
+  }
+}
+.se-checkbox-filled {
+  &:before {
+    content: $se-checkbox-filled; 
+  }
+}
+.se-checkbox-intermediate {
+  &:before {
+    content: $se-checkbox-intermediate; 
+  }
+}
+.se-checkbox-outline {
+  &:before {
+    content: $se-checkbox-outline; 
+  }
+}
+.se-chevron-down {
+  &:before {
+    content: $se-chevron-down; 
+  }
+}
+.se-chevron-left {
+  &:before {
+    content: $se-chevron-left; 
+  }
+}
+.se-chevron-right {
+  &:before {
+    content: $se-chevron-right; 
+  }
+}
+.se-chevron-up {
+  &:before {
+    content: $se-chevron-up; 
+  }
+}
+.se-close {
+  &:before {
+    content: $se-close; 
+  }
+}
+.se-collapse-table {
+  &:before {
+    content: $se-collapse-table; 
+  }
+}
+.se-control-panel {
+  &:before {
+    content: $se-control-panel; 
+  }
+}
+.se-copy {
+  &:before {
+    content: $se-copy; 
+  }
+}
+.se-delete {
+  &:before {
+    content: $se-delete; 
+  }
+}
+.se-download {
+  &:before {
+    content: $se-download; 
+  }
+}
+.se-drag-indicator {
+  &:before {
+    content: $se-drag-indicator; 
+  }
+}
+.se-edit {
+  &:before {
+    content: $se-edit; 
+  }
+}
+.se-expand-panel {
+  &:before {
+    content: $se-expand-panel; 
+  }
+}
+.se-expand-table {
+  &:before {
+    content: $se-expand-table; 
+  }
+}
+.se-filter {
+  &:before {
+    content: $se-filter; 
+  }
+}
+.se-groupby {
+  &:before {
+    content: $se-groupby; 
+  }
+}
+.se-help {
+  &:before {
+    content: $se-help; 
+  }
+}
+.se-home {
+  &:before {
+    content: $se-home; 
+  }
+}
+.se-info-circle {
+  &:before {
+    content: $se-info-circle; 
+  }
+}
+.se-info-circle-fill {
+  &:before {
+    content: $se-info-circle-fill; 
+  }
+}
+.se-log-out {
+  &:before {
+    content: $se-log-out; 
+  }
+}
+.se-maximize {
+  &:before {
+    content: $se-maximize; 
+  }
+}
+.se-mic {
+  &:before {
+    content: $se-mic; 
+  }
+}
+.se-more-hori {
+  &:before {
+    content: $se-more-hori; 
+  }
+}
+.se-more-vert {
+  &:before {
+    content: $se-more-vert; 
+  }
+}
+.se-my-tasks {
+  &:before {
+    content: $se-my-tasks; 
+  }
+}
+.se-notifications {
+  &:before {
+    content: $se-notifications; 
+  }
+}
+.se-overview {
+  &:before {
+    content: $se-overview; 
+  }
+}
+.se-pin-off {
+  &:before {
+    content: $se-pin-off; 
+  }
+}
+.se-pinned {
+  &:before {
+    content: $se-pinned; 
+  }
+}
+.se-radio-checked {
+  &:before {
+    content: $se-radio-checked; 
+  }
+}
+.se-radio-unchecked {
+  &:before {
+    content: $se-radio-unchecked; 
+  }
+}
+.se-remove {
+  &:before {
+    content: $se-remove; 
+  }
+}
+.se-remove-circle-outline {
+  &:before {
+    content: $se-remove-circle-outline; 
+  }
+}
+.se-reports {
+  &:before {
+    content: $se-reports; 
+  }
+}
+.se-search {
+  &:before {
+    content: $se-search; 
+  }
+}
+.se-send {
+  &:before {
+    content: $se-send; 
+  }
+}
+.se-serra {
+  &:before {
+    content: $se-serra; 
+  }
+}
+.se-share {
+  &:before {
+    content: $se-share; 
+  }
+}
+.se-time {
+  &:before {
+    content: $se-time; 
+  }
+}
+.se-unfold-less {
+  &:before {
+    content: $se-unfold-less; 
+  }
+}
+.se-unfold-more {
+  &:before {
+    content: $se-unfold-more; 
+  }
+}
+.se-view {
+  &:before {
+    content: $se-view; 
+  }
+}
+.se-view-columns {
+  &:before {
+    content: $se-view-columns; 
+  }
+}
+.se-view-off {
+  &:before {
+    content: $se-view-off; 
+  }
+}
+.se-worklist {
+  &:before {
+    content: $se-worklist; 
+  }
+}
+.se-Export {
+  &:before {
+    content: $se-Export; 
+  }
+}
+.se-Print {
+  &:before {
+    content: $se-Print; 
+  }
+}
+.se-unlink {
+  &:before {
+    content: $se-unlink; 
+  }
+}
+.se-link {
+  &:before {
+    content: $se-link; 
+  }
+}
+.se-account_statement {
+  &:before {
+    content: $se-account_statement; 
+  }
+}
+
+
+

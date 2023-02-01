@@ -1,0 +1,71 @@
+.filter-icon-btn-notification {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    padding: 5px 8px;
+    margin-right: 12px;
+    border-radius: 4px;
+    background-color: $solitude;
+    cursor: pointer;
+
+    .filter-notify {
+        background-color: $serra-primary-content;
+        width: 16px;
+        height: 16px;
+        color: $white;
+        font-size: 12px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &.active {
+        background-color: $mischka;
+    }
+
+    
+}
+
+.filter-edit-container {
+    text-align: right; 
+    display: flex;
+    justify-content: flex-end;
+    .filter-edit-icon {
+        cursor: pointer;
+        justify-content: flex-end;
+        
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        &.active {
+            background: $mischka;
+        }
+
+        span {
+            line-height: 18px;
+            &:focus {
+                outline: none;
+            }
+        }
+        .se-edit {
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
+}
+
+.global-filter-popup {
+    .e-query-builder {
+        border: none;
+        .e-group-header {
+            .e-lib.e-btn-group {
+                box-shadow: none;
+            }
+        }
+    }
+}

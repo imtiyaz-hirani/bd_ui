@@ -1,0 +1,13 @@
+{
+  "$merge": {
+    "source": {
+      "$import": "base-de.json"
+    },
+    "with": {
+      "$import": [
+        "apps-de.json",
+        "libs-de.json"
+      ]
+    }
+  }
+}

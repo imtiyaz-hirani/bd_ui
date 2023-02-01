@@ -1,0 +1,24 @@
+<div id="overview-widget" class="widget-wrapper" [class]="widgetType == WIDGETS.OVERVIEW ? 'overview-widget' : ''">
+    <div class="widget-container mb-0">
+        <div class="row ">
+            <div class="col-12 widget-header">
+                <div class="d-flex flex-row">
+                    <h5 class="widget-title main-title">{{ 'CORE.powerpanel.overview' | translate }}</h5>
+                </div>
+                <div>
+                    <ejs-textbox class="search-filter" placeholder="{{ 'CORE.powerpanel.placeholder.searchGlobally' | translate }}" floatLabelType="Auto"
+                    (input)="searchFilter($event)"></ejs-textbox>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <widget-add-tasks [widgetType]="'overview'"></widget-add-tasks>
+            <widget-my-tasks [widgetType]="'overview'"></widget-my-tasks>
+            <widget-notifications [widgetType]="'overview'"></widget-notifications>
+            <widget-chats [widgetType]="'overview'"></widget-chats>
+        </div>
+    </div>
+</div>

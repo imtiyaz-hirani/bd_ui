@@ -1,0 +1,113 @@
+{
+    "MASTERDATA":{
+        "company":{
+            "fileName":"Companies_Data",
+            "companies": "Companies",
+            "companyDetails": "Company Details",
+            "contactDetails": "Contact Details",
+            "companyName": "Company Name",
+            "contactName": "Contact Name",
+            "reportingCurrency": "Reporting Currency",
+            "segment": "Segment",
+            "region": "Region",
+            "postalCode": "Postal Code",
+            "city": "City",
+            "province": "Province",
+            "country": "Country",
+            "companyAddress": "Company Address",
+            "addressLine1": "Address Line 1",
+            "addressLine2": "Address Line 2",
+            "addressLine3": "Address Line 3",
+            "recordDeleted":"Company Deleted Successfully",
+            "contactConfirmDelete": "Final changes on record will be done after Save.",
+            "contactRecordDeleted": "Contact Deleted Successfully",
+            "details": "Details",
+            "title": "Title",
+            "firstName": "First Name",
+            "middleName": "Middle Name",
+            "lastName": "Last Name",
+            "designation": "Designation",
+            "isPrimary": "Is Primary",
+            "primaryContact": "Primary Contact",
+            "phoneType": "Phone Type",
+            "emailType": "Email Type",
+            "phone": "Phone",
+            "emailID": "Email ID",
+            "fields": {
+                "companyName": {
+                    "validation_msgs": {
+                        "req_msg":"Company name is required.",
+                        "str_msg": "Company name Max length is 100."
+                    }
+                },
+                "firstName": {
+                    "validation_msgs": {
+                        "str_msg": "First Name Max length is 100."
+                    }
+                },
+                "middleName": {
+                    "validation_msgs": {
+                        "str_msg": "Middle Name Max length is 100."
+                    }
+                },
+                "lastName": {
+                    "validation_msgs": {
+                        "str_msg": "Last Name Max length is 100."
+                    }
+                },
+                "designation": {
+                    "validation_msgs": {
+                        "str_msg": "Designation Max length is 100."
+                    }
+                },
+                "phoneNumber": {
+                    "validation_msgs": {
+                        "str_msg": "Phone Number Max length is 20.",
+                        "str_pattern": "Phone Number must have a correct phone format."
+                    }
+                },
+                "email": {
+                    "validation_msgs": {
+                        "str_msg": "Email Max length is 100.",
+                        "str_pattern": "Email is invalid."
+                    }
+                },
+                "addressLine1": {
+                    "validation_msgs": {
+                        "str_msg": "Address Line 1 Max length is 255."
+                    }
+                },
+                "addressLine2": {
+                    "validation_msgs": {
+                        "str_msg": "Address Line 2 Max length is 255."
+                    }
+                },
+                "addressLine3": {
+                    "validation_msgs": {
+                        "str_msg": "Address Line 3 Max length is 255."
+                    }
+                },
+                "city": {
+                    "validation_msgs": {
+                        "str_msg": "City Max length is 100."
+                    }
+                },
+                "province": {
+                    "validation_msgs": {
+                        "str_msg": "Province Max length is 100."
+                    }
+                },
+                "postalCode": {
+                    "validation_msgs": {
+                        "str_msg": "Postal Code Max length is 20."
+                    }
+                },
+                "country": {
+                    "validation_msgs": {
+                        "req_msg": "Country is required."
+                    }
+                }
+            }   
+        }
+    }
+}

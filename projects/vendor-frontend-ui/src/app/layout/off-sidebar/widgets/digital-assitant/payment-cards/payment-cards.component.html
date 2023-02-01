@@ -1,0 +1,65 @@
+
+    <div class="message-row from" *ngIf="userAnomolyText !== ''">
+        <div class="message">
+            <div class="message-content scriptedContent">{{userAnomolyText}}</div>
+        </div>
+    </div>
+    <div class="message-row from" *ngIf="indexText !== ''">
+        <div class="message">
+            <div class="message-content scriptedContent">{{indexText}}</div>
+        </div>
+    </div>
+    <div class="message-card-parent from" *ngIf="dataObjKeys(scriptedData).length > 0" [ngClass]="{disabled: hasActionTaken}">
+        <div class="message">
+            <div class="message-card">
+                <div class="converse-arrow"></div>
+                <div class="linkText">
+                    <div class='details-row' (click)="navigateToItemPage(scriptedData)">
+                        <span class="details key hyperLink">{{scriptedData.paymentItemAnomalyDTO["paymentItemId"].uiLabel}}</span>
+                        <span class="details value hyperLink">{{scriptedData.paymentItemAnomalyDTO["paymentItemId"].value}}</span>
+                        <span class='arrow'>
+                            <i class="se-chevron-right"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="boldText">
+                    <div class='details-row'>
+                        <span class="details">{{scriptedData.paymentItemAnomalyDTO["partnerName"].value}}</span>
+                    </div>
+                    <div class='details-row'>
+                        <span class="details">{{scriptedData.paymentItemAnomalyDTO["amount"].value}} {{scriptedData.paymentItemAnomalyDTO["currency"].value}}</span>
+                    </div>
+                </div>
+                <div class="normalText">
+                    <div class='details-row'>
+                        <span class="details">{{scriptedData.paymentItemAnomalyDTO["companyName"].uiLabel}}:</span> 
+                        <span class="details">{{scriptedData.paymentItemAnomalyDTO["companyName"].value}}</span>
+                    </div>
+                    <div class='details-row'>
+                        <span class="details">{{scriptedData.paymentItemAnomalyDTO["companyAccount"].uiLabel}}:</span>
+                        <span class="details">{{scriptedData.paymentItemAnomalyDTO["companyAccount"].value}}</span>
+                    </div>
+                    <div class='details-row'>
+                        <span class="details">{{scriptedData.paymentItemAnomalyDTO["partnerAccount"].uiLabel}}: </span>
+                        <span class="details">{{scriptedData.paymentItemAnomalyDTO["partnerAccount"].value}}</span>
+                    </div>
+                </div>
+                <div class='message-content'>{{scriptedData?.message}}</div>
+            </div>
+            <div class="actionbar">
+                <div class="action-bar__item pop-up-button popupBtn popup_secondary" *ngFor="let choice of scriptedData?.actions;" (click)="trigger(choice)">
+                    <div class="action-bar__button" >{{choice?.buttonText}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="message-row to" *ngIf="userSelection !== ''">
+        <div class="message">
+            <div class='message-content'>{{userSelection}}</div>
+        </div>
+    </div>
+    <div class="message-row from" *ngIf="actionResponse !== ''">
+        <div class="message">
+            <div class="message-content scriptedContent">{{actionResponse}}</div>
+        </div>
+    </div>

@@ -1,0 +1,12 @@
+.list-panel-container {
+    .list-panel-item {
+        border: 1px solid $mischka;
+        .label {
+            font-size: 11px;
+            margin-bottom: 0px;
+        }
+        &.update-record {
+            border: 1px solid $serra-primary-content;
+        }
+    }
+}

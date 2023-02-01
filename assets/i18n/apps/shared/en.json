@@ -1,0 +1,179 @@
+{
+    "SHARED": {
+      "GRID": {
+        "TOOLBAR": {
+          "RECORD_SELECTION": {
+            "TITLE": " Click anywhere on the list item to select. Click on bulk select item icon again to exit bulk select mode.",
+            "SEARCH": "Search",
+            "SELECT_ALL": "Select all",
+            "SELECTED_ROW_COUNT": "{{ selectedRowsCount }} Selected",
+            "CLEAR": "Clear",
+            "APPROVE": "Approve",
+            "REJECT": "Reject",
+            "DELETE": "Delete",
+            "EDIT": "Edit",
+            "GENERATE_PAYMENT": "Generate Payment",
+            "DESELECT_ALL": "Deselect all",
+            "CHANGE_EXECUTION_DATE": "Change Execution Date",
+            "REGENERATE_PAYMENT": "Regenerate Payment"
+          },
+          "RECORD_ACTIONS": {
+            "EXPORT": "Export",
+            "EXPORT_TO_EXCEL": "Export to Excel",
+            "EXPORT_TO_PDF": "Export to PDF",
+            "GROUP_BY": "Group By",
+            "BULK_ACTION": "Bulk Action",
+            "COLUMN_CHOOSER": "Column Chooser",
+            "SEARCH": "Search",
+            "DELETE": "Delete",
+            "ADD": "Add",
+            "SAVE": "Save",
+            "CANCEL": "Cancel"
+          }
+        }
+      },
+
+      "partyData": {
+        "columns": {
+          "shortName": "Short Name",
+          "name": "Name",
+          "details": "Details"
+        }
+      },
+
+      "BUTTONS": {
+          "YES": "Yes",
+          "NO": "No"
+      },
+      "ACTIONS": {
+        "ADD_RECORD": "Add Record",
+        "SAVE_AND_ADD": "Save and Add",
+        "ADD": "Add",
+        "SAVE": "Save",
+        "CANCEL": "Cancel",
+        "VIEW": "View",
+        "EDIT": "Edit",
+        "DELETE": "Delete",
+        "SEARCH": "Search",
+        "DELETE_ITEM": "Delete Item",
+        "REMOVE_ITEM": "Remove Item",
+        "CHANGE_EXECUTION_DATE": "Change Execution Date",
+        "EDIT_PAYMENT": "Edit Payment",
+        "REJECT": "Reject",
+        "MORE": "More",
+        "IMPORT": "Import"
+      },
+      "PF_SERRALA_DIALOG": {
+        "HEADER_TITLE": "Filter",
+        "COLUMNS":{
+          "FILE_ID": "File ID",
+          "MESSAGE_ID": "Message ID",
+          "STATUS": "Status",
+          "IS_ANOMALOUS": "Is Anomalous",
+          "IS_PARTNER_MISSING": "Is Partner Missing",
+          "EXECUTION_DATE": "Execution Date",
+          "PAYMENT_ITEM_RECEIVED": "Payment Item Received On"
+        },
+        "DIALOG_LABELS": {
+          "RESULTS": "{{rowCount}} results",
+          "CLEAR_ALL": "Clear All",
+          "CANCEL": "Cancel",
+          "APPLY": "Apply"
+        }
+      },
+      "BULK_ACTION_MODAL": {
+        "RECORD_SELECTED": "record selected",
+        "RECORDS_SELECTED": "records selected",
+        "GO_TO_SELECTION": "Go to selection",
+        "APPROVE_HEADER_TITLE": "Bulk Approve",
+        "REJECT_HEADER_TITLE": "Bulk Reject",
+        "CHANGE_EXECUTION_DATE_HEADER_TITLE": "Bulk Change Execution Date",
+        "DELETE_ITEM_HEADER_TITLE": "Bulk Delete",
+        "REMOVE_ITEM_HEADER_TITLE": "Bulk Remove",
+        "REGENERATE_PAYMENT_HEADER_TITLE": "Bulk Regenerate Payment",
+        "APPROVE_FOOTER_TEXT": "Approve all selected records",
+        "REJECT_FOOTER_TEXT": "Reject all selected records",
+        "REGENERATE_PAYMENT_FOOTER_TEXT": "Regenerate payment for all selected records",
+        "CHANGE_EXECUTION_DATE_FOOTER_TEXT": "Change execution date of all selected records",
+        "DELETE_ITEM_FOOTER_TEXT": "Delete all selected records",
+        "REMOVE_ITEM_FOOTER_TEXT": "Remove all selected records",
+        "APPROVE_ERROR_TEXT": "Only records in 'New','Import Successful' statuses can be approved",
+        "REJECT_ERROR_TEXT": "Only records in 'New','Import Successful' statuses can be rejected",
+        "REGENERATE_PAYMENT_ERROR_TEXT": "Regenerate Payment action can only be done when payment message is in 'Execution Date Changed', 'Item Removed' or 'Item Deleted' status",
+        "CHANGE_EXECUTION_DATE_ERROR_TEXT": "Execution date can be changed for payment messages in 'New', 'Import Successful', 'Item Removed', 'Item Deleted' and 'Execution Date Changed' status only",
+        "PAYMENT_CHANGE_EXECUTION_DATE_ERROR_TEXT": "Execution date can be changed for payments in 'New' and 'Execution Date Changed' status only",
+        "PAYMENT_DELETE_ITEM_ERROR_TEXT": "Only records in 'New' status can be deleted",
+        "PAYMENT_REMOVE_ITEM_ERROR_TEXT": "Only records in 'New' status can be removed",
+        "PAYMENT_ITEMS_APPROVE_ERROR_TEXT": "Only manual payment records in 'New','Import Successful' and 'Rejected' statuses can be approved",
+        "PAYMENT_ITEMS_REJECT_ERROR_TEXT": "Only manual payment records in 'New','Import Successful' and 'Approved' statuses can be rejected",
+        "PAYMENT_FILES_APPROVE_CONFIRM_TEXT": "Do you want to approve these record(s) -",
+        "PAYMENT_ITEMS_APPROVE_CONFIRM_TEXT": "Do you want to approve these record(s) -",
+        "PAYMENT_FILES_REJECT_CONFIRM_TEXT": "Do you want to reject these record(s) -",
+        "PAYMENT_ITEMS_REJECT_CONFIRM_TEXT": "Do you want to reject these record(s) -",
+        "REGENERATE_PAYMENT_CONFIRM_TEXT": "Do you want to regenerate payment for these record(s) -",
+        "PAYMENT_FILES_CHANGE_EXECUTION_DATE_CONFIRM_TEXT": "Do you want to change execution date of these records",
+        "PAYMENT_CHANGE_EXECUTION_DATE_CONFIRM_TEXT": "Do you want to change execution date of these records",
+        "PAYMENT_DELETE_ITEM_CONFIRM_TEXT": "Do you want to delete these record(s)",
+        "PAYMENT_REMOVE_ITEM_CONFIRM_TEXT": "Do you want to remove these record(s)",
+        "CHANGE_EXECUTION_DATE_INFO_TEXT": "All items under {{ records }} are in approved status, however, this action will change the execution date of all the items under it.",
+        "MESSAGES": {
+          "PAYMENT_FILE_APPROVE_SUCCESS_MESSAGE": "Files approved successfully",
+          "PAYMENT_FILE_REJECT_SUCCESS_MESSAGE": "Files rejected successfully",
+          "PAYMENT_APPROVE_SUCCESS_MESSAGE": "Payments approved successfully",
+          "PAYMENT_REJECT_SUCCESS_MESSAGE": "Payments rejected successfully",
+          "PAYMENT_FILE_CHANGE_EXECUTION_DATE_SUCCESS_MESSAGE": "Files execution date changed successfully",
+          "PAYMENT_CHANGE_EXECUTION_DATE_SUCCESS_MESSAGE": "Payments execution date changed successfully",
+          "PAYMENT_DELETE_ITEM_SUCCESS_MESSAGE": "Payments deleted successfully",
+          "PAYMENT_REMOVE_ITEM_SUCCESS_MESSAGE": "Payments removed successfully",
+          "REGENERATE_PAYMENTS_SUCCESS_MESSAGE": "Payments regenerated successfully",
+          "REGENERATE_PAYMENT_SUCCESS_MESSAGE": "Payment regenerated successfully"
+        },
+        "BUTTONS": {
+          "APPROVE": "Approve",
+          "REJECT": "Reject",
+          "CANCEL": "Cancel",
+          "REMOVE": "Remove",
+          "CHANGE_EXECUTION_DATE": "Change",
+          "DELETE": "Delete",
+          "REGENERATE": "Regenerate"
+        }
+      },
+      "EXECUTION_DATE_MODAL": {
+        "HEADER_TITLE": "Change Execution Date",
+        "FIELD": {
+          "EXECUTION_DATE": "Execution Date"
+        },
+        "MESSAGES": {
+          "CONFIRM_MESSAGE": "Please select execution date of today or future"
+        }
+      },
+      "contactTypes": {
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "whatsapp": "Whatsapp",
+        "fax": "Fax",
+        "other": "Other",
+        "primaryPhone": "Primary Phone",
+        "secondaryPhone": "Secondary Phone"
+      },
+      "emailTypes": {
+        "primary": "Primary",
+        "secondary": "Secondary",
+        "primaryEmail": "Primary Email",
+        "secondaryEmail": "Secondary Email"
+      },
+      "nameTitles": {
+        "mr": "Mr",
+        "ms": "Ms",
+        "mrs": "Mrs",
+        "dr": "Dr"
+      },
+      "email": "Email",
+      "phone": "Phone",
+      "cashflowNameType" : {
+        "in": "In",
+        "out": "Out"
+      },
+      "NOTE": "Note"
+    }
+  }

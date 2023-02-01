@@ -1,0 +1,61 @@
+{
+    "ACCOUNTS": {
+        "STATEMENT_ITEMS":{
+            "HEADER_TITLE": "Statement Items",
+            "GRID": {
+                "COLUMNS": {
+                    "fileId": "File ID",
+                    "statementID": "Statement ID",
+                    "itemID":"Item ID",
+                    "status": "Status",
+                    "transactionAmt": "Transaction Amount",
+                    "drCrIndicator": "Dr/Cr Indicator",
+                    "transactionCCY": "Transaction CCY",
+                    "valueDate": "Value Date",
+                    "bookDate": "Book Date",
+                    "additionalDetails1": "Additional Details 1",
+                    "additionalDetails2": "Additional Details 2",
+                    "transactionRef": "Transaction Ref",
+                    "statusOfTrxn": "Status Of Trxn",
+                    "bookDateTime": "Book Date And Time",
+                    "valueDateAndTime": "Value Date And Time",
+                    "bankEntryReference": "Bank Entry Reference",
+                    "BTCDomainsCode": "BTC Domains Code",
+                    "BTCFamilyCode": "BTC Family Code",
+                    "BTCSubfamilyCode": "BTC Subfamily Code",
+                    "BTCProprietaryCode": "BTC Proprietary Code",
+                    "BTCProprietaryCodeIssuer": "BTC Proprietary Code Issuer",
+                    "detailedMessageID": "Detailed Message ID",
+                    "orderAmount": "Order Amount",
+                    "orderCurrency": "Order Currency",
+                    "instructedSourceCurrency": "Instructed Source Currency",
+                    "instructedTargetCurrency": "Instructed Target Currency",
+                    "paymentInfoID": "Payment InfoID",
+                    "E2EID": "E2E ID",
+                    "trnxnID": "Trnxn ID",
+                    "chequeNo": "Cheque No",
+                    "receivingFIBIC": "Receiving FI BIC",
+                    "receivingFIClearingSystemID": "Receiving FI Clearing System ID",
+                    "receivingFIClearingSystemProprietaryID": "Receiving FI Clearing System Proprietary ID",
+                    "receivingFIClearingSystemMemberID": "Receiving FI Clearing System Member ID",
+                    "receivingFIName": "Receiving FI Name",
+                    "receivingFIAddress": "Receiving FI Address",
+                    "ultimateCreditorName": "Ultimate Creditor Name",
+                    "ultimateCreditorAddress": "Ultimate Creditor Address",
+                    "ultimateCreditorBIC": "Ultimate Creditor BIC",
+                    "accountNo": "Account No",
+                    "bankName": "Bank Name",
+                    "alternateAccountNumber": "Alternate Account Number",
+                    "company": "Company",
+                    "creationTimestamp": "Creation Timestamp"
+                }
+            },
+            "WIDGET":{
+                "title1" : "Money held with Account",
+                "title2" : "Amount by Bank",
+                "title3" : "Most Used BTC code",
+                "title4" : "Items per Currency"
+            }
+        }
+    }
+}

@@ -1,0 +1,71 @@
+<div id="communications-widget" class="widget-wrapper" [class]="widgetType == WIDGETS.CHATS ? 'communications-widget' : ''">
+    <div class="widget-container">
+        <div class="row ">
+            <div class="col-12 widget-header">
+                <ng-container *ngIf="widgetType == WIDGETS.CHATS; else elseOverviewWidget">
+                    <div class="widget-header--title">
+                        <div class="d-flex flex-row">
+                            <h5 class="widget-title main-title">{{ 'CORE.powerpanel.communication' | translate }}</h5>
+                            <div class="widget-settings d-flex flex-row ml-auto">
+                                <div>
+                                    <i class="se-add-circle"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <ejs-textbox class="search-filter" placeholder="{{ 'CORE.powerpanel.placeholder.search' | translate }}" floatLabelType="Auto"
+                        (input)="searchFilter($event)"></ejs-textbox>
+                    </div>
+                </ng-container>
+                <ng-template #elseOverviewWidget>
+                    <div class="d-flex flex-row">
+                        <div class="widget-title">{{ 'CORE.powerpanel.communication' | translate }}</div>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="widget-details communication-details">
+                    <div class="item">
+                        <div class="d-flex flex-row">
+                            <div class="desc">
+                                <div class="name">
+                                    Call with Bob M.
+                                </div>
+                                <div>
+                                    Missing item in Payment File...
+                                </div>
+                                <div class="date-time">
+                                    06/28/2020, 10:45 AM
+                                </div>
+                            </div>
+                            <div class="profile-pic">
+                                <img src="assets/images/user.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="d-flex flex-row">
+                            <div class="desc">
+                                <div class="name">
+                                    Call with Bob M.
+                                </div>
+                                <div>
+                                    Missing item in Payment File
+                                </div>
+                                <div class="date-time">
+                                    06/28/2020, 10:45 AM
+                                </div>
+                            </div>
+                            <div class="profile-pic">
+                                <img src="assets/images/user.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

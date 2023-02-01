@@ -1,0 +1,24 @@
+<ejs-dialog 
+    id="confirmModalPopup"
+    #confirmModalDialog 
+    [visible]="false" 
+    [position]="dialogPosition"
+    [width]='450' 
+    isModal='true' 
+    [height]="'auto'"
+    [header]="'SHARED.CONFIRM_MODAL.TITLE' | translate"
+    [showCloseIcon]='showCloseButton'>
+    <ng-template #content>
+        <div class="dialogContent">
+            <div class="customMessage" [innerHTML]="customMessage | translate"></div>
+        </div>
+    </ng-template>
+    <ng-template *ngIf="showFooter" #footerTemplate>
+        <button ejs-button  [isPrimary]="false" (click)="getConfirm('no')">
+            {{ 'SHARED.BUTTONS.NO' | translate }}
+        </button>
+        <button ejs-button [disabled]="isDisableButtons" [isPrimary]="true" (click)="getConfirm('yes')">
+            {{ 'SHARED.BUTTONS.YES' | translate }}
+        </button>
+    </ng-template>
+</ejs-dialog>

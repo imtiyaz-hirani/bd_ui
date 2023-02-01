@@ -1,0 +1,93 @@
+{
+    "MASTERDATA":{
+        "masterBank":{
+            "fileName":"Master_Bank_Data",
+            "masterBanks": "Master Banks",
+            "bank": "Bank",
+            "bankName": "Bank Name",
+            "bic8": "BIC 8",
+            "bic11": "BIC 11",
+            "dnCode": "DN Code",
+            "postalCode": "Postal Code",
+            "city": "City",
+            "province": "Province",
+            "country": "Country",
+            "bankDetails":"Bank Details",
+            "bankCodes": "Bank Codes",
+            "codeType": "Code Type",
+            "codeValue": "Code Value",
+            "bankAddress": "Bank Address",
+            "addressLine1": "Address Line 1",
+            "addressLine2": "Address Line 2",
+            "addressLine3": "Address Line 3",
+            "recordExist":"Bank Code Already Exist",
+            "recordDeleted":"Bank Code Deleted Successfully",
+            "recordAdded":"Bank Code Added Successfully",
+            "bicCodeConfirmDelete": "Final changes on record will be done after Save.",
+            "details": "Details",
+            "fields": {
+                "bank": {
+                    "validation_msgs": {
+                        "req_msg":"Bank name is required.",
+                        "str_msg": "Bank name Max length is 100."
+                    }
+                },
+                "codeType": {
+                    "validation_msgs": {
+                        "req_msg":"Code Type is required."
+                    }
+                },
+                "codeValue": {
+                    "validation_msgs": {
+                        "req_msg":"Code Value is required.",
+                        "invalid_msg": "Invalid input Code Value.",
+                        "invalidDN": "Invalid DN Struture",
+                        "bicInvalidPattern": "BIC validation fails, space and special chars are not allowed",
+                        "bic11_length_msg": "BIC 11 Code allowed length is 11.",
+                        "bic8_length_msg": "BIC 8 Code allowed length is 8.",
+                        "bic_invalid_msg": "BIC validation fails, invalid ISO country code.",
+                        "bic_either_code_msg": "Either of the BIC8 Code or BIC11 Code is mandatory.",
+                        "dnMaxLength": "DN Max length is 100.",
+                        "bic8Length": "BIC8 Code allowed length is 8.",
+                        "bic11Length": "BIC11 Code allowed length is 11."
+                    }
+                },
+                "addressLine1": {
+                    "validation_msgs": {
+                        "str_msg": "Address Line 1 Max length is 255."
+                    }
+                },
+                "addressLine2": {
+                    "validation_msgs": {
+                        "str_msg": "Address Line 2 Max length is 255."
+                    }
+                },
+                "addressLine3": {
+                    "validation_msgs": {
+                        "str_msg": "Address Line 3 Max length is 255."
+                    }
+                },
+                "city": {
+                    "validation_msgs": {
+                        "str_msg": "City Max length is 100."
+                    }
+                },
+                "province": {
+                    "validation_msgs": {
+                        "str_msg": "Province Max length is 100."
+                    }
+                },
+                "postalCode": {
+                    "validation_msgs": {
+                        "str_msg": "Postal Code Max length is 20."
+                    }
+                },
+                "country": {
+                    "validation_msgs": {
+                        "req_msg": "Country is required."
+                    }
+                }
+            }   
+        }
+    }
+}

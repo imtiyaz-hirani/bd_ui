@@ -1,0 +1,53 @@
+{
+    "SETTINGS":{
+        "STATUSMESSAGESETTINGS":{
+            "MAIN_TITLE":"Status Message Settings",
+            "ADD_BUTTON":"Add",
+            "MESSAGE":{
+              "DELETE_CONFIRM":"Do you want delete Record",
+              "SUCCESS_MSG":"Successfully Added",
+              "DELETE_SUCCESS":"Sucessfully deleted"
+            },
+            "GRID":{
+                "NAME":"Name",
+                "DESCRIPTION":"Description",
+                "CONNECTORS":"Connectors",
+                "STATUSMESSAGEFORMAT":"Status Message FORMAT",
+                "ACTIONS":"Actions"
+            },
+            "FORM":{
+                "NAME_PLACEHOLDER":"Enter configuration name *",
+                "DESCRIPTION_PLACEHOLDER":"Enter configuration description",
+                "CONNECTORS_PLACEHOLDER":"Select applicable connectors *",
+                "INFO_PLACEHOLDER":"Select information category to update status *",
+                "SLA_TIME_PLACEHOLDER":"SLA Time in minutes",
+                "STATUS_MSG_FORMAT_PLACEHOLDER":"Select status message format *",
+                "BLOCK_TYPE_PLACEHOLDER":"Select applicable block type for format *",
+                "REGEX_PLACEHOLDER":"Enter regex e.g. ACCP,AC01 *",
+                "REGEX_PURPOSE_PLACEHOLDER":"Enter regex purpose",
+                "INFOCATEGORY_STATUS_PLACEHOLDER":"Select outbound payment message new status *",
+                "APPLY_TO_ALL_ITEMS_PLACEHOLDER":"Apply To All Items",
+                "ITEM_STATUS_PLACEHOLDER":"Select outbound item new status",
+                "SEQ_FORM_TITLE":"Add Sequence Configuration",
+                "REGEX_TITLE":"Regex & Status-",
+                "BLOCK_TYPE_TEXT":"Block type",
+                "REGEX_TEXT":"Regex",
+                "PAYMENT_MESSAGE_TEXT":"Payment Message Status",
+                "PAYMENT_ITEM_TEXT":"Payment Item Status",
+                "SLA_TEXT":"SLA Time",
+                "STATUS_MSG_FORMAT_TEXT":"Status Message Format",
+                "NAME_ERROR_MSG":"Configuration name is required",
+                "CONNECTORS_ERROR_MSG":"Connectors are required",
+                "INFOCATEGORY_ERROR_MSG":"Information category is required",
+                "SLA_TIME_ERROR_MSG":"SLA Time is required",
+                "SLA_TIME_ERROR_MSG_MAX_LENGTH":"Max length of sla time can be 3",
+                "STATUS_MSG_FORMAT_ERROR_MSG":"Status message format is required",
+                "BLOCK_TYPE_ERROR_MSG":"Block type is required",
+                "REGEX_ERROR_MSG":"Regex is required",
+                "INFOCATEGORY_STATUS_ERROR_MSG":"Payment Message Status is required",
+                "ITEMSTATUS_ERROR_MSG":"Item Status is required"
+                 
+            }
+        }
+    }
+}

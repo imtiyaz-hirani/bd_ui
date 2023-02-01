@@ -1,0 +1,35 @@
+/* ========================================================================
+     Component: typography
+ ========================================================================== */
+ @import '../variables/fonts';
+
+ $fonts-path: 'assets/fonts' !default;
+
+ @font-face{
+     font-family: 'NotoSans';
+     font-weight: 400;
+     font-style: normal;
+     font-stretch: normal;
+     src: url('#{$fonts-path}/NotoSans-Regular.ttf') format('truetype');
+ }
+ @font-face{
+     font-family: 'NotoSans';
+     font-weight: 400;
+     font-style: italic;
+     font-stretch: normal;
+     src: url('#{$fonts-path}/NotoSans-Italic.ttf') format('truetype');
+ }
+ @font-face{
+     font-family: 'NotoSans';
+     font-weight: 700;
+     font-style: normal;
+     font-stretch: normal;
+     src: url('#{$fonts-path}/NotoSans-Bold.ttf') format('truetype');
+ }
+ @font-face{
+     font-family: 'NotoSans';
+     font-weight: 700;
+     font-style: italic;
+     font-stretch: normal;
+     src: url('#{$fonts-path}/NotoSans-BoldItalic.ttf') format('truetype');
+ }

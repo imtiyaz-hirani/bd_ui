@@ -1,0 +1,53 @@
+.custom-view-menu-container {
+    font-size: 14px;
+    line-height: 1.43;
+    margin-top: 10px;
+    .serra-custom-dropdown-menu {
+        height: 30px;
+        line-height: 1.43;
+        background: transparent;
+        li.e-menu-item {
+            background: transparent;
+            line-height: 1.43;
+            height: 30px;
+            padding: 0 30px 0 0;
+            span.e-icons.e-caret {
+                line-height: 30px;
+            }
+        }
+
+        .custom-chip {
+            font-size: 14px;
+            border-radius: 2px;
+            line-height: 16px;
+            padding: 2px 6px;
+            height: 20px;
+            background-color: $serra-chips-bg-color;
+            border-color: $serra-chips-color;
+        }
+    }
+}
+
+
+
+.serra-custom-dropdown-menu {
+    .e-ul {
+        padding: 0;
+        min-width: 320px;
+
+        li.e-menu-item {
+            &.e-ripple {
+                .e-ripple-element {
+                    display: none;
+                }
+            }
+            height: 40px;
+            line-height: 40px;
+            background: #f4f6f7;
+            &.e-focused, &.e-selected {
+                font-weight: bold;
+                background-color: #dfe1e7;
+            }
+        }
+    }
+}

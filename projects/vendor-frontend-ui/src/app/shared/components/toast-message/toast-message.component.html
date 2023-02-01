@@ -1,0 +1,41 @@
+
+<ejs-toast #element >
+  <ng-template #content>
+    <div class="d-flex align-items-center">
+      <span class="pl-2">
+        <i  [ngClass]="isErrorMessage ? 'se-alert-triangle-fill error-icon':'se-check-circle success-icon'"></i>
+      </span>
+      <span class="pl-2 message-text">
+        {{ toastMessage }}
+      </span>
+    </div>
+  </ng-template>
+</ejs-toast>
+<ejs-toast #notificationElement showCloseButton=true>
+  <ng-template #content>
+      <div class="d-flex align-items-center">
+        <span class="pl-2 message-text">
+          {{ currentNotification.message }}
+        </span>
+      </div>
+      <div class="date-time ml-2">
+        {{currentNotification['createdDate'] | date:'medium'}}
+      </div>
+      <div class="mt-3 mb-1 d-flex flex-row ml-2">
+        <ng-container *ngFor="let action of currentNotification.actions">
+        <ng-container>
+            <button *ngIf="action.actionName === 'View Details'" ejs-button cssClass="e-small pl-2 pr-2 mr-2 notitification-actions" (click)="clickOnButton('viewDetails')">{{action.actionName}}</button>
+            <div *ngIf="action.actionName === 'Get assisted by Serra'"class="serra-icon ml-auto" (click)="clickOnButton('serra')">
+                <span class="notitification-actions"> 
+                    <i class="se-serra"></i>
+                </span>
+            </div>
+         </ng-container>
+         <button *ngIf="action.actionName !== 'View Details' && action.actionName !== 'Get assisted by Serra'" ejs-button cssClass="e-small pl-2 pr-2 mr-2 notitification-actions">{{action.actionName}}</button>
+        </ng-container>
+      </div>  
+  </ng-template>
+</ejs-toast>
+
+
+

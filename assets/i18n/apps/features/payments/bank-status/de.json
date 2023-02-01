@@ -1,0 +1,51 @@
+{
+    "PAYMENTS":{
+        "BANK_STATUS":{
+            "HEADER_TITLE":"Status Messages",
+            "CUSTOM_VIEW": "My custom view",
+            "DONUT":{
+                "TITLE1":"Payment Acceptance Rate",
+                "TITLE2":"Unmatched Status Message",
+                "TITLE3":"Connectors Delivery Message",
+                "TITLE4":"Status Message Per Format"
+            },
+            "KPI" :{
+                "MATCHED" : "Matched",
+                "UNMATCHED" : "Unmatched"
+            },
+            "GRID":{
+                "COLUMNS":{
+                    "FILE_ID":"FILE ID",
+                    "FORMAT":"Format",
+                    "INBOUD_CONNECTOR":"Inboud Connector",
+                    "INBOUND_ADAPTER":"Inbound Adapter",
+                    "TIMESTAMP":"Timestamp",
+                    "MATCH_STATUS":"Match Status",
+                    "STATUS":"Status",
+                    "ACTION":"Action"
+                }
+            },
+            "BANK_DETAILS":{
+              "TITLE":"Bank Status Details",
+              "OVERVIEW":"Overview",
+              "LIFECYCLE":"Lifecycle",
+              "GRID":{
+                  "COLUMNS":{
+                      "LEVEL":"Level",
+                      "REFERENCE_ID":"Reference Id",
+                      "STATUS_CODE":"Status Code",
+                      "STATUS":"Status",
+                      "LINKED_REF":"Linked Ref.ID",
+                      "REASON_CODE":"Reason Code",
+                      "ADDITIONAL_INFO":"Additional Info",
+                      "BLOCK_TYPE":"Block Type",
+                      "DESCRIPTION":"Description",
+                      "STATUS_DESCRIPTION":"Status Description",
+                      "REASON_DESCRIPTION":"Reason Description",
+                      "ADD_REASON_INFO":"Add. Reason Information"
+                  }
+              }
+            }
+        }
+    }
+}

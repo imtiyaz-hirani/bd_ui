@@ -1,0 +1,17 @@
+@import "./reset.css";
+@import "./bootstrap.min.css";
+@import "./bootstrap-card.css";
+@import "./prism.css";
+@import "./ionicons.min.css";
+@import "./compodoc.css";
+@import "./tablesort.css";
+
+hr {
+    color: black;
+    margin: 0;
+    width: 100%;
+}
+
+.title {
+    background: none !important;
+}

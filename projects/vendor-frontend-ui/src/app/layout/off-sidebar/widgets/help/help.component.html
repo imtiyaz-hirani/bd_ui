@@ -1,0 +1,67 @@
+<div id="help-widget" class="widget-wrapper" [class]="widgetType == WIDGETS.HELP ? 'help-widget' : ''">
+    <div class="widget-container">
+        <div class="row ">
+            <div class="col-12 widget-header">
+                <div class="d-flex flex-row">
+                    <ng-container *ngIf="widgetType == WIDGETS.HELP; else elseOverviewWidget">
+                        <h5 class="widget-title main-title">{{ 'CORE.powerpanel.help' | translate }}</h5>
+                    </ng-container>
+                    <ng-template #elseOverviewWidget>
+                        <div class="widget-title">{{ 'CORE.powerpanel.help' | translate }}</div>
+                    </ng-template>
+                </div>
+                <div class="app-version-details">
+                    <div>
+                        {{ 'CORE.powerpanel.alevateVersion' | translate:{ version: '1.5.3' } }}
+                    </div>
+                    <div>
+                        {{ 'CORE.powerpanel.copyrightSerrala' | translate:{ year: 2020 } }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="widget-details d-flex flex-column">
+                    <div class="item">
+                        Contact Support
+                    </div>
+                    <div class="item">
+                        About us
+                    </div>
+                    <div class="item">
+                        Terms of services
+                    </div>
+                    <div class="item">
+                        Privacy policy
+                    </div>
+                </div>
+                <div class="help-guide mt-auto">
+                    <div class="text-bold mb-2"> 
+                        Let's get started
+                    </div>
+                    <div class="item">
+                        <div>
+                            <i class="se-check-circle-fill"></i> <span>1. Contact Support</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <i class="se-check-circle"></i> <span>2. Add a payment file</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <i class="se-check-circle"></i> <span>3. Talk to Serra</span>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div>
+                            <i class="se-check-circle"></i> <span>4. Add to bookmark </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

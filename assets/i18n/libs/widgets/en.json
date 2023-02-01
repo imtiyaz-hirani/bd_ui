@@ -1,0 +1,30 @@
+{
+  "WIDGETS": {
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "manage": "Manage Dashboard",
+    "proc_overview": {
+      "title": "Process Overview",
+      "statements": "Imported Statements",
+      "advices": "Imported Remittance Advices",
+      "lockboxes": "Imported Lockboxes",
+      "provider": "Imported Payment Service Providers",
+      "systems": "Imported O/I Systems"
+    },
+    "proc_monitor": {
+      "title": "Process Monitor",
+      "grid_col": {
+        "date": "Date",
+        "status": "Status",
+        "department": "Department",
+        "comment": "Comment"
+      }
+    },
+    "sizes": {
+      "-1": "Disabled",
+      "0": "Small",
+      "1": "Medium",
+      "2": "Large"
+    }
+  }
+}

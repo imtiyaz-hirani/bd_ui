@@ -1,0 +1,73 @@
+{
+  "PAYMENTS": {
+    "PAYMENT_ITEMS": {
+      "HEADER_TITLE": "Payment Items",
+      "MESSAGES": {
+        "DELETE_SUCCESS_MESSAGE": "Payment is deleted successfully",
+        "APPROVE_SUCCESS_MESSAGE": "Payments are approved successfully",
+        "REJECT_SUCCESS_MESSAGE": "Payments are rejected successfully",
+        "SEND_SUCCESS_MESSAGE": "Payment is sent successfully",
+        "CONFIRM_APPROVE_MESSAGE": "Do you want to approve payments ?",
+        "CONFIRM_REJECT_MESSAGE": "Do you want to reject payments ?",
+        "CONFIRM_SEND_MESSAGE": "Do you want to send payments ?",
+        "CONFIRM_DELETE_MESSAGE": "Are you sure you want to delete the payments ?",
+        "DELETE_FAILURE_MESSAGE": "Failed to delete the payment",
+        "SINGLE_PAYMENT_DELETE_SUCCESS_MESSAGE": "Payment is deleted successfully",
+        "SINGLE_PAYMENT_APPROVE_SUCCESS_MESSAGE": "Payment is approved successfully",
+        "SINGLE_PAYMENT_REJECT_SUCCESS_MESSAGE": "Payment is rejected successfully",
+        "SINGLE_PAYMENT_CONFIRM_APPROVE_MESSAGE": "Do you want to approve payment ?",
+        "SINGLE_PAYMENT_CONFIRM_REJECT_MESSAGE": "Do you want to reject payment ?",
+        "SINGLE_PAYMENT_CONFIRM_DELETE_MESSAGE": "Are you sure you want to delete the payment {{ id }} ?",
+        "SINGLE_PAYMENT_CONFIRM_REMOVE_MESSAGE": "Are you sure you want to remove the payment {{ id }} ?",
+        "SINGLE_PAYMENT_CHANGE_EXECUTION_DATE_SUCCESS_MESSAGE": "Payment execution date changed successfully",
+        "SINGLE_PAYMENT_ITEM_DELETE_FROM_FILE_SUCCESS_MESSAGE": "{{ id }} deleted successfully from the payment message",
+        "SINGLE_PAYMENT_ITEM_REMOVE_FROM_FILE_SUCCESS_MESSAGE": "{{ id }} removed successfully from the payment message"
+      },
+      "BAR_HORIZONTAL_CONVERSION": {
+        "TITLE": "Payment Conversion Rate"
+      },
+      "BAR_HORIZONTAL_MONEY": {
+        "TITLE": "Money Out Flow Per Country"
+      },
+      "BAR_VERTICAL_MONEY": {
+        "TITLE": "Money Outflow Per Bank"
+      },
+      "DONUT_CHART": {
+        "TITLE": "Payments Per Bank"
+      },
+      "GRID": {
+        "COLUMNS": {
+          "FILE_ID": "File ID",
+          "INTERNAL_REFERENCE_ID": "Internal Reference Id",
+          "STATUS": "Status",
+          "AMOUNT": "Amount",
+          "CURRENCY": "Currency",
+          "PAYMENT_PARTNER": "Payment Partner",
+          "PAYMENT_PARTNER_ADDRESS": "Payment Partner Address",
+          "PAYMENT_PARTNER_COUNTRY": "Payment Partner Country",
+          "PAYMENT_PARTNER_ACCOUNT_NUMBER": "Payment Partner Account Number",
+          "PAYMENT_PARTNER_BANK": "Payment Partner Bank",
+          "PAYMENT_PARTNER_CURRENCY": "Payment Partner Currency",
+          "COMPANY": "Company",
+          "COMPANY_ADDRESS": "Company Address",
+          "COMPANY_COUNTRY": "Company Country",
+          "COMPANY_ACCOUNT_NUMBER": "Company Account Number",
+          "COMPANY_BANK": "Company Bank",
+          "COMPANY_BANK_ADDRESS": "Company Bank Address",
+          "COMPANY_BANK_COUNTRY": "Company Bank Country",
+          "COMPANY_CURRENCY": "Company Currency",
+          "TRANSACTION_REFERENCE_ID": "Transaction Reference Id",
+          "END_TO_END_ID": "End to End Id",
+          "PAYMENT_INFORMATION_ID": "Payment Information Id",
+          "MESSAGE_ID": "Message Id",
+          "REMITTANCE_INFORMATION": "Remittance Information",
+          "MANUAL_PAYMENT_INDICATOR": "Manual Payment Indicator",
+          "OUTBOUND_FILE_ID": "Outbound File Id",
+          "EXECUTION_DATE": "Execution Date",
+          "FORMAT_TYPE": "Format Type",
+          "ACTIONS": "Actions"
+        }
+      }
+    }
+  }
+}

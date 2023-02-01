@@ -1,0 +1,8 @@
+.widget-details{
+    & .notification-message{
+        width: 95%;
+    }
+    & .notitification-actions{
+        cursor: pointer;
+    }
+}

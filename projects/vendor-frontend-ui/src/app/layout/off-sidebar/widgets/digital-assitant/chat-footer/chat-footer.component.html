@@ -1,0 +1,28 @@
+    <div class="d-flex flex-row icon footer-input-parent">
+        <div class="serra-icon" [class.active]="powerPanelBottomMenu?.isActive">
+            <span (click)="showBotComponent(powerPanelBottomMenu?.key)"> 
+                <i [class]="powerPanelBottomMenu?.icon"></i>
+            </span>
+        </div>
+        <div class="serra-search">
+            <ejs-textbox class="search-filter" 
+            placeholder="{{ 'FEATURES.SERRA.placeholder' | translate }}"
+            [(ngModel)]="serraUserMessage"
+            (input)="inputUserMessage($event,powerPanelBottomMenu?.key)"
+            (keyup.enter)="sendMessage()"></ejs-textbox>
+        </div>
+        <div class="serra-mic">
+            <span *ngIf="serraUserMessage.trim().length === 0 else sendIcon" (mousedown)="listen()" 
+            (touchstart)="listen()"
+            (touchend)="destroySpeech()"
+            (mouseup)="destroySpeech()">
+                <i class="se-mic"></i>
+            </span>
+            <ng-template #sendIcon>
+                <span class="sendIcon" (click)="sendMessage()"
+                ng-class="{disabled : !disableVoiceButton, listnening : !disableVoiceButton}">
+                    <i class="se-send"></i>
+                </span>
+            </ng-template>
+         </div>
+    </div>

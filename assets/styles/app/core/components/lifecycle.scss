@@ -1,0 +1,99 @@
+@import "assets/styles/app/core/variables/variables";
+
+ /* stepper css */
+.serrala-lifecycle-container{
+.step-container {
+  width: 100%;
+}
+
+
+.v-stepper {
+  position: relative;
+}
+
+/* regular step */
+.step-circle {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: $malacehit;
+  z-index: 2;
+  margin-top: 0;
+
+  &.start {
+    background-color: $rose
+  }
+}
+
+.step-line {
+  height: 100%;
+  position: absolute;
+  border-left: 2px solid $mischka;
+}
+
+.step-line-card {
+  height: 158px;
+  position: absolute;
+  border-left: 2px solid $mischka;
+  top: 0;
+  left: 1px;
+}
+
+
+.stepper-content {
+  height: auto;
+  border: 1px solid $athens-gray;
+  border-radius: 2px;
+  min-width: 920px;
+
+  @media (max-width: 1023px) {
+    min-width: 350px;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1280px) {
+    min-width: 550px;
+  }
+}
+
+.step-detail-header {
+  font-size: map_get($serra-font, font-size);
+  font-weight: $font-weight-bold;
+  line-height: 20px;
+  letter-spacing: map_get($serra-font, letter-spacing);;
+  color: $serra-primary-content;
+}
+
+.step-detail-content {
+  font-size: map_get($serra-font, font-size);
+  font-weight: $font-weight;
+  line-height: 20px;
+  letter-spacing: map_get($serra-font, letter-spacing);;
+  color: $shuttle-gray;
+}
+
+.highlight-urgent {
+  border-left: 2px solid $serra-primary-dark;
+}
+
+.lifecycle-card-icon {
+  font-size: 30px;
+  color: $santas-gray;
+  cursor: pointer;
+}
+
+.level1-indent {
+  padding-top: 24px;
+}
+
+.level2-indent {
+  padding-top: 24px;
+  padding-left: 36px;
+}
+
+.level3-indent {
+  padding-top: 24px;
+  padding-left: 36px;
+}
+
+}

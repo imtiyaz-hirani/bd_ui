@@ -1,0 +1,30 @@
+{
+  "WIDGETS": {
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "manage": "Verwaltung Dashboard",
+    "proc_overview": {
+      "title": "Prozessübersicht",
+      "statements": "Importierte Auszüge",
+      "advices": "Importierte Avise",
+      "lockboxes": "Importierte Lockboxen",
+      "provider": "Importierte Zahlungsanbieter",
+      "systems": "Importierte O/I-Systeme"
+    },
+    "proc_monitor": {
+      "title": "Prozessmonitor",
+      "grid_col": {
+        "date": "Datum",
+        "status": "Status ",
+        "department": "Abteilung",
+        "comment": "Anmerkung"
+      }
+    },
+    "sizes": {
+      "-1": "Deaktiviert",
+      "0": "Klein",
+      "1": "Mittel",
+      "2": "Groß"
+    }
+  }
+}

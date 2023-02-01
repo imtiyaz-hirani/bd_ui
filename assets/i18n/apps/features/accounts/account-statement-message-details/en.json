@@ -1,0 +1,77 @@
+{
+    "ACCOUNTS": {
+        "ACCOUNT_STATEMENT_MESSAGE_DETAILS": {
+            "HEADER_TITLE": "Account Statement Messages",
+            "WIDGETS": {
+                "WIDGET1_TITLE": "Item Level Status",
+                "WIDGET2_TITLE": "Item Rejection Reason"
+            },
+            "TABS": {
+                "OVERVIEW": "Overview",
+                "LIFECYCLE": "Lifecycle"
+            },
+            "SECTIONS" : {
+                "HEADER_TITLE": "Details",
+                "ACCOUNT_STATEMENTS" : {
+                    "HEADER_LINK": "Go to list",
+                    "HEADER_TITLE": "Account Statements" 
+                },
+                "ACTIVITY_LIFECYCLE": {
+                    "HEADER_TITLE": "Activity Lifecycle",
+                    "HEADER_LINK": "Go to list"
+                },
+                "DETAILS":{
+                    "LABELS":{
+                        "FILE_ID":"File Id",
+                        "FORMAT_NAME":"Format Name",
+                        "INBOUND_CONNECTOR_NAME":"Inbound Connector Name",
+                        "NUMBER_OF_STATEMENTS":"Number of Statments",
+                        "OUTBOUND_CONNECTOR_NAME":"Outbound Connector Name",
+                        "SENDER_BANK_NAME":"Sender Bank Name",
+                        "SENDER_BIC":"Sender BIC",
+                        "STATEMENT_DATE":"Statement Date",
+                        "STATUS":"Status",
+                        "TOTAL_ITEM": "Total Items"
+                    }
+                }
+            }
+        },
+        "ACCOUNT_STATEMENT_DETAILS":{
+            "BREAD_CRUMB":"Statement Details",
+            "HEADER_TITLE": "Account Statements",
+            "WIDGETS": {
+                "WIDGET1_TITLE": "Item Level Status",
+                "WIDGET2_TITLE": "Item Rejection Reason"
+            },
+            "TABS": {
+                "OVERVIEW": "Overview",
+                "LIFECYCLE": "Lifecycle",
+                "STATEMENT":"Statement"
+            },
+            "SECTIONS" : {
+                "HEADER_TITLE": "Details",
+                "ACCOUNT_STATEMENTS" : {
+                    "HEADER_LINK": "Go to list",
+                    "HEADER_TITLE": "Account Statements" 
+                },
+                "ACTIVITY_LIFECYCLE": {
+                    "HEADER_TITLE": "Activity Lifecycle",
+                    "HEADER_LINK": "Go to list"
+                },
+                "DETAILS":{
+                    "LABELS":{
+                        "STATEMENT_ID":"Statement ID",
+                        "COMPANY_NAME":"Company Name",
+                        "ACCOUNT_NUMBER":"Account Number",
+                        "SENDER_BANK_NAME":"Sender Bank Name",
+                        "SENDER_BIC":"Sender BIC",
+                        "STATMENT_CURRENCY":"Statement Currency",
+                        "OPENING_BALANCE":"Opening Balance",
+                        "CLOSING_BALANCE":"Closing Balance",
+                        "NO_OF_ITEMS":"Number of items"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,144 @@
+<div class="global-navbar">
+    <div class="aside-container">
+        <ejs-sidebar #sidebarMenuInstance id="sidebar-container" class="e-hidden" (mouseenter)="showSidebar()"
+            (mouseleave)="hideSidebar()" (created)="onCreated($event)" [width]='width' [dockSize]='dockSize'
+            [enableDock]='enableDock'>
+            <div class="aside-inner">
+                <div class="logo" (click)="pinNavbar()" tabindex="1" >
+                    <span class="logo-img">
+                        <img [src]="appDetails?.logo" />
+                    </span>
+                    <span class="company-name">{{ appDetails?.name }}</span>
+                </div>
+                <nav class="sidebar">
+                    <ul class="sidebar-nav">
+                        <ng-container *ngFor='let item of menuItems; let index = index;'>
+                            <ng-container *ngIf="!item?.isSubmenu; else elseIfSubmenu">
+                                <li [routerLink]='item?.link' tabindex="{{ index + 1 }}" [class.active]="item?.isActive"
+                                    (mouseenter)="clearSubmenu('submenu')">
+                                    <span>
+                                        <span class="icon">
+                                            <i [class]="item.icon"></i>
+                                        </span>
+                                        <span class="text-link">{{ item?.text | translate }}</span>
+                                    </span>
+                                </li>
+                            </ng-container>
+                            <ng-template #elseIfSubmenu>
+                                <li tabindex="{{ index + 1 }}" (mouseenter)="showSubmenu('submenu', item?.text, item)"
+                                    (mouseleave)="hideSubmenu('submenu', item?.text)" [class.active]="item?.isActive">
+                                    <span>
+                                        <span class="icon">
+                                            <i [class]="item.icon"></i>
+                                        </span>
+                                        <span class="text-link">{{ item?.text | translate }}</span>
+                                        <span class="icon-arrow-right">
+                                            <i class="se-chevron-right"></i>
+                                        </span>
+                                    </span>
+                                </li>
+                            </ng-template>
+                        </ng-container>
+                    </ul>
+                </nav>
+
+                <ng-template let-menuLastTabIndex [ngTemplateOutletContext]="{ $implicit: (menuItems.length + 2 + 1) }"
+                    [ngTemplateOutlet]="t" #t>
+                    <nav class="sidebar bottom-sidebar">
+                        <ul class="sidebar-nav">
+                            <ng-container *ngFor='let item of bottomMenuItems; let index = index;'>
+                                <ng-container *ngIf="!item?.isSubmenu; else elseIfSubmenu">
+                                    <ng-container *ngIf="!item?.isLogout; else elseLogoutBtn" >
+                                        <li [routerLink]='item?.link' tabindex="{{ menuLastTabIndex + index }}" [class.active]="item?.isActive">
+                                            <div class="d-flex flex-row">
+                                                <ng-container *ngIf="item?.profilePic; else showIconContent">
+                                                    <div class="profile-pic-container">
+                                                        <div class="profile-pic">
+                                                            <img [src]="item?.profilePic" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="profile-pic-text-link text-link">{{ item?.text | translate }}</div>
+                                                </ng-container>
+                                                <ng-template #showIconContent>
+                                                    <div class="icon">
+                                                        <i [class]="item?.icon"></i>
+                                                    </div>
+                                                    <div class="text-link">{{ item?.text | translate }}</div>
+                                                </ng-template>
+                                                
+                                                
+                                            </div>
+                                        </li>
+                                    </ng-container>
+                                    <ng-template #elseLogoutBtn>
+                                        <li [routerLink]='item?.link' (click)="logoutUser()" tabindex="{{ menuLastTabIndex + index }}" [class.active]="item?.isActive">
+                                            <span>
+                                                <span class="icon">
+                                                    <i [class]="item?.icon"></i>
+                                                </span>
+                                                <span class="text-link">{{ item?.text | translate }}</span>
+                                            </span>
+                                        </li>
+                                    </ng-template>
+                                    
+                                </ng-container>
+                                <ng-template #elseIfSubmenu>
+                                    <li tabindex="{{ menuLastTabIndex + index }}" (mouseenter)="showSubmenu('submenu', item?.text, item)"
+                                    (mouseleave)="hideSubmenu('submenu', item?.text)" [class.active]="item?.isActive">
+                                        <span>
+                                            <span class="icon">
+                                                <i [class]="item?.icon"></i>
+                                            </span>
+                                            <span class="text-link">{{ item?.text | translate }}</span>
+                                            <span class="icon-arrow-right">
+                                                <i class="se-chevron-right"></i>
+                                            </span>
+                                        </span>
+                                    </li>
+                                </ng-template>
+                            </ng-container>
+                        </ul>
+                    </nav>
+                </ng-template>
+            </div>
+        </ejs-sidebar>
+    </div>
+
+    <div id="submenu" class="sidenav" (mouseenter)="activeSubmenu(true, 'submenu')"
+        (mouseleave)="activeSubmenu(false, 'submenu')">
+
+        <h5 class="h5-b pl-3 mb-1">
+            {{ submenuDetails?.text | translate }}
+        </h5>
+        
+        <div class="pl-3 pr-3">
+            <div>
+                <ejs-textbox placeholder="Search" floatLabelType="Auto" (input)="filterSubmenu($event)"></ejs-textbox>
+            </div>
+        </div>
+
+        <div class="submenu-list-container">
+            <ul class="submenu-list pt-4">
+                <ng-container *ngFor="let submenuItem of currentSubmenuItems">
+                    <li class="item level-{{ submenuItem?.subModuleLevel }}">
+                        <span>
+                            <span class="text-link">{{ submenuItem?.text | translate }}</span>
+                        </span>
+                    </li>
+
+                    <ng-container *ngIf="submenuItem?.submenu">
+                        <ng-container *ngFor="let subSubItem of submenuItem?.submenu">
+                            <li class="item level-{{ subSubItem?.subModuleLevel }}" [routerLink]='subSubItem?.link' routerLinkActive='active'>
+                                <span>
+                                    <span class="text-link">{{ subSubItem?.text | translate }}</span>
+                                </span>
+                            </li>
+                        </ng-container>
+                    </ng-container>
+
+                    <div class="mb-4"></div>
+                </ng-container>
+            </ul>
+        </div>
+    </div>
+</div>

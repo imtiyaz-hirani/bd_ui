@@ -1,0 +1,12 @@
+textarea.e-input,
+.e-float-input textarea,
+.e-float-input.e-control-wrapper textarea,
+.e-input-group textarea,
+.e-input-group.e-control-wrapper textarea {
+    resize: none;
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.5;
+}

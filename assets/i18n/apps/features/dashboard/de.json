@@ -1,0 +1,53 @@
+{
+  "DASHBOARD": {
+    "HEADER": {
+      "DASHBOARDS": "Dashboards",
+      "PAYMENT_DASHBOARD": "Payment Dashboard",
+      "MY_DASHBOARD": "My Dashboard",
+      "PAYMENT_MESSAGE": "Payment Message",
+      "PAYMENT_ITEMS": "Payment Items",
+      "ACCOUNT_OVERVIEW": "Account Overview",
+      "PAYMENT_UPDATES": "Payment Updates"
+    },
+    "BANK_FUNNEL": {
+      "TITLE": "Bank Statement Validation"
+    },
+    "ERROR_RATE_LINE": {
+      "TITLE": "Error Rate (Rejected Files)"
+    },
+    "FILE_STATUS_DONUT": {
+      "TITLE": "Payment Message by Status"
+    },
+    "HIGHEST_AMOUNT_BAR": {
+      "TITLE": "Top 5 to be Approved (by Amount)"
+    },
+    "MONEY_OUTFLOW_LINE": {
+      "TITLE": "Balances by Bank"
+    },
+    "MONEY_OUTFLOW_BANK_BAR": {
+      "TITLE": "Money Out Flow per Bank"
+    },
+    "MONEY_OUTFLOW_COUNTRY_BAR": {
+      "TITLE": "Money Out Flow per Country"
+    },
+    "PAYMENT_CONVERSION_BAR": {
+      "TITLE": "Payment Conversion Rate"
+    },
+    "PAYMENT_ITEMS_DONUT": {
+      "TITLE": "Payment Items Sent",
+      "TOOLTIP_HEADER": "Payment Items"
+    },
+    "SUCCESS_RATIO_BAR": {
+      "TITLE": "Bank/PSP Acceptance"
+    },
+    "BUTTONS": {
+      "EDIT": "Edit"
+    },
+    "IMPORT_ERROR_RATIO": {
+      "TITLE": "Import Error Ratio"
+    },
+    "UNMATCHED_STATUS_MESSAGE": {
+      "TITLE": "Unmatched Status Message"
+    } 
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "name": "Serrala Alevate Documentation",
+    "hideGenerator": true,
+    "customFavicon": "assets/images/favicon.png",
+    "customLogo": "assets/images/logo.svg",
+    "theme": "Readthedocs",
+    "silent": false,
+    "extTheme": "compodoc/"
+}

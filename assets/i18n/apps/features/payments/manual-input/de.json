@@ -1,0 +1,21 @@
+{
+  "PAYMENTS": {
+    "MANUAL_INPUT": {
+      "TEMPLATE_DIALOG_HEADER": "Save as New Template",
+      "ENTERTEMPLATENAME": "Enter Template Name",
+      "SETDEFAULT": "Set as Default Template",
+      "DELETETEMPLATE": "Do you want to delete the template {{templateName}} ?",
+      "TEMPLATESAVEDSUCESS": "Template saved successfully",
+      "TEMPLATEDELETED": "Template deleted successfully",
+      "BUTTONS": {
+        "SUBMIT": "Submit",
+        "SAVE": "Save",
+        "CANCEL": "Cancel",
+        "SAVE_NEW_TEMPLATE": "Save as new Template",
+        "NO": "No",
+        "YES": "Yes"
+      },
+      "TITLE": "Manual Input"
+    }
+  }
+}

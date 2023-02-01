@@ -1,0 +1,83 @@
+<div id="grid" class="serrala-grid">
+  <ejs-grid #grid  [width]="'100%'"
+    [dataSource]="data"
+    [gridLines]="'Both'" class="datagrid"
+    [height]="600"
+    [allowSorting]="true" [allowResizing]="true"
+    [showColumnMenu]="true" [allowReordering]="true"
+    [allowFiltering]="true" [allowExcelExport]="true"
+    [allowPdfExport]="true"
+    [allowSelection]="false"
+    [showColumnChooser]="true"
+    [infiniteScrollSettings]="infiniteOptions"
+    [sortSettings]="initialSort"
+    [toolbar]="toolbar"
+    (load)="load()"
+    (dataBound)="dataBound()"
+    >
+    <e-columns>
+      <e-column  headerText="Stray No" field="Stray No" width='150'></e-column>
+      <e-column  headerText="Stray Date" field="Stray Date"></e-column>
+      <e-column  headerText="Stray Loc" field="Stray Loc"></e-column>
+      <e-column  headerText="Emp Code" field="Emp Code"></e-column>
+      <e-column  headerText="Emp Name" field="Emp Name"></e-column>
+      <e-column  headerText="PackDesc" field="PackDesc"></e-column>
+      <e-column  headerText="AwbNo" field="AwbNo"></e-column>
+      <e-column  headerText="Remarks" field="Remarks"></e-column>
+      <e-column  headerText="Status" field="Status"></e-column>
+      <e-column  headerText="Vehicle No" field="Vehicle No"></e-column>
+      <e-column  headerText="Vehicle Orgin" field="Vehicle Orgin"></e-column>
+      <e-column  headerText="Route" field="Route"></e-column>
+      <e-column  headerText="Commodity" field="Commodity"></e-column>
+      <e-column  headerText="Update Date" field="Update Date"></e-column>
+      <e-column  headerText="Update Emp" field="Update Emp"></e-column>
+      <e-column  headerText="Display Image" field="Display Image"></e-column>
+    </e-columns>
+  </ejs-grid>
+</div>
+
+<ng-template #leftToolBarTemplate let-data>
+  <div class="toolbar left-toolbar-items">
+      <div class="search-bar" >
+          <div class="d-flex flex-row">
+              <div>
+                <input id="gridGlobalSearch" placeholder="{{'SHARED.GRID.TOOLBAR.RECORD_SELECTION.SEARCH' | translate}}" (change)="search($event)"  />
+              </div>
+          </div>
+  </div>
+  </div>
+</ng-template>
+
+<ng-template #rightToolBarTemplate let-data>
+  <div class="toolbar right-toolbar-items">
+      <div class="icon d-flex row-flex">
+
+
+          <div class="icon-item" [ngClass]="currentActiveTool == 'groupBy' ? 'active' : ''"
+              title="{{'SHARED.GRID.TOOLBAR.RECORD_ACTIONS.GROUP_BY' | translate}}">
+              <i class="se-groupby" (click)="opengrouping()"></i>
+          </div>
+
+          <div class="icon-item" id="columnChooserIcon"
+              [ngClass]="currentActiveTool == 'columnChooser' ? 'active' : ''"
+              title="{{'SHARED.GRID.TOOLBAR.RECORD_ACTIONS.COLUMN_CHOOSER' | translate}}">
+              <i class="se-view-columns" (click)="openColumnChooser()"></i>
+          </div>
+
+          <div class="icon-item" [ngClass]="currentActiveTool == 'search' ? 'active' : ''"
+              title="{{'SHARED.GRID.TOOLBAR.RECORD_ACTIONS.SEARCH' | translate}}">
+              <i class="se-search" (click)="focusSearch()"></i>
+          </div>
+
+          <div class="icon-item" [ngClass]="currentActiveTool == 'search' ? 'active' : ''"
+              title="Excel download">
+              <i class="se-Export" (click)="exportExcel()"></i>
+          </div>
+
+
+
+      </div>
+  </div>
+</ng-template>
+
+

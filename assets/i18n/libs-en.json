@@ -1,0 +1,11 @@
+{
+  "$merge": {
+    "source": {
+    },
+    "with": {
+      "$import": [
+        "libs/widgets/en.json"
+      ]
+    }
+  }
+}

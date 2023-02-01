@@ -1,0 +1,79 @@
+@import "../../../../../../../assets/styles/app/core/variables/variables";
+
+::ng-deep .bulk-action-dialog {
+    .e-dlg-header-content {
+        border-bottom: 1px solid $ghost;
+        .e-dlg-header {
+            font-weight: bold;
+            font-size: 18px;
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+    .dialogContent {
+        padding: 18px 28px;
+        font-size: 14px;
+        .selected-text {
+            font-weight: bold;
+        }
+        .error-section {
+            padding: 1em;
+            font-size: 13px;
+            width: 100%;
+            .se-icon {
+                color: $razzmatazz;
+                font-size: 21px;
+            }
+            background-color: $pale-rose;
+            border: 1px solid $razzmatazz;
+            border-radius: 2px;
+        }
+        .e-link {
+            color: $blue-ribbon;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    .footer-section {
+        width:100%;
+        padding: 0px 6px;
+        .footer-info-text {
+            color: $ghost-gray;
+            font-size: 14px;
+            word-break: break-all;
+        }
+    }
+    
+    ::ng-deep .e-footer-content {
+        padding: 25px !important;
+        background-color: $lily-white;
+    }
+    
+    ::ng-deep .e-dlg-content {
+        &::-webkit-scrollbar {
+            width: 14px;
+            height: 18px;
+        }
+        &::-webkit-scrollbar-thumb {
+            height: 6px;
+            border: 4px solid rgba(0, 0, 0, 0);
+            background-clip: padding-box;
+            -webkit-border-radius: 7px;
+            background-color: rgba(0, 0, 0, 0.15);
+            -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+        }
+        &::-webkit-scrollbar-button {
+            width: 0;
+            height: 0;
+            display: none;
+        }
+        &::-webkit-scrollbar-corner {
+            background-color: transparent;
+        }
+    }
+}
+

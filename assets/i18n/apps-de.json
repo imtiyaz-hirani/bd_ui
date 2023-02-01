@@ -1,0 +1,45 @@
+{
+    "$merge": {
+      "source": {
+        "$import": [
+          "apps/masterdata/de.json",
+          "apps/masterdata/country/de.json",
+          "apps/masterdata/currency/de.json",
+          "apps/masterdata/external-service-provider/de.json",
+          "apps/masterdata/customer/de.json",
+          "apps/masterdata/master-bank/de.json",
+          "apps/masterdata/company/de.json",
+          "apps/masterdata/accounts/de.json",
+          "apps/masterdata/cashflow-type/de.json",
+          "apps/masterdata/list-of-values/de.json",
+          "apps/masterdata/fx-rates/de.json",
+          "apps/masterdata/external-system/de.json"
+        ]
+      },
+      "with": {
+        "$import": [
+          "apps/features/serra/de.json",
+          "apps/features/payments/payment-message/de.json",
+          "apps/features/payments/payment-message-details/de.json",
+          "apps/features/payments/payment-item-details/de.json",
+          "apps/features/payments/payment-items/de.json",
+          "apps/features/payments/quick-pay/de.json",
+          "apps/features/payments/manual-input/de.json",
+          "apps/features/payments/generate-payments/de.json",
+          "apps/features/payments/bank-status/de.json",
+          "apps/features/dashboard/de.json",
+          "apps/shared/de.json",
+          "apps/features/accounts/account-statements/de.json",
+          "apps/features/accounts/control-center/de.json",
+          "apps/features/accounts/statement-items/de.json",
+          "apps/settings/status-message-settings/de.json",
+          "apps/collections/accounting-files/en.json",
+          "apps/features/connector-settings/de.json",
+          "apps/settings/status-message-settings/de.json",
+          "apps/settings/duplicate-check-status/en.json",
+          "apps/features/accounts/unknown-accounts/de.json",
+          "apps/features/accounts/account-statement-message-details/en.json"
+        ]
+    }
+  }
+}

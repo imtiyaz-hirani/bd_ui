@@ -1,0 +1,30 @@
+<div id="communications-widget" class="widget-wrapper" [class]="widgetType == WIDGETS.SERRA ? 'digital-assitant-widget' : ''">
+    <div class="widget-container">
+        <div class="row ">
+            <div class="col-12 widget-header">
+                <ng-container *ngIf="widgetType == WIDGETS.SERRA">
+                    <div class="widget-header--title">
+                        <div class="d-flex flex-row">
+                            <h5 class="widget-title main-title">{{ 'CORE.powerpanel.serra' | translate }} </h5>
+                            <div class="widget-settings d-flex flex-row ml-auto">
+                                <div>
+                                    <i class="se-control-panel"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <ejs-textbox class="search-filter" placeholder="{{ 'CORE.powerpanel.placeholder.search' | translate }}" floatLabelType="Auto"
+                        (input)="searchFilter($event)"></ejs-textbox>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    <div class="row ">
+        <div class="col-12" >
+            <div class="messages pt-5">
+                <app-chat-panel [botResponse]="botResponse" [messages]="messages | async"></app-chat-panel>
+            </div>
+        </div>
+    </div>
+</div>

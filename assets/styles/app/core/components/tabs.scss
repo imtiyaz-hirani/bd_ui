@@ -1,0 +1,26 @@
+.serrala-tab {
+    &.e-tab {
+        .e-tab-header {
+            .e-indicator {
+                background: transparent;
+            }
+            .e-toolbar-item.e-active {
+                .e-text-wrap {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 20px;
+                    letter-spacing: 0.2px;
+                    color:$serra-primary-content;
+                    .e-tab-text {
+                        color: $serra-primary-content;
+                        font-weight: bold;
+                    }
+                }
+                .e-tab-wrap {
+                    border-radius: 3px;
+                    background-color: $athens-gray;
+                }
+            } 
+        }
+    }
+}

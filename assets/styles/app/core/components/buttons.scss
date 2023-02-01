@@ -1,0 +1,63 @@
+button {
+    text-transform: none;
+    letter-spacing: 0.2px;
+    &.e-btn, &.e-css.e-btn {
+        box-shadow: none;
+        // height: 32px;
+        line-height: 22px;
+        &.e-small {
+            font-size: 12px;
+            line-height: 1.33;
+        }
+        &.e-control.e-btn.e-lib {
+            min-width: 85px;
+            &.e-small, &.e-round {
+                min-width: auto;
+            }
+            &.e-small:not(.e-round) {
+                min-width: 64px;
+            }
+            &.e-custom:not(.e-round) {
+                min-width: 30px;
+                padding: 1px;
+            }
+            &.e-primary:disabled {
+                background-color: $serra-primary-button-disabled-bg;
+                color: $serra-primary-button-disabled-color;
+            }
+            &.se-text-icon-btn {
+                padding: 4px 14px;
+                min-width: 115px;
+            }
+            &.e-dlg-closeicon-btn {
+                min-width: auto;
+                background: transparent;
+                width: auto;
+                .e-icon-dlg-close {
+                    color: $santas-gray;
+                }
+            }
+        }
+
+    }
+    &.se-icon-btn {
+        min-width: auto !important;
+        &.small {
+            line-height: 20px;
+            padding: 0 1px;
+        }
+        &.download-icon-btn {
+            padding: 0px 2px;
+            display: flex;
+            height: 32px;
+            align-items: center;
+            
+            i, em {
+                font-size: 25px;
+            }
+        }
+    }
+
+    
+
+}

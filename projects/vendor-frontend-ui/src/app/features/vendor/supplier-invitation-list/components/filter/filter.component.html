@@ -1,0 +1,44 @@
+<div id="dailogbox" class="control-section">
+  <div #container class='root-container'></div>
+  <ejs-dialog class="serra-popup-query-builder" id='dialog' #ejDialog [header]="'SHARED.PF_SERRALA_DIALOG.HEADER_TITLE' | translate" [target]="target" [buttons]='buttons'
+  width='800px'  showCloseIcon='true' height='auto' (close)="dialogClosed()"  [position]='dialogPosition' [visible] ='dialogVisible'>
+
+  <ng-template #content>
+    <ejs-querybuilder #querybuilder class="row" width="70%" [dataSource]="dataSource" [rule]="importRules" (created)="createdControl()">
+      <e-columns>
+        <e-column field="EmployeeID" label="Employee ID" type="number"></e-column>
+        <e-column field="FirstName" label="First Name" type="string"></e-column>
+        <e-column field="TitleOfCourtesy" label="Title Of Courtesy" type="boolean" [values]="values"></e-column>
+        <e-column field="Title" label="Title" type="string"></e-column>
+        <e-column field="HireDate" label="Hire Date" type="date" format="dd/MM/yyyy"></e-column>
+        <e-column field="Country" label="Country" type="string"></e-column>
+        <e-column field="City" label="City" type="string"></e-column>
+      </e-columns>
+    </ejs-querybuilder>
+  </ng-template>
+
+  <ng-template #footerTemplate>
+    <div class="d-flex flex-row align-items-center">
+      <div class="left-content pl-2">
+        <div class="body-2">{{'SHARED.PF_SERRALA_DIALOG.DIALOG_LABELS.RESULTS' | translate: {rowCount: '0'} }}</div>
+      </div>
+      <div class="right-content ml-auto">
+        <div class="d-flex flex-row align-items-center">
+          <div class="mr-2">
+            <a (click)="resetFilter()">{{'SHARED.PF_SERRALA_DIALOG.DIALOG_LABELS.CLEAR_ALL' | translate}}</a>
+          </div>
+          <div class="mr-2">
+            <button ejs-button  cssClass="e-small" (click)="hideDialog()">{{'SHARED.PF_SERRALA_DIALOG.DIALOG_LABELS.CANCEL' | translate}}</button>
+          </div>
+          <div>
+            <button ejs-button [isPrimary]="true" cssClass="e-small" (click)="applyFilter()">{{'SHARED.PF_SERRALA_DIALOG.DIALOG_LABELS.APPLY' | translate}}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+</ejs-dialog>
+</div>
+
+

@@ -1,0 +1,215 @@
+{
+  "FEATURES": {
+      "PAYMENTS": {
+          "PAYMENT_MESSAGES": {
+              "HEADER_TITLE": "Payment Messages",
+              "CUSTOM_VIEW": "My custom view",
+              "BUTTONS": {
+                  "IMPORT_BTN": "Import"
+              },
+              "MANUAL_IMPORT": {
+                  "HEADER_TITLE": "Payment File Import",
+                  "LABELS": {
+                      "FORMAT": "Format",
+                      "FILE_ENCODING": "File Encoding",
+                      "OUTBOUND_CONNECTOR": "Outbound Connector"
+                  },
+                  "UPLOADER_TEXT": "Drop files here or",
+                  "UPLOADER_LINK_TEXT": "Browse",
+                  "BUTTONS": {
+                      "CLEAR_ALL": "Clear All",
+                      "CANCEL": "Cancel",
+                      "IMPORT": "Import"
+                  },
+                  "ERROR_MESSAGES": {
+                      "FORMAT_REQUIRED": "* Please select format",
+                      "ENCODING_REQUIRED": "* Please select file encoding",
+                      "CONNECTOR_REQUIRED": "* Please select outbound connector",
+                      "GET_FORMAT_LIST_API_ERROR": "Error getting format list",
+                      "GET_FILE_ENCODING_LIST_API_ERROR": "Error getting file encoding list",
+                      "GET_CONNECTOR_LIST_API_ERROR": "Error getting connector list",
+                      "FILE_UPLOAD_API_ERROR": "File import failed",
+                      "FILE_UPLOAD_API_SUCCESS": "File uploaded successfully"
+                  }
+              },
+              "BANK_STATUS": {
+                "HEADER_TITLE": "Bank Status Message",
+                "LABELS": {
+                  "RECEIVED": "Received",
+                  "SLA_BREACH": "SLA Breach",
+                  "FILE_SENT_TIME": "Status message expectation for file sent at",
+                  "STATUS_STATEMENT":"{{noOfStatusMessageFormats}} Status messages expected, {{totalFilesReceived}} status messages received, SLA  breached for {{slaBreachedMessageCount}} status messages.",
+                  "STATUS_NOT_MATCHED": "Status messages are not matched.",
+                  "NOT_MATCHED_STATUS_INFO": "User can manually link not-matched status",
+                  "EXPECTED": "Expected by"
+                }
+              }
+          },
+          "PAYMENT_MESSAGE_DETAILS": {
+              "HEADER_TITLE": "Payment Message",
+              "HEADER_TITLE_TO_APPROVE": "To approve",
+              "TABS": {
+                  "OVERVIEW": "Overview",
+                  "LIFECYCLE": "Lifecycle"
+              },
+              "SECTIONS": {
+                  "DETAILS": {
+                      "HEADER_TITLE": "Details",
+                      "LABELS": {
+                          "IMPORT_TYPE": "Mode",
+                          "COMPANY_NAME": "Company Name",
+                          "COMPANY_BANK": "Company Bank",
+                          "INBOUND_CONNECTOR": "Inbound Connector",
+                          "OUTBOUND_CONNECTOR": "Outbound Connector",
+                          "TOTAL_TXN": "No of Transactions",
+                          "SUM_TXN": "Sum of Transactions"
+                      }
+                  },
+                  "ACTIVITY_LIFECYCLE": {
+                      "HEADER_TITLE": "Activity Lifecycle",
+                      "HEADER_LINK": "Go to list"
+                  },
+                  "PAYMENT_ITEMS": {
+                      "HEADER_TITLE": "Payment Items",
+                      "HEADER_LINK": "Go to list",
+                      "CHARTS": {
+                        "PAYMENT_PARTNERS_CHART": {
+                          "TITLE": "Top 5 Payment Partners",
+                          "NAME": "Payment Partner"
+                        },
+                        "PAYMENT_ITEMS_AMOUNT_RANGE_CHART": {
+                          "TITLE": "Range of amounts",
+                          "NAME": "Payment Item"
+                        }
+                      }
+                  },
+                  "REMARKS": {
+                      "HEADER_TITLE": "Remarks",
+                      "HEADER_LINK": "View all"
+                  }
+              },
+              "BUTTONS": {
+                  "APPROVE": "Approve",
+                  "REJECT": "Reject",
+                  "DELETE": "Delete"
+              },
+              "MESSAGES": {
+                "DELETE_SUCCESS_MESSAGE": "Payment message deleted successfully",
+                "APPROVE_SUCCESS_MESSAGE": "Payment message approved successfully",
+                "REJECT_SUCCESS_MESSAGE": "Payment message rejected successfully",
+                "SEND_SUCCESS_MESSAGE": "Payment message sent successfully",
+                "CONFIRM_APPROVE_MESSAGE": "Do you want to approve payment message ?",
+                "CONFIRM_REJECT_MESSAGE": "Do you want to reject payment message?",
+                "CONFIRM_SEND_MESSAGE": "Do you want to send payment message?",
+                "CONFIRM_DELETE_MESSAGE": "Are you sure you want to delete the payment message?",
+                "DELETE_FAILURE_MESSAGE": "Failed to delete payment message",
+                "STATUS_UPDATE_ERROR_MESSAGE": "Failed to update status for payment message"
+              }
+          },
+
+          "PAYMENT_ITEM_DETAILS": {
+            "HEADER_TITLE": "Payment Item",
+            "HEADER_TITLE_TO_APPROVE": "To approve",
+            "TABS": {
+              "OVERVIEW": "Overview",
+              "DETAILS": "Details",
+              "LIFECYCLE": "Lifecycle"
+            },
+            "SECTIONS": {
+              "DETAILS": {
+                "HEADER_TITLE": "Details",
+                "HEADER_LINK": "Edit",
+                "LABELS": {
+                  "FILE_ID": "File ID",
+                  "INTERNAL_REF_ID": "Internal Reference ID",
+                  "EXECUTION_DATE": "Execution Date",
+                  "COMPANY_NAME": "Company Name",
+                  "COMPANY_BANK": "Company Bank",
+                  "PARTNER_NAME": "Partner Name",
+                  "PARTNER_BANK": "Partner Bank"
+                }
+              },
+              "LIFECYCLE": {
+                "HEADER_TITLE": "Lifecycle",
+                "HEADER_LINK": "View all"
+              }
+            },
+            "BUTTONS": {
+              "APPROVE": "Approve",
+              "REJECT": "Reject",
+              "DELETE": "Delete"
+            },"MESSAGES": {
+              "DELETE_SUCCESS_MESSAGE": "Payment is deleted successfully",
+              "APPROVE_SUCCESS_MESSAGE": "Payment is approved successfully",
+              "REJECT_SUCCESS_MESSAGE": "Payment is rejected successfully",
+              "SEND_SUCCESS_MESSAGE": "Payment is sent successfully",
+              "CONFIRM_APPROVE_MESSAGE": "Do you want to approve payment ?",
+              "CONFIRM_REJECT_MESSAGE": "Do you want to reject payment ?",
+              "CONFIRM_SEND_MESSAGE": "Do you want to send payment ?",
+              "CONFIRM_DELETE_MESSAGE": "Are you sure you want to delete the payment ?",
+              "DELETE_FAILURE_MESSAGE": "Failed to delete the payment"
+            }
+          },
+        "QUICK_PAY": {
+          "PAYMENT_ITEMS": "Payment items",
+          "BUTTONS": {
+            "CONTINUE": "Continue",
+            "CANCEL": "Cancel"
+          },
+          "TITLE": "Quick Pay",
+          "FIELDS": {
+            "I": "I",
+            "SOMEBODY": "Somebody",
+            "CURRENCY": "Currency",
+            "AMOUNT": "Amount",
+            "WANTTO": "want to",
+            "PAYTO": "pay to",
+            "MESSAGE": "Write a note for beneficiary"
+          }
+        },
+        "MANUAL_INPUT": {
+          "TEMPLATE_DIALOG_HEADER": "Save as New Template",
+          "ENTERTEMPLATENAME":"Enter Template Name",
+          "SETDEFAULT": "Set as Default Template",
+          "DELETETEMPLATE": "Do you want to delete the template {{templateName}} ?",
+          "TEMPLATESAVEDSUCESS": "Template saved successfully",
+          "TEMPLATEDELETED": "Template deleted successfully",
+          "BUTTONS": {
+            "SUBMIT": "Submit",
+            "SAVE": "Save",
+            "CANCEL" : "Cancel",
+            "SAVE_NEW_TEMPLATE": "Save as new Template",
+            "NO": "No",
+            "YES": "Yes"
+          },
+          "TITLE": "Manual Input"
+        },
+        "PAYMENT_ITEMS":{
+          "HEADER_TITLE": "Payment Items",
+          "MESSAGES": {
+            "DELETE_SUCCESS_MESSAGE": "Payment is deleted successfully",
+            "APPROVE_SUCCESS_MESSAGE": "Payments are approved successfully",
+            "REJECT_SUCCESS_MESSAGE": "Payments are rejected successfully",
+            "SEND_SUCCESS_MESSAGE": "Payment is sent successfully",
+            "CONFIRM_APPROVE_MESSAGE": "Do you want to approve payments ?",
+            "CONFIRM_REJECT_MESSAGE": "Do you want to reject payments ?",
+            "CONFIRM_SEND_MESSAGE": "Do you want to send payments ?",
+            "CONFIRM_DELETE_MESSAGE": "Are you sure you want to delete the payments ?",
+            "DELETE_FAILURE_MESSAGE": "Failed to delete the payment"
+          }
+        },
+        "GENERATE_PAYMENTS": {
+          "MODAL": {
+            "TITLE": "Choose Outbound Connector",
+            "OUTBOUND_CONNECTOR":"Outbound Connector",
+            "BUTTONS": {
+              "YES": "Yes",
+              "NO": "No"
+            },
+            "SINGLE_ERROR_MESSAGE": "Please resolve {{ errorMessagesLength }} error to proceed",
+            "MULTIPLE_ERROR_MESSAGE": "Please resolve {{ errorMessagesLength }} errors to proceed"
+          }
+        }
+      }
+  }
+}

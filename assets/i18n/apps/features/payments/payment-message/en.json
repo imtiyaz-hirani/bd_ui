@@ -1,0 +1,108 @@
+{
+  "PAYMENTS": {
+    "PAYMENT_MESSAGES": {
+      "HEADER_TITLE": "Payment Messages",
+      "CUSTOM_VIEW": "My custom view",
+      "ACTIONS": {
+        "APPROVE": "Approve",
+        "REJECT": "Reject",
+        "SEND": "Send",
+        "PAYMENT_ITEMS": "payment items",
+        "DELETE": "Delete",
+        "SEND_TO_BANK": "Send to bank",
+        "CHANGE_EXECUTION_DATE": "Change Execution Date",
+        "REGENERATE_PAYMENT": "Regenerate Payment"
+      },
+      "BUTTONS": {
+        "IMPORT_BTN": "Import"
+      },
+      "MANUAL_IMPORT": {
+        "HEADER_TITLE": "Payment File Import",
+        "LABELS": {
+          "FORMAT": "Format",
+          "FILE_ENCODING": "File Encoding",
+          "OUTBOUND_CONNECTOR": "Outbound Connector"
+        },
+        "UPLOADER_TEXT": "Drop files here or",
+        "UPLOADER_LINK_TEXT": "Browse",
+        "BUTTONS": {
+          "CLEAR_ALL": "Clear All",
+          "CANCEL": "Cancel",
+          "IMPORT": "Import"
+        },
+        "ERROR_MESSAGES": {
+          "FORMAT_REQUIRED": "* Please select format",
+          "ENCODING_REQUIRED": "* Please select file encoding",
+          "CONNECTOR_REQUIRED": "* Please select outbound connector",
+          "GET_FORMAT_LIST_API_ERROR": "Error getting format list",
+          "GET_FILE_ENCODING_LIST_API_ERROR": "Error getting file encoding list",
+          "GET_CONNECTOR_LIST_API_ERROR": "Error getting connector list",
+          "FILE_UPLOAD_API_ERROR": "File import failed",
+          "FILE_UPLOAD_API_SUCCESS": "File uploaded successfully"
+        }
+      },
+      "BANK_STATUS": {
+        "HEADER_TITLE": "Bank Status Message",
+        "LABELS": {
+          "RECEIVED": "Received",
+          "SLA_BREACH": "SLA Breach",
+          "FILE_SENT_TIME": "Status message expectation for file sent at",
+          "STATUS_STATEMENT": "{{noOfStatusMessageFormats}} Status messages expected, {{totalFilesReceived}} status messages received, SLA  breached for {{slaBreachedMessageCount}} status messages.",
+          "STATUS_NOT_MATCHED": "Status messages are not matched.",
+          "NOT_MATCHED_STATUS_INFO": "User can manually link not-matched status",
+          "EXPECTED": "Expected by",
+          "STATUS_MESSAGE_OVERDUE": "Status Message Overdue"
+        }
+      },
+      "DONUT": {
+        "TITLE": "{{paymentMessageCount}} Payment Messages"
+      },
+      "FILE_STATUS_DONUT": {
+        "TITLE": "Payment Messages by Status"
+      },
+      "LINE_CHART": {
+        "TITLE": "Error Rate (Rejected Files)"
+      },
+      "PF_BARCHART": {
+        "TITLE": "Bank/PSP Acceptance"
+      },
+      "PF_BARCHART_HORIZONTAL": {
+        "TITLE": "Top 5 to be Approved (by Amount)"
+      },
+      "GRID": {
+        "COLUMNS": {
+          "FILE_ID": "File ID",
+          "FILE_NAME": "File Name",
+          "STATUS": "Status",
+          "COMPANY": "Company",
+          "SUM_OF_TXN": "Sum of all Txn",
+          "TOTAL_TXN": "Total Txn in file",
+          "CURRENCY": "Currency",
+          "OUTBOUND_CONNECTOR": "Outbound Connector",
+          "IMPORT_DATETIME": "Import Date Time",
+          "COMPANY_COUNTRY": "Company's Country",
+          "INBOUND_ADAPTER": "Inbound Adapter",
+          "MODE": "Mode",
+          "STATUS_MESSAGE": "Status Message",
+          "MESSAGE_ID": "Message ID",
+          "EXECUTION_DATE": "Execution Date",
+          "ACTIONS": "Actions"
+        }
+      },
+      "MESSAGES": {
+        "DELETE_FILE_SUCCESS_MESSAGE": "File deleted successfully",
+        "APPROVE_FILE_SUCCESS_MESSAGE": "File approved successfully",
+        "REJECT_FILE_SUCCESS_MESSAGE": "File rejected successfully",
+        "SEND_FILE_SUCCESS_MESSAGE": "File sent successfully",
+        "DELETE_FILE_CONFIRM_MESSAGE": "Do you want to delete payment file {{ file }}?",
+        "APPROVE_FILE_CONFIRM_MESSAGE": "Do you want to approve payment file {{ file }}?",
+        "SEND_FILE_CONFIRM_MESSAGE": "Do you want to send payment file {{ file }}?",
+        "REJECT_FILE_CONFIRM_MESSAGE": "Do you want to reject payment file {{ file }}?",
+        "REGENERATE_PAYMENT_CONFIRM_MESSAGE": "Do you want to regenerate payment?",
+        "REGENERATE_PAYMENT_SUCCESS_MESSAGE": "Payment regenerated successfully",
+        "FILE_EXECUTION_DATE_CHANGED_SUCCESS_MESSAGE": "File execution date changed successfully"
+      }
+    }
+  }
+}
+

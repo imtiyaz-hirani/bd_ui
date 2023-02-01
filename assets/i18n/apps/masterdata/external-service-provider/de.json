@@ -1,0 +1,202 @@
+{
+  "MASTERDATA": {
+    "externalServiceProvider": {
+      "fileName": "Collection_Agency_Data",
+      "headerTitle": "Collection Agencies",
+      "buttons": {
+        "addButton": "Add",
+        "downloadActionItems": {
+          "exportExcel": "Export to Excel",
+          "exportPDF": "Export to PDF"
+        }
+      },
+      "grid": {
+        "columns": {
+          "externalServiceProviderId": "Collection Agency ID",
+          "shortName": "Short Name",
+          "serviceProviderName": "Collection Agency Name",
+          "activeFlag": "Active Flag",
+          "contractId": "Contract ID",
+          "contactName": "Contact Name",
+          "title": "Title",
+          "firstName": "First Name",
+          "middleName": "Middle Name",
+          "lastName": "Last Name",
+          "designation": "Designation",
+          "contactEmail": "Contact Email",
+          "contactPhone": "Contact Phone",
+          "actions": "Actions"
+        },
+        "messages": {
+          "deleteSuccess": "Collection Agency deleted successfully",
+          "deleteError": "Error deleting Collection Agency",
+          "confirmDeleteDialogHeader": "Warning",
+          "confirmDeleteDialogContent": "Are you sure you want to delete Collection Agency - {{name}} ?",
+          "confirmBulkDeleteDialogContent": "Do you want to delete these Collection Agencies?",
+          "bulkDeleteSuccess": "Collection Agencies deleted successfully",
+          "bulkDeleteError": "Error deleting Collection Agencies"
+        }
+      },
+      "externalServiceProviderDetails": {
+        "headerTitle": "Collection Agency",
+        "labels": {
+          "externalServiceProviderId": "Collection Agency ID",
+          "shortName": "Short Name",
+          "serviceProviderName": "Collection Agency Name",
+          "contractId": "Contract ID",
+          "activeStatus": "Status",
+          "contactInformation": "Contact Details"
+        }
+      },
+      "addForm": {
+        "headerTitle": "Add",
+        "labels": {
+          "externalServiceProviderId": "Collection Agency ID",
+          "shortName": "Short Name",
+          "shortNameHintText": "Enter new name or select from existing",
+          "serviceProviderName": "Collection Agency Name",
+          "contractId": "Contract ID",
+          "details": "Details",
+          "activeFlag": "Active Flag",
+          "contactInformation": "Contact Details",
+          "title": "Title",
+          "firstName": "First Name",
+          "middleName": "Middle Name",
+          "lastName": "Last Name",
+          "designation": "Designation",
+          "isPrimary": "Is Primary",
+          "contactNumber": "Contact Number Type",
+          "contactPhone": "Contact Number",
+          "contactEmail": "Contact Email Type",
+          "emailId": "Email ID",
+          "contactInformationPanel": {
+            "primaryPhone": "Primary Phone",
+            "secondaryPhone": "Secondary Phone",
+            "whatsapp": "Whatsapp",
+            "fax": "Fax",
+            "other": "Other",
+            "primaryEmail": "Primary Email",
+            "secondaryEmail": "Secondary Email"
+          }
+        },
+        "buttons": {
+          "addContact": "Add Contact",
+          "save": "Save",
+          "saveAndClose": "Save",
+          "saveAndNew": "Save & Add",
+          "cancel": "Cancel"
+        },
+        "messages": {
+          "add_success": "Collection Agency created successfully",
+          "add_error": "Error creating Collection Agency",
+          "duplicate_add_error": "Contract id already exists"
+        },
+        "validationMessages": {
+          "shortNameRequired": "Short name is required",
+          "shortNameMaxlength": "Short name cannot be more than 12 characters",
+          "serviceProviderNameRequired": "Collection Agency name is required",
+          "serviceProviderNameMaxlength": "Collection Agency name cannot be more than 75 characters",
+          "contractIdRequired": "Contract Id is required",
+          "contractIdMaxlength": "Contract id cannot be more than 25 characters",
+          "detailsMaxlength": "Details cannot be more than 100 characters",
+          "titleRequired": "Title is required",
+          "firstNameRequired": "First name is required",
+          "firstNameMaxlength": "First name cannot be more than 50 characters",
+          "middleNameMaxlength": "Middle name cannot be more than 50 characters",
+          "lastNameMaxlength": "Last name cannot be more than 50 characters",
+          "designationMaxlength": "Designation name cannot be more than 100 characters",
+          "contactNumberRequired": "Contact type is required",
+          "contactPhoneRequired": "Contact number is required",
+          "contactPhoneMaxlength": "Contact number cannot be more than 20 characters",
+          "contactEmailRequired": "Email type is required",
+          "emailIdRequired": "Email id is required",
+          "emailIdInvalid": "Please enter a valid email id",
+          "emailIdMaxlength": "Email id cannot be more than 100 characters",
+          "deleteContactError": "Cannot delete contact. Atleast one primary contact is required."
+        },
+        "responseMessages": {
+          "duplicate_add_error": "Input data already exist."
+        }
+      },
+      "updateForm": {
+        "labels": {
+          "externalServiceProviderId": "Collection Agency ID",
+          "shortName": "Short Name",
+          "shortNameHintText": "Enter new name or select from existing",
+          "serviceProviderName": "Collection Agency Name",
+          "contractId": "Contract ID",
+          "details": "Details",
+          "activeFlag": "Active Flag",
+          "contactInformation": "Contact Details",
+          "title": "Title",
+          "firstName": "First Name",
+          "middleName": "Middle Name",
+          "lastName": "Last Name",
+          "designation": "Designation",
+          "isPrimary": "Is Primary",
+          "contactNumber": "Contact Number Type",
+          "contactPhone": "Contact Number",
+          "contactEmail": "Contact Email Type",
+          "emailId": "Email ID",
+          "contactInformationPanel": {
+            "primaryPhone": "Primary Phone",
+            "secondaryPhone": "Secondary Phone",
+            "whatsapp": "Whatsapp",
+            "fax": "Fax",
+            "other": "Other",
+            "primaryEmail": "Primary Email",
+            "secondaryEmail": "Secondary Email"
+          }
+        },
+        "buttons": {
+          "addContact": "Add Contact",
+          "save": "Save",
+          "cancel": "Cancel"
+        },
+        "messages": {
+          "update_success": "Collection Agency updated successfully",
+          "update_error": "Error updating Collection Agency"
+        },
+        "validationMessages": {
+          "shortNameRequired": "Short name is required",
+          "shortNameMaxlength": "Short name cannot be more than 12 characters",
+          "serviceProviderNameRequired": "Collection Agency name is required",
+          "serviceProviderNameMaxlength": "Collection Agency name cannot be more than 75 characters",
+          "contractIdRequired": "Contract Id is required",
+          "contractIdMaxlength": "Contract id cannot be more than 25 characters",
+          "detailsMaxlength": "Details cannot be more than 100 characters",
+          "titleRequired": "Title is required",
+          "firstNameRequired": "First name is required",
+          "firstNameMaxlength": "First name cannot be more than 50 characters",
+          "middleNameMaxlength": "Middle name cannot be more than 50 characters",
+          "lastNameMaxlength": "Last name cannot be more than 50 characters",
+          "designationMaxlength": "Designation name cannot be more than 100 characters",
+          "contactNumberRequired": "Contact type is required",
+          "contactPhoneRequired": "Contact number is required",
+          "contactPhoneMaxlength": "Contact number cannot be more than 20 characters",
+          "contactEmailRequired": "Email type is required",
+          "emailIdRequired": "Email id is required",
+          "emailIdInvalid": "Please enter a valid email id",
+          "emailIdMaxlength": "Email id cannot be more than 100 characters",
+          "contactNumberDetailsRequiredError": "Contact type or contact number cannot be blank",
+          "emailIdDetailsRequiredError": "Email type or email id cannot be blank"
+        }
+      },
+      "bulkEdit": {
+        "modal": {
+          "headerText": "Bulk Edit",
+          "footerText": "Changes will apply to all selected records",
+          "successText": "Do you want to update all selected Collection Agencies?",
+          "buttons": {
+            "apply": "Apply",
+            "cancel": "Cancel"
+          }
+        },
+        "messages": {
+          "bulk_edit_success": "Collection Agencies updated successfully",
+          "bulk_edit_error": "Error updating Collection Agencies"
+        }
+      }
+    }
+  }
+}

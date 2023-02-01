@@ -1,0 +1,375 @@
+@import '../../../../../assets/styles/app/core/variables/colors';
+
+.dialog-position {
+  @media all and (max-width: 767px){
+    width: 200px !important;
+  }
+}
+
+.fileNoteColor {
+  color: $pink
+}
+
+#fileUploadContainer {
+  .e-error {
+    padding-top: 7px;
+  }
+
+  #reactive .upload-area {
+    width: 86%;
+  }
+
+  #browse {
+    float: right;
+    position: relative;
+    top: -4px;
+    right: -60px;
+  }
+  /*#reactive .form-group .submit-btn {
+    margin-top: 15px;
+    position: relative;
+  }*/
+  #reactive .form-group .desc {
+    margin: 2% 16% 0% 18%;
+  }
+  @media only screen and (max-width: 500px) {
+    #reactive .form-group .submitBtn .desc {
+      margin: 12px;
+    }
+  }
+  #reactive .form-group .submitBtn {
+    position: relative;
+    text-align: right;
+  }
+  .bootstrap #reactive .form-group .submit-btn {
+    margin-left: 8px;
+  }
+  .e-bigger.material #reactive .form-group .submit-btn {
+    margin-left: -7px;
+  }
+  .fabric #reactive .form-group .submit-btn, .highcontrast #reactive .form-group .submit-btn {
+    margin-left: -11px;
+  }
+  .e-bigger.fabric #reactive .form-group .submit-btn, .e-bigger.highcontrast #reactive .form-group .submit-btn {
+    margin-left: -25px;
+  }
+  .e-bigger.bootstrap #reactive .form-group .submit-btn {
+    margin-left: -8px;
+  }
+  .success .successmsg {
+    border: 0.5px solid $serra-success;
+    padding: 10%;
+    color: $serra-success;
+  }
+  form#reactive {
+    position: relative;
+    top: 14%;
+  }
+  #reactive .e-upload {
+    display: none;
+  }
+  #reactive .upload-area button#browse {
+    float: right;
+    margin-top: -28px;
+  }
+  .fabric #reactive .upload-area button#browse,
+  .highcontrast #reactive .upload-area button#browse {
+    float: right;
+    margin-top: -32px;
+  }
+  .bootstrap #reactive .upload-area button#browse {
+    float: right;
+    margin-top: -35px;
+  }
+  .fabric.e-bigger #reactive .upload-area button#browse,
+  .highcontrast.e-bigger #reactive .upload-area button#browse,
+  .bootstrap.e-bigger #reactive .upload-area button#browse {
+    margin-top: -40px;
+  }
+  .material.e-bigger #reactive .upload-area button#browse {
+    margin-top: -36px;
+  }
+  .b
+  #reactive .form-group .e-float-input.upload-area .e-float-line, .material .e-float-input.upload-area .e-float-line {
+    width: 70%;
+    margin-top: initial;
+  }
+  #reactive .form-group .upload-area input {
+    width: 100%;
+  }
+
+  @media (min-width: 250px) and (max-width: 500px) {
+    #control_wrapper.control_wrapper {
+      padding: 1% 4% 12%;
+    }
+  }
+  @media (max-width: 300px) {
+    #control_wrapper.control_wrapper {
+      padding: 1% 4% 15%;
+    }
+  }
+  .bootstrap #reactive .form-group .upload-area {
+    background: transparent;
+  }
+  .form-title {
+    text-align: center;
+  }
+
+  .e-dialog .e-dlg-header-content .e-btn.e-dlg-closeicon-btn {
+    height: auto !important;
+  }
+
+  /* file uploader css */
+
+  .uploader-section {
+    width: 700px;
+    height: auto;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+  }
+
+  .uploadtemplate #dropArea {
+    min-height: 50px;
+    margin: 15px 0;
+    position: relative;
+  }
+
+  .uploadtemplate #drop {
+    padding: 3% 30% 3%;
+    display: inherit;
+    border: 1px dashed $ghost
+  }
+  .e-upload {
+    float: none;
+  }
+  .e-bigger .uploadtemplate #drop {
+    padding: 20px 27% 20px;
+  }
+
+  .uploadtemplate .droparea {
+    font-size: 14px;
+  }
+
+  .e-bigger .uploadtemplate .droparea {
+    font-size: 15px;
+  }
+
+  .uploader-control_wrapper {
+    max-width: 700px;
+    margin: auto;
+  }
+
+  .uploadtemplate  .e-file-select-wrap {
+    display: none;
+  }
+
+  .uploadtemplate .e-upload {
+    float: none;
+    border: none;
+  }
+
+  .uploadtemplate .ul-element {
+    list-style: none;
+    width: 100%;
+    padding-left: 0;
+  }
+
+  .uploadtemplate .file-name {
+    padding: 8px 6px 8px 0;
+    font-size: 13px;
+    width: 46%;
+    display: inline-block;
+    position: relative;
+    top: 4px;
+  }
+
+  .e-bigger .uploadtemplate .file-name {
+    font-size: 14px;
+  }
+
+  .uploadtemplate .file-size {
+    padding: 4px;
+    font-size: 13px;
+    width: 18%;
+    display: inline-block;
+    position: relative;
+  }
+
+  .e-bigger .uploadtemplate span.file-size {
+    font-size: 14px;
+  }
+
+  .uploadtemplate li.file-lists {
+    border: 1px solid $ghost;
+    padding: 0 6px 0 14px;
+    margin-top: 15px;
+    position: relative;
+    background: $athens-gray;
+  }
+
+  .uploadtemplate span.file-size, .file-name {
+    font-family: "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .uploadtemplate span.progress-bar-container {
+    display: block;
+    float: right;
+    height: 20px;
+    right: 13%;
+    top: 14px;
+    position: relative;
+    width: 20%;
+  }
+
+  .uploadtemplate .progress {
+    width: 100%;
+    height: 15px;
+    -webkit-appearance: none;
+  }
+
+  .uploadtemplate .close-icon-container {
+    cursor: pointer;
+    font-size: 11px;
+    height: 24px;
+    margin: 0 12px 0 22px;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    width: 24px;
+    top: 6px;
+  }
+
+  .uploadtemplate .close-icon-container.e-icons::before {
+    left: 7px;
+    position: inherit;
+    top: 7px;
+    content: '\e932';
+  }
+
+  .bootstrap4 .close-icon-container.e-icons::before {
+    left: 7px;
+    position: inherit;
+    top: 7px;
+    content: '\e745';
+  }
+  .bootstrap4 .file-lists {
+    background: $white;
+  }
+
+  .uploadtemplate .close-icon-container.delete-icon::before {
+    content: '\e94a';
+  }
+
+  .bootstrap4 .close-icon-container.delete-icon::before {
+    content: '\e773';
+  }
+
+  .uploadtemplate .close-icon-container:hover {
+    background-color: $mischka;
+    border-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .bootstrap4 .close-icon-container:hover {
+    background-color: $athens-gray;
+    border-color: transparent;
+    border-radius: 4px;
+    box-shadow: 0 0 0 transparent;
+  }
+
+  .highcontrast .uploadtemplate .close-icon-container:hover {
+    background-color: $yellow;
+    color: $black;
+  }
+
+  .highcontrast .uploadtemplate .close-icon-container {
+    color: $white;
+  }
+
+  .uploadtemplate .upload-success {
+    color: $serra-success;
+  }
+
+  .uploadtemplate .upload-fails {
+    color: $serra-danger;
+  }
+  .uploadtemplate progress::-webkit-progress-bar {
+    border: 1px solid $mischka;
+    background-color: $white;
+    border-radius: 2px;
+  }
+  .uploadtemplate #dropArea progress {
+    border: 1px solid $mischka;
+    background-color: $white;
+    border-radius: 2px;
+  }
+
+  .bootstrap4 #dropArea progress {
+    background-color: $mischka;
+    border-radius: 4px;
+  }
+
+  .bootstrap4 progress::-webkit-progress-value {
+    background-color: $blue;
+    border-radius: 4px;
+  }
+
+  .highcontrast .uploadtemplate #dropArea progress {
+    background-color: $black;
+  }
+  .highcontrast .uploadtemplate progress::-webkit-progress-bar {
+    background-color: $black;
+  }
+  .material .uploadtemplate progress::-webkit-progress-value, .uploadtemplate progress::-webkit-progress-value {
+    border-radius: 2px;
+    background-color: $pink;
+  }
+  .bootstrap .uploadtemplate progress::-webkit-progress-value {
+    border-radius: 2px;
+    background-color: $navy-blue;
+  }
+  .fabric .uploadtemplate progress::-webkit-progress-value {
+    background-color: $blue-ribbon;
+    border-radius: 2px;
+    top: -66px;
+  }
+  .highcontrast .uploadtemplate progress::-webkit-progress-value {
+    background-color: $yellow;
+    border-radius: 2px;
+  }
+  .material .uploadtemplate progress::-moz-progress-bar, .uploadtemplate progress::-moz-progress-bar {
+    border-radius: 2px;
+    background-color: $pink;
+  }
+  .bootstrap .uploadtemplate progress::-moz-progress-bar {
+    border-radius: 2px;
+    background-color: $navy-blue;
+  }
+  .fabric .uploadtemplate progress::-moz-progress-bar {
+    background-color: $blue-ribbon;
+    border-radius: 2px;
+    top: -66px;
+  }
+  .highcontrast .uploadtemplate progress::-moz-progress-bar {
+    background-color: $yellow;
+    border-radius: 2px;
+  }
+  .material .uploadtemplate span a, .uploadtemplate span a {
+    color: $pink;
+  }
+  .fabric .uploadtemplate span a {
+    color: $blue-ribbon;
+  }
+  .bootstrap .uploadtemplate span a {
+    color: $navy-blue;
+  }
+  .highcontrast .uploadtemplate span a {
+    color: $yellow;
+  }
+
+}

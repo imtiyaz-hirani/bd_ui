@@ -1,0 +1,6 @@
+<span class="labelFont" *ngIf="data;else noDataTemplate">
+    {{ data }}
+</span>
+<ng-template #noDataTemplate>
+    <span class="labelFont" [innerHTML]="noData"></span>
+</ng-template>

@@ -1,0 +1,129 @@
+{
+  "MASTERDATA": {
+    "ACCOUNTS": {
+      "HEADER_TITLE": "Accounts",
+      "FILENAME": "Account_Data",
+      "DETAILS": "Details",
+      "ACCOUNT_DETAILS": "Account Details",
+      "OTHER_DETAILS": "Other Details",
+      "BANK_DETAILS": "Bank Details",
+      "ACCOUNT_STATEMENT_CONFIGURATION": "Account Statement Configuration",
+      "CHOOSE_AVAILABLE_BALANCES": "Choose Available Balances",
+      "GRID": {
+        "COLUMNS": {
+          "ACCOUNT_NUMBER": "Account Number",
+          "IBAN": "IBAN",
+          "DESCRIPTION": "Description",
+          "BANK": "Bank",
+          "CURRENCY": "Currency",
+          "CITY": "City",
+          "COUNTRY": "Country",
+          "PROVINCE":"Province",
+          "POSTALCODE": "Postal Code",
+          "BIC": "BIC",
+          "ACCOUNT_TYPE":"Account Type",
+          "REGISTERED_FOR_ACCOUNT_STATEMENT": "Registered for Account Statement",
+          "FREQUENCY_CHECK": "Frequency Check",
+          "VALIDATE_STATEMENT_NUMBER": "Validate Statement Number",
+          "STATEMENT_RECEIVED": "Statement Received",
+          "CALCULATED_FROM_ITEMS": "Calculated from items",
+          "ACTIONS": "Actions"
+        },
+        "MESSAGES": {
+          "DELETE_SUCCESS": "Account deleted successfully",
+          "DELETE_ERROR": "Error deleting account",
+          "CONFIRM_DELETE_DIALOG_HEADER": "Warning",
+          "CONFIRM_DELETE_DIALOG_CONTENT": "Are you sure you want to delete account - {{accountNumber}} ?",
+          "CONFIRM_BULK_DELETE_DIALOG_CONTENT": "Do you want to delete these accounts?"
+        }
+      },
+      "FIELDS": {
+        "ACCOUNT_NUMBER_TYPE": {
+          "CAPTION": "Type",
+          "validation_msgs": {
+            "req_msg":"Account number type is required."
+          }
+        },
+        "ACCOUNT_NUMBER": {
+          "CAPTION": "Account Number",
+          "validation_msgs": {
+            "req_msg":"Account number is required.",
+            "str_msg": "Account number maxlength is 50.",
+            "ptrn_msg": "Only numbers and alphabets are allowed in Account Number."
+          }
+        },
+        "DESCRIPTION": {
+          "CAPTION": "Description",
+          "validation_msgs": {
+            "req_msg":"Description is required.",
+            "str_msg": "Description maxlength is 100."
+          }
+        },
+        "COMPANY": {
+          "CAPTION": "Company",
+          "validation_msgs": {
+            "req_msg":"Company is required."
+          }
+        },
+        "CURRENCY": {
+          "CAPTION": "Currency",
+          "validation_msgs": {
+            "req_msg":"Currency is required."
+          }
+        },
+        "ACCOUNT_TYPE": {
+          "CAPTION": "Account Type",
+          "validation_msgs": {
+            "req_msg":"Account type is required."
+          }
+        },
+        "BANK": {
+          "CAPTION": "Select Bank",
+          "validation_msgs": {
+            "req_msg":"Bank is required."
+          }
+        },
+        "BIC": {
+          "CAPTION": "BIC",
+          "validation_msgs": {
+            "req_msg":"BIC is required."
+          }
+        },
+        "CITY": "City",
+        "COUNTRY": "Country",
+        "PROVINCE": "Province",
+        "POSTAL_CODE":"Postal Code",
+        "REGISTERED_FOR_ACCOUNT_STATEMENT": "Registered for Account Statement",
+        "FREQUENCY_CHECK": "Frequency Check",
+        "VALIDATE_STATEMENT_NUMBER": "Validate Statement Number",
+        "STATEMENT_RECEIVED": "Statement Received",
+        "CALCULATED_FROM_ITEMS": "Calculated from items",
+        "MESSAGES": {
+          "ACCOUNT_NUMBER_CONFIRM_DELETE": "Final changes on record will be done after Save.",
+          "ACCOUNT_NUMBER_DELETED": "Account Number Deleted Successfully",
+          "ACCOUNT_NUMBER_EXITS": "Account number alreday exists.",
+          "IBAN_NUMBER_EXITS": "Multiple IBAN type is not allowed.",
+          "ACCOUNT_NUMBER_TYPE_EXITS": "Multiple account number type is not allowed.",
+          "IBAN_ACCOUNT_NUMBER_NOT_EXISTS" : "At least one of Account Number Type IBAN or Account Number is mandatory."
+        }
+      },
+      "FIELD_DETAILS": {
+        "DESCRIPTION":"Description",
+        "COMPANY": "Company",
+        "CURRENCY": "Currency",
+        "ACCOUNT_TYPE": "Account Type",
+        "BANK":"Bank",
+        "BIC":"BIC",
+        "CITY":"City",
+        "COUNTRY":"Country",
+        "PROVINCE": "Province",
+        "POSTAL_CODE": "Postal Code",
+        "REGISTERED_FOR_ACCOUNT_STATEMENT": "Registered for Account Statement",
+        "FREQUENCY_CHECK": "Frequency Check",
+        "VALIDATE_STATEMENT_NUMBER":"Validate Statement Number",
+        "STATEMENT_RECEIVED": "Statement Received",
+        "CALCULATED_FROM_ITEMS": "Calculated from items"
+      }
+    }
+  }
+}

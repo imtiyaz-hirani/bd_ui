@@ -1,0 +1,33 @@
+{
+    "MASTERDATA":{
+        "cashflowType":{
+            "fileName":"Cashflow_Type_Data",
+            "cashflowTypes": "Cashflow Types",
+            "cashflowType": "Cashflow Type",
+            "cashflowName": "Cashflow Name",
+            "name": "Name",
+            "description": "Description",
+            "inOut": "InOut",
+            "type": "Type",
+            "columns": {
+                "cashflowName": {
+                    "validation_msgs": {
+                        "req_msg":"Name is required.",
+                        "str_msg":"Name Min length is 3 and Max length is 50."
+                    }
+                },
+                "description": {
+                    "validation_msgs": {
+                        "req_msg":"Description is required.",
+                        "str_msg":"Description Min length is 3 and Max length is 100."
+                    }
+                },
+                "type": {
+                    "validation_msgs": {
+                        "req_msg":"Type is required."
+                    }
+                }
+            }
+        }
+    }
+}

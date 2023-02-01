@@ -1,0 +1,15 @@
+export const COLOR_HEX = {
+  DEEP_BLUSH: '#e9679b',
+  CANBERRY_PINK: '#e599f7',
+  GRANNY_SMITH_APPLE: '#92e2a0',
+  INDIGO: '#9775fa',
+  SULU: '#c0eb75',
+  MALIBU: '#7C97FF',
+  KOURNIKOVA: '#ffde79',
+  TURQUOISE_BLUE: '#66D9E8',
+  CORNFLOWER_LILAC: '#ffa8a8',
+  MARCONI_AND_CHEESE: '#ffc078',
+  LIGHT_MALIBU: '#74c0fc',
+  AQUAMARINE: '#63e6be',
+  white: '#ffffff',
+};

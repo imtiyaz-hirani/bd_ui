@@ -1,0 +1,45 @@
+.chart-header {
+    margin-top: 6px;
+    
+    .chart-title {
+        font-weight: bold;
+    }
+}
+
+
+.chart-container {
+    .accordion-icon {
+        position: absolute;
+        right: 18px;
+        font-size: 30px;
+        color: $santas-gray;
+        cursor: pointer;
+    }
+    
+    height: 300px;
+    &.collapsed {
+        max-height: 60px;
+        transition: max-height 0.5s ease-in-out;
+        svg {
+            g, rect {
+                display: none;
+            }
+        }
+    }
+    &.expanded {
+        max-height: 300px;
+        transition: all 0.5s ease-in-out;
+        overflow: hidden;
+        svg {
+            g, rect {
+                display: inherit;
+            }
+        }
+    }
+
+    pf-linechart ejs-chart {
+        svg rect {
+            stroke: transparent;
+        }
+    }
+}

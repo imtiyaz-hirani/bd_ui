@@ -1,0 +1,89 @@
+<div id="notifications-widget" class="widget-wrapper" [class]="widgetType == WIDGETS.NOTIFICATIONS ? 'notifications-widget' : ''">
+    <ng-container *ngIf="widgetType === WIDGETS.NOTIFICATIONS && notificationsList.length >0 ; else elseOverviewWidget">
+        <div class="widget-container">
+            <div class="row ">
+                <div class="col-12 widget-header">
+                    <div class="widget-header--title">
+                        <div class="d-flex flex-row">
+                            <h5 class="widget-title main-title">{{ 'CORE.powerpanel.notifications' | translate }} <span class="notifications-unseen">({{notificationsList.length}})</span></h5>
+                            <div class="widget-settings d-flex flex-row ml-auto">
+                                <div class="mr-2">
+                                    <a (click)="clearAllNotifications()">Clear</a>
+                                </div>
+                                <div>
+                                    <i class="se-control-panel"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <ejs-textbox class="search-filter" placeholder="{{ 'CORE.powerpanel.placeholder.search' | translate }}" floatLabelType="Auto"
+                        (input)="searchFilter($event)"></ejs-textbox>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="widget-details">
+                        <ng-container *ngFor="let currGroup of  groupedNotificationsList| sortFieldBySequence : 'createdDate' : 'desc'; index as currGrpIndex">
+                           <div class="widget-card" *ngIf= "currGroup.notifications.length > 0">
+                            <div class="day">
+                                <div class="date">{{ currGroup['createdDate']  | dateAgo}}</div>
+                                <ng-container *ngFor = "let currNotif of currGroup.notifications  | sortFieldBySequence : 'createdDate' : 'desc';">
+                                    <div class="item" [ngClass]="currNotif['read'] ? '' : 'highlight-urgent'">
+                                        <div class="d-flex flex-row">
+                                            <span class="notification-message" [innerHTML] = "currNotif['message']"> </span>
+                                            <span class="notitification-actions notification-close" (click)="closeEachNotification(currNotif,currGrpIndex)"><i class="se-close"></i></span>
+                                        </div>
+                                        <div class="date-time">
+                                            {{currNotif['createdDate'] | date:'medium'}}
+                                        </div>
+                                        <div class="mt-3 mb-1 d-flex flex-row">
+                                            <ng-container *ngFor="let action of currNotif.actions">
+                                            <ng-container>
+                                                <button *ngIf="action.actionName === 'View Details'" ejs-button cssClass="e-small pl-2 pr-2 mr-2 notitification-actions" (click)="viewDetails(currNotif)">{{action.actionName}}</button>
+                                                <div *ngIf="action.actionName === 'Get assisted by Serra'"class="serra-icon ml-auto" (click)="assistBySerra(currNotif)">
+                                                    <span class="notitification-actions"> 
+                                                        <i class="se-serra"></i>
+                                                    </span>
+                                                </div>
+
+                                             </ng-container>
+                                             <button *ngIf="action.actionName !== 'View Details' && action.actionName !== 'Get assisted by Serra'" ejs-button cssClass="e-small pl-2 pr-2 mr-2 notitification-actions">{{action.actionName}}</button>
+                                            </ng-container>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                            </div>
+                           </div>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-template #elseOverviewWidget>
+        <div class="widget-container">
+            <div class="row ">
+                <div class="col-12 widget-header">
+                    <div class="d-flex flex-row">
+                        <div class="widget-title">{{ 'CORE.powerpanel.notifications' | translate }}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="widget-details">
+                        <div class="item">
+                            <div>
+                                There are no new notifications.
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</div>

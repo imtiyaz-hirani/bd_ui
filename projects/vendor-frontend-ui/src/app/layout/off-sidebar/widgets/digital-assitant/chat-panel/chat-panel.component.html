@@ -1,0 +1,17 @@
+<div class="scrollToBottom" id="scrollToBottom">
+    <div class="mesasge-parent">
+        <ng-container  *ngFor="let message of messages">
+            <div class="message-row"
+                    [ngClass]="{ 'from': message.sentBy === sentbyBot,
+                                'to':   message.sentBy === sentbyUser}">
+                <div class="message" *ngIf="message?.content !== ''">
+                    <span [innerHTML]="message.content"></span>
+                </div>
+                <div class="timeStamp" *ngIf="message?.content !== ''"></div> 
+            </div> 
+        </ng-container>  
+    </div>
+    <ng-container *ngIf="isScriptedFlow()">
+        <app-scripted-flow [botResponse]="botResponse" [scriptedResponse]="scriptedResponse"></app-scripted-flow>
+    </ng-container>
+</div>

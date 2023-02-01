@@ -1,0 +1,46 @@
+{
+    "ACCOUNTS": {
+        "CONTROL_CENTER":{
+            "HEADER_TITLE": "Control Center",
+            "GRID": {
+                "COLUMNS": {
+                    "bank": "Bank",
+                    "accountNumber": "Account Number",
+                    "lastStatementReceivedAt": "Last Statement Received",
+                    "unknownAccount": "Unknown",
+                    "frequencyCheck": "Frequency Check",
+                    "unregisteredAccount": "Unregistered",
+                    "balanceCheckFailed": "Balance Check"
+                }
+            },
+            "buttons":{
+                "allAccounts": "All Accounts",
+                "accountsWithIssues": "Accounts With Issues",
+                "accountsWithNoIssues": "Accounts With No Issues"
+            },
+            "messages":{
+                "unknownAccountCount":"Account {{accountNumber}} is not available in master data",
+                "unregisteredAccountCount": "Account {{accountNumber}} is not registered to receive account statements",
+                "balanceCheckFailedCount": "Account {{accountNumber}} has statements which failed balance check",
+                "accountNotRegisterd": "Either statement is not received for an account or validation is not applicable",
+                "validationSuccess": "Validation processed successfully"
+            },
+            "actions": {
+                "view": "View Account Statements",
+                "download": "Download File"
+            },
+            "WIDGET":{
+                "title1" : "Statements Processed",
+                "title2" : "Statements with Issues",
+                "title3" : "Statements Sent",
+                "title4" : "Statements Received"
+            },
+            "TEXT":{
+                "out_of" : "out of" ,
+                "sent" : "Banks sent Statements",
+                "received" : "Statements received",
+                "status" : "today"
+            }
+        }
+    }
+}

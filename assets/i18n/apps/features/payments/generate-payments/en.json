@@ -1,0 +1,16 @@
+{
+  "PAYMENTS": {
+    "GENERATE_PAYMENTS": {
+      "MODAL": {
+        "TITLE": "Choose Outbound Connector",
+        "OUTBOUND_CONNECTOR": "Outbound Connector",
+        "BUTTONS": {
+          "YES": "Yes",
+          "NO": "No"
+        },
+        "SINGLE_ERROR_MESSAGE": "Please resolve {{ errorMessagesLength }} error to proceed",
+        "MULTIPLE_ERROR_MESSAGE": "Please resolve {{ errorMessagesLength }} errors to proceed"
+      }
+    }
+  }
+}

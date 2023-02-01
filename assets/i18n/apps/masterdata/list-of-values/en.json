@@ -1,0 +1,46 @@
+{
+  "MASTERDATA": {
+    "listOfValues": {
+      "headerTitle": "List of Values",
+      "columns": {
+        "code": "Code",
+        "name": "Name",
+        "description": "Description"
+      },
+      "buttons": {
+        "add": "Add",
+        "import": "Import"
+      },
+      "validationMessages": {
+        "keyRequired": "This field is required",
+        "nameRequired": "This field is required",
+        "descriptionRequired": "This field is required",
+        "keyMaxlength": "This field cannot be more than {{keyMaxLengthCount}} characters",
+        "keyMinlength": "This field cannot be less than {{keyMinLengthCount}} characters",
+        "nameMaxlength": "This field cannot be more than {{nameMaxLengthCount}} characters",
+        "nameMinlength": "This field cannot be less than {{nameMinLengthCount}} characters",
+        "descriptionMaxlength": "This field cannot be more than {{descriptionMaxLengthCount}} characters",
+        "descriptionMinlength": "This field cannot be less than {{descriptionMinLengthCount}} characters"
+      },
+      "messages": {
+        "update_success": "Record saved successfully",
+        "deleteSuccess": "Record deleted successfully",
+        "deleteError": "Error deleting selected record",
+        "confirmDeleteDialogHeader": "Warning",
+        "confirmDeleteDialogContent": "Are you sure you want to delete Lov record - {{name}} ?"
+      },
+      "fileImport": {
+        "headerTitle": "Manual Import",
+        "buttons": {
+          "cancel": "Cancel",
+          "import": "Import"
+        },
+        "supportedFileNote": "Note: Excel File format supported (xls/xlsx).",
+        "messages": {
+          "file_upload_success": "File uploaded successfully",
+          "file_upload_error": "Error uploading file"
+        }
+      }
+    }
+  }
+}

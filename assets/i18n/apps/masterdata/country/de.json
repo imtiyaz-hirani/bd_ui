@@ -1,0 +1,26 @@
+{
+    "MASTERDATA":{
+        "country":{
+            "fileName":"Country_Data",
+            "countries": "Countries",
+            "country": "Country",
+            "countryCode": "Country Code",
+            "countryName": "Country Name",
+            "isoCode": "ISO Code",
+            "columns": {
+                "countryCode": {
+                    "validation_msgs": {
+                        "req_msg":"ISO Code is required.",
+                        "str_msg":"ISO Code required length is 2."
+                    }
+                },
+                "countryName": {
+                    "validation_msgs": {
+                        "req_msg":"Country Name is required.",
+                        "str_msg":"Country Name max length is 100."
+                    }
+                }
+            }
+        }
+    }
+}

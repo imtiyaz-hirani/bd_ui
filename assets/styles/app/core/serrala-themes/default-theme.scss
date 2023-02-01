@@ -1,0 +1,25 @@
+@import "../../core/variables/variables";
+
+
+$brand-theme-bg-color: $solitude-light;
+// components css color override
+$serra-primary-btn: $bright-gray;
+$serra-primary-btn-text: #fff;
+$serra-primary-btn-hover: $bright-gray;
+$serra-secondary-btn: $mischka;
+$serra-secondary-btn-hover: $mischka;
+$serra-secondary-btn-text: $bright-gray;
+$serra-hyperlink: $serra-hyperlink-light;
+
+// @import '../../../syncfusion/variables/variables';
+@import '../../../syncfusion/variables-all/variables';
+@import '../../../syncfusion/syncfusion';
+
+.default-theme {
+  color: $serra-primary-content;
+  
+  &.serrala-app-background {
+    background-color: $brand-theme-bg-color;
+    @import '../components/components';
+  }
+}

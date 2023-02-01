@@ -1,0 +1,25 @@
+@import '../../../../../../../assets/styles/app/core/variables/variables';
+::ng-deep .change-execution-date-dialog {
+    .e-dlg-header-content {
+        border-bottom: 1px solid $ghost;
+        .e-dlg-header {
+            font-weight: bold;
+            font-size: 18px;
+            padding-left: 12px;
+            padding-top: 6px;
+            padding-bottom: 6px;
+        }
+    }
+    .e-dlg-content {
+        min-height: 110px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .dialogContent {
+        padding: 18px 14px;
+        font-size: 14px;
+        flex-basis: 100%;
+    }
+}

@@ -1,0 +1,61 @@
+@import "assets/styles/app/core/variables/colors";
+.message-row {
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+.message {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    font-family: NotoSans;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.2px;
+    white-space: pre-line;
+}
+.timeStamp{
+  height: 15px;
+  font-size: 11px;
+}
+.message-row.to {
+    text-align: right;
+    & .message {
+        background: $zumthor;
+        &:after{
+        content: "";
+        border: 10px solid transparent;
+        border-bottom-color: $zumthor;
+        position: absolute;
+        bottom: 0;
+        right: -10px;
+        }
+    }
+}
+.message-row.from {
+    text-align: left;
+   & .message {
+        background: $porcelain;
+        text-indent: 0px;
+        &:after{
+            content: "";
+            border: 10px solid transparent;
+            border-top-color: $porcelain;
+            position: absolute;
+            top: 0;
+            left: -10px;
+        }
+    }
+}
+// .scrollToBottom{
+//     overflow: hidden;
+//     height: 70vh;
+//     overflow-y: scroll;
+//     & .mesasge-parent{
+//         bottom: 0;
+//         height: auto;
+//     }
+// }

@@ -1,0 +1,329 @@
+// $serra-primary-content: #3c4049;
+// $serra-sidebar-bg: #f4f6f7;
+// $serra-sidebar-active-icon-bg-color: #da0158;
+// $serra-sidebar-active-icon-color: #fff;
+// $serra-sidebar-hover-item-bg: #dfe1e7;
+// $serra-sidebar-submenu-color: #838a99;
+
+// $serra-sidebar-scrollbar-track: #f1f1f1;
+// $serra-sidebar-scrollbar-thumb: #989fae;
+// $serra-sidebar-scrollbar-hover: #989fae;
+
+
+.aside-container {
+    #sidebar-container {
+        overflow: hidden;
+        min-height: 450px;
+        background: $serra-sidebar-bg;
+        .aside-inner {
+            .sidebar {
+                .sidebar-nav {
+                    position: relative;
+                    font-size: 14px;
+                    margin-bottom: 0;
+                    padding-left: 0;
+                    list-style: none;
+
+                    li {
+                        padding: 0 5px;
+                        margin: 15px 0;
+                        cursor: pointer;
+                        line-height: 34px;
+                        width: 50px;
+                        &:focus {
+                            outline: none;
+
+                            // .icon i {
+                            //     border: 1px solid $serra-primary-content;
+                            // }
+                        }
+                        .icon {
+                            i, em {
+                                font-size: 24px;
+                                height: 24px;
+                                width: 24px;
+                                text-align: center;
+                                padding: 7px;
+                                vertical-align: middle;
+                                line-height: 1;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-size: 24px;
+                                line-height: 40px;
+                                text-transform: none;
+                                white-space: nowrap;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        &.active {
+                            font-weight: bold;
+                            .icon {
+                                i, em {
+                                    background: $serra-sidebar-active-icon-bg-color;
+                                    color: $serra-sidebar-active-icon-color;
+                                    box-shadow: 0 5px 8px 0 rgba(60, 64, 73, 0.25);
+                                }
+                            }
+                        }
+                    }
+                }
+                &.bottom-sidebar {
+                    bottom: 0;
+                    position: absolute;
+                    li {
+                        .profile-pic-container {
+                            width: 40px;
+                            height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .profile-pic {
+                                width: 25px;
+                                height: 25px;
+                                line-height: 25px;
+                                border-radius: 50%;
+                                overflow: hidden;
+                                img {
+                                    max-width: 100%;
+                                    height: auto;
+                                    width: auto;
+                                }
+                            }
+                        }
+                        .profile-pic-text-link {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+            .logo {
+                .logo-img {
+                    line-height: 24px;
+                    img {
+                        margin-left: 2px;
+                    }
+                }
+                cursor: pointer;
+                width: 48px;
+                padding: 5px;
+                text-align: center;
+                margin: 20px 0;
+                height: 28px;
+                overflow: hidden;
+                img {
+                    width: 36px;
+                }
+                .company-name {
+                    font-weight: bold;
+                    overflow: hidden;
+                    height: 0;
+                    opacity: 0;
+                    width: 0;
+                    color: $serra-primary-content;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        &.e-sidebar.e-left.e-open {
+            transform: translateX(0%) !important;
+            transition: 0.5s;
+            box-shadow: 0 5px 8px 0 rgba(60, 64, 73, 0.25);
+
+            .aside-inner {
+                .logo {
+                    width: 100%;
+                    text-align: left;
+            
+                    span {
+                        text-align: left;
+                        display: inline-block;
+                    }
+                    .company-name {
+                        text-align: left;
+                        display: inline-block;
+                        margin-left: 24px;
+                        letter-spacing: 4px;
+                        height: auto;
+                        width: auto;
+                        opacity: 1;
+                        transition: height 0s 0s, opacity 0.5s 0.2s;
+                        font-size: 16px;
+                        line-height: 16px;
+                    }
+                }
+                .sidebar {
+                    .sidebar-nav {
+                        li {
+                            width: 200px;
+                            &:hover {
+                                background-color: $serra-sidebar-hover-item-bg;
+                            }
+                            .text-link {
+                                margin-left: 20px;
+                                vertical-align: -3px;
+                                overflow: hidden;
+                                height: auto;
+                                opacity: 1;
+                                transition: height 0ms 0ms, opacity 2s 0ms;
+                            }
+                            .icon-arrow-right {
+                                display: block;
+                                float: right;
+                                margin-top: 1px;
+                                i.se-chevron-right {
+                                    height: 24px;
+                                    width: 24px;
+                                    text-align: center;
+                                    // padding: 7px;
+                                    vertical-align: middle;
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.e-sidebar.e-left.e-close.e-dock {
+            transform: translateX(-50px) translateX(50px) !important;
+            .aside-inner {
+                .sidebar {
+                    .sidebar-nav {
+                        li {
+                            .text-link {
+                                margin-left: 20px;
+                                vertical-align: -3px;
+                                overflow: hidden;
+                                height: 0;
+                                opacity: 0;
+                                display: none;
+                            }
+                            .icon-arrow-right {
+                                display: none;
+                            }
+                            &:focus {
+                                .icon i {
+                                    border: 1px solid $serra-primary-content;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+@media (max-height: 480px) {
+    .aside-container #sidebar-container {
+        min-height: auto;
+        overflow-y: scroll;
+        .aside-inner .sidebar.bottom-sidebar {
+            bottom: auto;
+            position: relative;
+            
+        }
+        
+    }
+}
+
+.global-navbar {
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+      
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: $serra-sidebar-scrollbar-track;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: $serra-sidebar-scrollbar-thumb;
+    }
+    
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: $serra-sidebar-scrollbar-hover;
+    }
+
+    .sidenav div {
+        overflow: hidden; // Hide the element content, while height = 0
+        height: 0; 
+        opacity: 0;
+    }
+    .sidenav.open {
+        div {
+            overflow: unset;
+            height: auto; 
+            opacity: 1;
+            transition: height 0ms 0ms, opacity 1.3s 0ms;
+        }
+    }
+
+    .sidenav {
+        border-left: 0px;
+        
+        outline: none;
+        &.open {
+            border-left: 1px solid $serra-sidebar-hover-item-bg;
+            // border-right: 1px solid $serra-sidebar-divider;
+            box-shadow: 0 5px 8px 0 rgba(60, 64, 73, 0.25);
+            outline: none;
+            width: 220px;
+            transition-property: width;
+            transition-duration: 0.5s;
+        }
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 102;
+        top: 0;
+        left: 0;
+        background-color: $serra-sidebar-bg;
+        overflow-x: hidden;
+        // -webkit-transition: width 1s;
+        // transition: width 1s;
+        transform: translateX(0%) !important;
+        transition: 0.5s;
+        margin-left: 200x;
+    }
+
+    .submenu-list-container {
+        .submenu-list {
+            list-style: none;
+            padding-left: 0px;
+
+            .item {
+                padding: 8px 18px;
+                &.level-1 {
+                    color: $serra-sidebar-submenu-color;
+                    font-size: 12px;
+                    line-height: 16px;
+                }
+                &.level-2 {
+                    color: $serra-primary-content;
+                    font-size: 14px;
+                    line-height: 20px;
+                    cursor: pointer;
+                    &:hover, &:focus {
+                        background-color: $serra-sidebar-hover-item-bg;
+                    }
+                }
+                &.active {
+                    font-weight: bold;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+

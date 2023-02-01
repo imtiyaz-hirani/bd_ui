@@ -1,0 +1,78 @@
+ejs-dialog.serra-popup-query-builder {
+    .e-dlg-header-content {
+        border-bottom: 1px solid $mischka;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        .e-dlg-header {
+            font-size: 18px;
+            line-height: 1.22;
+            font-weight: bold;
+        }
+        .e-btn.e-dlg-closeicon-btn{
+            &:focus, &:active {
+                background-color: transparent;
+            }
+        }
+        button.e-dlg-closeicon-btn.e-control.e-btn.e-lib {
+            min-width: auto;
+            margin-right: 6px;
+            margin-left: auto;
+            .e-icon-dlg-close {
+                color: $santas-gray;
+            }
+            &:hover, &:active {
+                background-color: transparent;
+            }
+        }
+    }
+    .e-dlg-content {
+        padding-top: 18px;
+        margin-bottom: 24px;
+        .e-group-container {
+            .e-group-body {
+                .e-rule-list {
+                    padding-top: 18px;
+                }
+            }
+        }
+        
+        
+    }
+    .e-footer-content {
+        background-color: $lily-white;
+        padding: 18px;
+    }
+}
+
+.serra-query-builder {
+    &.e-query-builder {
+        border: none;
+        .e-rule-list > ::after,
+        .e-rule-list > :first-child::before {
+            top: -14px;
+        }
+        .e-rule-list > .e-rule-container::after {
+            top: calc(50% - 3px);
+        }
+        .e-group-body {
+            .e-rule-container {
+                margin-left: 18px;
+            }
+        } 
+        .e-rule-list > ::after,
+        .e-rule-list > ::before {
+            left: -18px;
+            width: 18px;
+        }
+        .e-btn-group input:checked + label.e-btn, 
+        .e-btn-group .e-btn.e-qb-toggle.e-active-toggle {
+            background-color: $white;
+            border: $white;
+            border-bottom: 2px solid $serra-primary-content;
+            color: $serra-primary-content;
+        }
+    }
+}
+
+

@@ -1,0 +1,60 @@
+
+<ejs-dialog
+    class="change-execution-date-dialog"
+    #changeExecutionDateDialog 
+    [isModal]="true" 
+    [visible]="false"
+    [position]="{ X: 'center', Y: '150' }"
+    [width]="'400'"
+    [height]="'Auto'"
+    [header]="'SHARED.GRID.TOOLBAR.RECORD_SELECTION.CHANGE_EXECUTION_DATE' | translate"
+    (close)="onCloseDialog()"
+    [showCloseIcon]="true">
+    <ng-template #content>
+        <div class="dialogContent">
+            <form [formGroup]="executionDateForm" class="serra-form">
+                <ejs-datepicker
+                    id="executiondatepicker"
+                    [floatLabelType]="'Auto'" 
+                    [placeholder]="'SHARED.EXECUTION_DATE_MODAL.FIELD.EXECUTION_DATE' | translate" 
+                    [showClearButton]="true"
+                    [format]="dateFormat"
+                    [min]="minDate"
+                    formControlName="executionDate"
+                    name="executionDate"
+                    (open)="calculatePostitionForDatePicker($event)"
+                >
+                </ejs-datepicker>
+                <div *ngIf="executionDate.invalid && (executionDate.dirty || executionDate.touched)"
+                    class="serra-error">
+                    <div *ngIf="executionDate.errors.required">
+                        {{ 'SHARED.VALIDATION_ERROR.REQUIRED' | translate : { fieldName : 'Execution Date' } }}
+                    </div>
+                    <div *ngIf="executionDate.errors.min">
+                        {{ 'SHARED.VALIDATION_ERROR.INVALID_DATE' | translate : { fieldName : 'Execution Date' } }}
+                    </div>
+                </div>
+            </form>
+            <div class="mt-3" *ngIf="infoText">
+                <strong>{{ 'SHARED.NOTE' | translate }}:</strong>&nbsp;{{ infoText }}
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #footerTemplate>
+        <div class="d-flex flex-row align-items-center mr-2 mb-1">
+        <div class="left-content pl-2">
+        </div>
+        <div class="right-content ml-auto">
+            <div class="d-flex flex-row align-items-center">
+            <div class="mr-1">
+                <button ejs-button  cssClass="e-small" (click)="closeChangeExecutionDateDialog()">{{'SHARED.BUTTONS.NO' | translate}}</button>
+            </div>
+            <div>
+                <button ejs-button  [disabled]="submitted" [isPrimary]="true" cssClass="e-small" (click)="confirmButtonClick()">{{'SHARED.BUTTONS.YES' | translate}}</button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </ng-template>
+</ejs-dialog>
+<app-confirm-modal #confirmModal [customMessage]="confirmMessage | translate" [showCloseButton]="true"  [showFooter]="false"></app-confirm-modal>

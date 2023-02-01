@@ -1,0 +1,12 @@
+@import '../variables/fonts';
+
+label {
+    font-family: map-get($serra-form-label-font, 'font-family');;
+    font-size: map-get($serra-form-label-font, 'font-size');;
+    font-weight: map-get($serra-form-label-font, 'font-weight');;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: map-get($serra-form-label-font, 'line-height');;
+    letter-spacing: map-get($serra-form-label-font, 'letter-spacing');;
+    color: $serra-label-color;
+}

@@ -1,0 +1,19 @@
+{
+    "ACCOUNTS": {
+        "UNKWOWN_ACCOUNTS":{
+            "title": "Unknown Accounts",
+            "GRID": {
+                "COLUMNS":{
+                    "accountNumber": "Account Number",
+                    "accountName": "Account Name",
+                    "creationTimestamp": "Creation Timestamp",
+                    "flag": "Flag",
+                    "action":"Action"
+                }
+            },
+            "action": {
+              "deleteRecord": "Delete Record"
+            }
+        }
+    }
+}

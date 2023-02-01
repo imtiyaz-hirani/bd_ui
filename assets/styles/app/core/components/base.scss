@@ -1,0 +1,78 @@
+body { 
+    font-family: $serra-default-font-family;
+}
+
+i, mat-icon, em {
+  &.fa {
+    font-family: 'FontAwesome' !important;
+  }
+}
+
+.row-flush {
+  margin: 0;
+}
+.row-flush > .col, .row-flush > [class*="col-"] {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+button {
+  outline: none !important;
+}
+.center {
+  text-align: center;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-left {
+  text-align: left !important;
+}
+.text-bold {
+  font-weight: bold;
+}
+.no-mg {
+  margin: 0;
+}
+.no-pd {
+  padding: 0;
+}
+.no-mg-pd {
+  margin: 0;
+  padding: 0;
+}
+.ptr {
+  cursor: pointer;
+}
+.e-control, .e-css {
+  font-size: 14px;
+  line-height: 1.43;
+}
+a {
+  color: $serra-hyperlink;
+  cursor: pointer;
+  &:hover {
+    color: $serra-hyperlink-light;
+  }
+}
+.no-cursor {
+  cursor: default !important;
+}
+a.no-cursor {
+  text-decoration: none !important;
+}
+.display-none {
+  display: none;
+}
+
+app-pf-toolbar {
+  div {
+    outline: none;
+  }
+}
+span, div {
+  outline: none;
+}
+.h-100 {
+  height: 100%;
+}

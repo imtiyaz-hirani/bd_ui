@@ -1,0 +1,98 @@
+// Colors used within Serrala theme
+$bright-gray: #3c4049;
+$razzmatazz: #da0158;
+$zumthor: #ebf3ff;
+$blue: #007bff;
+$blue-ribbon: #1f69ff;
+$pink: #ff4081;
+$rose: #ff0d5e;
+$flamingo: #f03e3e;
+$dodger-blue: #2986ff;
+$cornflower-blue: #5c7cfa;
+$navy-blue: #1f496e;
+$cranberry: #da578c;
+$pale-rose: #ffe5f4;
+$malacehit: #00bd35;
+$zircon: #f7f8ff;
+$bridal-heath: #fffbf4;
+$chablis: #fff2f2;
+$malibu: #7fb5ff;
+$saffron: #f7b63d;
+$yellow: #ffd939;
+$froly: #f57f7f;
+$shuttle-gray: #656c7b;
+$waterloo: #838895;
+$santas-gray: #989fae;
+$ghost: #c0c4ce;
+$mischka: #dfe1e7;
+$ghost-gray: #6b778c;
+$athens-gray: #ebecef;
+$solitude: #edf0f2;
+$porcelain: #f3f5f6;
+$solitude-light: #f4f6f7;
+$deep-blush: #E9679B;
+$kournikova: #ffde79;
+$granny-smith-apple: #92e2a0;
+$lily-white: #f9fafa;
+$white: #ffffff;
+$black: #000000;
+$shark: #25272D;
+$light-froly: #fcadb7;
+$medium-red: #bc0000;
+$light-pale-rose: #fff5f5;
+$cranberry-pink:#E599F7;
+$indigo: #9775fa;
+$aquamarine: #63e6be;
+$ocean-blue: #639EF6;
+$medium-dark: rgba(0,0,0,0.2);
+$inset-shadow-black: rgba(0, 0, 0, 0.05);
+// Serrala theme color co;des
+$serra-primary-content: $bright-gray;       // text, button
+$serra-primary-light: $razzmatazz;
+$serra-selection-light: $zumthor;
+$serra-hyperlink-light: $blue-ribbon;
+$serra-icon-color: $razzmatazz;
+$serra-notification-bg-color: $serra-icon-color;
+// Serrala theme dark color codes
+$serra-primary-dark: $rose;
+$serra-hyperlik-dark: $dodger-blue;
+
+// Serrala highlight color codes
+$serra-highlight-error: $cranberry;
+$serra-highlight-bg-table-cell: $pale-rose;
+$serra-selection-light: $zumthor;
+
+// Serrala theme success, info, warn color codes
+$serra-success: $malacehit;
+$serra-info: $dodger-blue;
+$serra-warn: $saffron;
+$serra-danger: $razzmatazz;
+
+// Insights color codes
+$serra-insights-bg-info: $zircon;
+$serra-insights-bg-warn: $bridal-heath;
+$serra-insights-bg-alert: $chablis;
+$serra-insights-border-info: $malibu;
+$serra-insights-border-warn: $saffron;
+$serra-insights-border-alert: $froly;
+
+// Serra default theming variables
+
+$serra-bg: $solitude-light;
+
+//serra border colors
+$serra-err-border-color: $light-froly;
+
+//serra bg colors
+$serra-err-bg-color: $light-pale-rose;
+
+$serra-err-text-color: $medium-red;
+$serra-err-icon-color: $medium-red;
+
+//bank status colors
+$bank-status-percent-color: #ce345b;
+$bank-status-matched-color: #70707b;
+$bank-status-unmatched-color: #70707b;
+$bank-status-line-color: #ececec;
+
+$table-border: 1px solid $ghost;

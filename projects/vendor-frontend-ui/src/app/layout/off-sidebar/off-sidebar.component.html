@@ -1,0 +1,50 @@
+<div class="power-panel-wrapper">
+    <div class="power-panel-container">
+        <ejs-sidebar #powerpanelInstance id="power-panel-sidebar" class="e-hidden"
+            (created)="onCreated()" [position]='position' [width]='width'
+            [dockSize]='dockSize' [enableDock]='enableDock' [closeOnDocumentClick]="isCloseOnDocumentClick">
+            <div class="power-panel-inner">
+                <div class="top-container">
+                    <div class="d-flex flex-row">
+                        <nav>
+                            <div class="power-panel-nav">
+                                <ul class="sidebar-nav">
+                                    <ng-container *ngFor="let menuItem of powerPanelMenuList">
+                                        <li [class.active]="menuItem?.isActive" (click)="showDetails(menuItem?.key)">
+                                            <span>
+                                                <span class="icon">
+                                                    <i [class]="menuItem?.icon"></i>
+                                                    <ng-container *ngIf="menuItem?.unseen_notification">
+                                                        <span class="notifications-unseen">{{ menuItem?.unseen_notification }}</span>
+                                                    </ng-container>
+                                                </span>
+                                            </span>
+                                        </li>
+                                    </ng-container>
+                                </ul>
+                            </div>
+                        </nav>
+                        <div class="power-panel-details" id="powerPanelDetails">
+                            <div class="widgets container mb-10">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="container">
+                                            <span class="icon-pinning" [class]="pinnedPowerPanel ? 'pinned' : ''" (click)="togglePinning()">
+                                                <i class="se-pin-off"></i>
+                                                <i class="se-pinned"></i>
+                                            </span>
+                                            <app-widgets [widgetType]="widgetType"></app-widgets>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="bottom-container">
+                    <app-chat-footer (showBotPanel)="setBotPanelState($event)"></app-chat-footer>
+                </nav>
+            </div>
+        </ejs-sidebar>
+    </div>
+</div>

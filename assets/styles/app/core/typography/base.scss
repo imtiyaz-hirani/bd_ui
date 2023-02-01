@@ -1,0 +1,80 @@
+@import '../variables/fonts';
+body, .body-1 { 
+    font-family: map-get($serra-font, font-family);
+    font-size: map-get($serra-font, font-size);
+    letter-spacing: map-get($serra-font, letter-spacing);
+    font-weight: map-get($serra-font, font-weight);
+    line-height: map-get($serra-font, line-height);
+}
+
+.body-2 {
+    font-family: map-get($serra-body2-font, font-family);
+    font-size: map-get($serra-body2-font, font-size);
+    letter-spacing: map-get($serra-body2-font, letter-spacing);
+    font-weight: map-get($serra-body2-font, font-weight);
+    line-height: map-get($serra-body2-font, line-height);
+}
+
+.serrala-theme {
+    h1, .h1, .h1-b {
+        font-size: map-get($serra-h1-font, 'font-size');
+        line-height: map-get($serra-h1-font, 'line-height');
+        font-family: map-get($serra-h1-font, 'font-family');
+        font-weight: map-get($serra-h1-font, 'font-weight');
+        letter-spacing: map-get($serra-h1-font, 'letter-spacing');
+    }
+    
+    h2, .h2, .h2-b {
+        font-size: map-get($serra-h2-font, 'font-size');
+        line-height: map-get($serra-h2-font, 'line-height');
+        font-family: map-get($serra-h2-font, 'font-family');
+        font-weight: map-get($serra-h2-font, 'font-weight');
+        letter-spacing: map-get($serra-h2-font, 'letter-spacing');
+    }
+    
+    h3, .h3, .h3-b {
+        font-size: map-get($serra-h3-font, 'font-size');
+        line-height: map-get($serra-h3-font, 'line-height');
+        font-family: map-get($serra-h3-font, 'font-family');
+        font-weight: map-get($serra-h3-font, 'font-weight');
+        letter-spacing: map-get($serra-h3-font, 'letter-spacing');
+    }
+    
+    h4, .h4, .h4-b {
+        font-size: map-get($serra-h4-font, 'font-size');
+        line-height: map-get($serra-h4-font, 'line-height');
+        font-family: map-get($serra-h4-font, 'font-family');
+        font-weight: map-get($serra-h4-font, 'font-weight');
+        letter-spacing: map-get($serra-h4-font, 'letter-spacing');
+    }
+    
+    h5, .h5, .h5-b {
+        font-size: map-get($serra-h5-font, 'font-size');
+        line-height: map-get($serra-h5-font, 'line-height');
+        font-family: map-get($serra-h5-font, 'font-family');
+        font-weight: map-get($serra-h5-font, 'font-weight');
+        letter-spacing: map-get($serra-h5-font, 'letter-spacing');
+    }
+    
+    h6, .h6, .h6-b {
+        font-size: map-get($serra-h6-font, 'font-size');
+        line-height: map-get($serra-h6-font, 'line-height');
+        font-family: map-get($serra-h6-font, 'font-family');
+        font-weight: map-get($serra-h6-font, 'font-weight');
+        letter-spacing: map-get($serra-h6-font, 'letter-spacing');
+    }
+    
+    h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6,
+    .h1-b, .h2-b, .h3-b, .h4-b, .h5-b, .h6-b {
+        margin: 24px 0;
+    }
+    .h1-b, .h2-b, .h3-b, .h4-b, .h5-b, .h6-b {
+        font-weight: $font-weight-bold;
+    }
+
+    .main-title {
+        display: inline-block;
+        margin: 6px 24px 24px 0;
+    }
+}
+
