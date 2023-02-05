@@ -10,8 +10,10 @@ import { TabModule } from '@syncfusion/ej2-angular-navigations';
 import { SharedModule } from '@app/shared/shared.module';
 import { FilterComponent } from './components/filter/filter.component';
 import { QueryBuilderModule } from '@syncfusion/ej2-angular-querybuilder';
+import { AddStray } from './components/add-stray/add-stray.component';
 @NgModule({
-  declarations: [SupplierInvitationListComponent, ToolbarComponent, VendorGridComponent, FilterComponent],
+  declarations: [SupplierInvitationListComponent, ToolbarComponent, VendorGridComponent, FilterComponent,
+  AddStray],
   imports: [
     CommonModule,
     SupplierInvitationListRoutingModule,TabModule,SyncfusionModules,SharedModule,QueryBuilderModule

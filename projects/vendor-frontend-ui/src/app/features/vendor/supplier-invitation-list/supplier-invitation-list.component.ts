@@ -2,6 +2,7 @@ import { RuleModel } from '@syncfusion/ej2-angular-querybuilder';
 import { SelectingEventArgs, TabComponent } from '@syncfusion/ej2-angular-navigations';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Router } from '@angular/router';
 
 
  @Component({
@@ -22,7 +23,7 @@ export class SupplierInvitationListComponent implements OnInit {
   
   importRules: RuleModel;
 
-  constructor( private translateService: TranslateService) { }
+  constructor( private translateService: TranslateService, private router: Router) { }
 
   ngOnInit(): void {
 
@@ -80,6 +81,17 @@ export class SupplierInvitationListComponent implements OnInit {
 hideFilter(event: string): void {
   this.showFilter = false;
 }
+
+onQueryChange(event){
+  console.log(event)
+}
+
+addRecord(): void {
+  
+    this.router.navigate(['/vendor/add-stray']);
+
+}
+
 
 
 }

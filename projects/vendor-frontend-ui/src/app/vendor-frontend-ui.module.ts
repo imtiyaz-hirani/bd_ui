@@ -19,10 +19,8 @@ import { BaseService } from './shared/services/base.service';
 import { VendorFrontendUiComponent } from './vendor-frontend-ui.component';
 import { VendorFrontendUiRoutingModule } from './vendor-frontend-ui-routing.module';
 import { TriggerService } from './core/services/trigger.service';
-import { ErrorInterceptor } from './core/services/error-interceptor.service';
 import { ErrorService } from './core/services/error.service';
 import { ToastService } from './core/services/toast.service';
-import { GlobalErrorHandler } from './core/services/global-error-handler';
 // eslint-disable-next-line prefer-arrow/prefer-arrow-functions
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -51,9 +49,7 @@ export function createTranslateLoader(http: HttpClient) {
     TriggerService,
     ToastService,
     { provide: APP_BASE_HREF, useValue: environment.baseHref },
-    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     ErrorService,
-    { provide: ErrorHandler, useClass: GlobalErrorHandler },
   ],
   bootstrap: [VendorFrontendUiComponent],
 })

@@ -1,11 +1,19 @@
 <div class="row ">
-  <div class="col-9">
-      <div class="d-flex flex-row">
-          <div>
-              <h3 class="main-title">Stray</h3>
-
-          </div>
+  <div class="col-12">
+    <div class="d-flex flex-row">
+      <div>
+          <h3 class="main-title">Stray</h3>
       </div>
+      <div class="ml-auto">
+          <div class="d-flex flex-row">
+              <div>
+                  <button  class="e-control e-btn e-lib e-primary" (click)="addRecord()">Add New Stray</button>
+              </div>
+          </div>
+          
+      </div>
+  </div>
+
   </div>
 
 </div>
@@ -17,7 +25,7 @@
          
               <div *ngIf="showFilter">
                 <div id="dailogbox" >
-                   <vendor-supplier-list-filter  [dialogVisible]='true' (dialogClosed)="hideFilter($event)"></vendor-supplier-list-filter>
+                   <vendor-supplier-list-filter  [dialogVisible]='true' (dialogClosed)="hideFilter($event)" (queryChange) = "onQueryChange($event)"></vendor-supplier-list-filter>
                 </div>
                 </div>
               <div class="mt-2">

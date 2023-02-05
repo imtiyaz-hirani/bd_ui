@@ -1,20 +1,80 @@
 <div id="dailogbox" class="control-section">
   <div #container class='root-container'></div>
-  <ejs-dialog class="serra-popup-query-builder" id='dialog' #ejDialog [header]="'SHARED.PF_SERRALA_DIALOG.HEADER_TITLE' | translate" [target]="target" [buttons]='buttons'
+  <ejs-dialog class="serra-popup-query-builder" id='dialog' #ejDialog header="Query" [target]="target" [buttons]='buttons'
   width='800px'  showCloseIcon='true' height='auto' (close)="dialogClosed()"  [position]='dialogPosition' [visible] ='dialogVisible'>
 
-  <ng-template #content>
-    <ejs-querybuilder #querybuilder class="row" width="70%" [dataSource]="dataSource" [rule]="importRules" (created)="createdControl()">
-      <e-columns>
-        <e-column field="EmployeeID" label="Employee ID" type="number"></e-column>
-        <e-column field="FirstName" label="First Name" type="string"></e-column>
-        <e-column field="TitleOfCourtesy" label="Title Of Courtesy" type="boolean" [values]="values"></e-column>
-        <e-column field="Title" label="Title" type="string"></e-column>
-        <e-column field="HireDate" label="Hire Date" type="date" format="dd/MM/yyyy"></e-column>
-        <e-column field="Country" label="Country" type="string"></e-column>
-        <e-column field="City" label="City" type="string"></e-column>
-      </e-columns>
-    </ejs-querybuilder>
+  <ng-template #content >
+      <div class="row serra-form mb-6">
+      <div class="col-12" >
+          <div class="e-card serra-card p-4 serrala-card-form">
+              <form class="form-horizontal" [formGroup]="strayForm">
+                  <div class="row" [ngSwitch]="item.inputType" *ngFor="let item of strayForm1">
+                      <div class="col-12" *ngSwitchCase = "'date'" >
+                          <div class="form-group">
+                              <div class="row">
+                                  <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                                      <ejs-datepicker  [placeholder]="item.formName" [formControlName]="item.formControlName" format = "dd/MM/yyyy"></ejs-datepicker>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                      <div class="col-12" *ngSwitchCase = "'input'">
+                          <div class="form-group">
+                              <div class="row">
+                                  <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                                      <ejs-textbox [placeholder]="item.formName" [formControlName]="item.formControlName"
+                                          floatLabelType="Auto" ></ejs-textbox>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-6" *ngSwitchCase = "'dropdown'">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-12 col-lg-12 col-md-12 col-sm-12">
+                                    <ejs-dropdownlist 
+                                        [dataSource]="item.dataSource" floatLabelType="Auto"
+                                        [formControlName]="item.formControlName" [fields]='dropdownFields'
+                                        [placeholder]="item.formName"
+                                        [showClearButton]="true">
+                                    </ejs-dropdownlist>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+              
+                  </div>
+
+                 
+
+
+
+              </form>
+
+
+                  
+              
+          </div>
+      </div>
+
+      <!-- <div class="col-12" >
+          <div class="form-action-footer-section d-flex align-items-center pl-8">
+            <div class="d-flex flex-row">
+              <div>
+                <button  class="e-control e-btn e-lib e-primary" [disabled]="!strayForm.valid || !file"
+                  (click)="saveStray()">
+                  Save Stray
+                </button>
+              </div>
+             
+          </div>
+        </div>
+     
+  </div> -->
+
+</div>
+
   </ng-template>
 
   <ng-template #footerTemplate>

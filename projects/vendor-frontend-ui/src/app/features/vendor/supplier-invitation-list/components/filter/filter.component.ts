@@ -3,6 +3,7 @@ import { Component, ElementRef, EventEmitter, Input, OnInit, Output, ViewChild }
 import { QueryBuilderComponent, RuleModel, ShowButtonsModel } from '@syncfusion/ej2-angular-querybuilder';
 import { PositionDataModel } from '@syncfusion/ej2-popups';
 import { DialogComponent } from '@syncfusion/ej2-angular-popups';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'vendor-supplier-list-filter',
@@ -11,11 +12,31 @@ import { DialogComponent } from '@syncfusion/ej2-angular-popups';
 })
 export class FilterComponent implements OnInit {
 
+  @Output() queryChange = new EventEmitter();
+
+  regionList = [
+    {name : 'ALL' , id :'ALL'},
+    {name : 'WEST1' , id :'WEST1'},
+    {name : 'WEST2' , id :'WEST2'},
+    {name : 'SOUTH1' , id :'SOUTH1'},
+    {name : 'SOUTH2' , id :'SOUTH2'},
+    {name : 'EAST' , id :'EAST'},
+    {name : 'NORTH' , id :'NORTH'}
+]
+
+statusList = [
+    {name : 'Closed' , id :'Closed'},
+    {name : 'CCODE' , id :'CCODE'}
+]
+
+dropdownFields = { text: 'name', value: 'id' };
+
   showButtons: ShowButtonsModel = {
     groupInsert: false,
     groupDelete: true,
     ruleDelete: true,
   };
+   strayForm : FormGroup
 
   i: boolean;
 
@@ -34,7 +55,57 @@ export class FilterComponent implements OnInit {
 
   initilaizeTarget: EmitType<object> = () => {
     this.targetElement = this.container.nativeElement.parentElement;
-  };
+  }; 
+   strayForm1 =[
+    {
+      formName: 'Stray#S',
+      inputType : 'input',
+      formControlName  : 'strayS'
+     },{
+      formName: 'Stray Date',
+      inputType : 'date',
+      formControlName  : 'StrayDate'
+     },
+     {
+      formName: 'To',
+      inputType : 'date',
+      formControlName  : 'to'
+     },
+     {
+      formName: 'Region',
+      inputType : 'dropdown',
+      formControlName  : 'region',
+      dataSource : this.regionList
+     },{
+      formName: 'Stray Loc',
+      inputType : 'input',
+      formControlName  : 'strayLoc'
+     },
+     {
+      formName: 'Status',
+      inputType : 'dropdown',
+      formControlName  : 'status',
+      dataSource : this.statusList
+     },{
+      formName: 'Vehicle Origin',
+      inputType : 'input',
+      formControlName  : 'vehicleOrigin'
+     },
+     {
+      formName: 'Route',
+      inputType : 'input',
+      formControlName  : 'route'
+     },
+     {
+      formName: 'Commodity',
+      inputType : 'input',
+      formControlName  : 'commodity'
+     }
+   ]
+   
+   
+
+
 
   @ViewChild('ejDialog', { static: true }) ejDialog: DialogComponent;
   @ViewChild('querybuilder', { static: false }) qryBldrObj: QueryBuilderComponent;
@@ -42,13 +113,17 @@ export class FilterComponent implements OnInit {
   @Output('dialogClosed')
   dialogCloseEvent: EventEmitter<any> = new EventEmitter<any>();
 
-  constructor() {
+  constructor(private formBuilder: FormBuilder) {
     this.i = true;
    }
 
- 
 
   ngOnInit(): void {
+    const FormControlObject = {}
+    this.strayForm1.forEach(ele =>{
+      FormControlObject[ele.formControlName]= new FormControl('')
+    })
+    this.strayForm = this.formBuilder.group(FormControlObject)
   }
 
 
@@ -104,8 +179,8 @@ export class FilterComponent implements OnInit {
   };
 
   onApply() {
-    this.importRules = this.qryBldrObj.getRules();
-    console.log(this.importRules);
+    console.log(this.strayForm.value)
+    this.queryChange.emit(this.strayForm.value);
   }
 
     // Enables the footer buttons
