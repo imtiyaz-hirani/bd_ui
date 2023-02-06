@@ -3,6 +3,7 @@ import { SelectingEventArgs, TabComponent } from '@syncfusion/ej2-angular-naviga
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
+import { StrayService } from './service/stray-service';
 
 
  @Component({
@@ -16,14 +17,16 @@ export class SupplierInvitationListComponent implements OnInit {
   chips: string[] =['chip1' , 'chip2'];
   target = '.control-section';
   showFilter = false;
+  strayData;
+
   public headerText: Object = [{ 'text': '<div class="e-title  ">30 Vendors</div>' },
   { 'text': '<div class="e-title  ">Invitation Monitoring</div>' },
   { 'text': '<div class="e-title e-active">Invite</div>' }];
 
-  
+
   importRules: RuleModel;
 
-  constructor( private translateService: TranslateService, private router: Router) { }
+  constructor( private translateService: TranslateService, private strayService: StrayService,private router: Router) { }
 
   ngOnInit(): void {
 
@@ -47,9 +50,9 @@ export class SupplierInvitationListComponent implements OnInit {
 
 
 
- 
 
-    
+
+
   }
 
   public animation: object = {
@@ -83,11 +86,14 @@ hideFilter(event: string): void {
 }
 
 onQueryChange(event){
-  console.log(event)
+   this.strayService.getStrayDate(event).subscribe(data=>{
+      this.strayData = data;
+      console.log(this.strayData);
+   });
 }
 
 addRecord(): void {
-  
+
     this.router.navigate(['/vendor/add-stray']);
 
 }

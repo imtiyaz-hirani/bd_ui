@@ -55,55 +55,55 @@ dropdownFields = { text: 'name', value: 'id' };
 
   initilaizeTarget: EmitType<object> = () => {
     this.targetElement = this.container.nativeElement.parentElement;
-  }; 
+  };
    strayForm1 =[
     {
       formName: 'Stray#S',
       inputType : 'input',
-      formControlName  : 'strayS'
+      formControlName  : 'mcremarks'
      },{
       formName: 'Stray Date',
       inputType : 'date',
-      formControlName  : 'StrayDate'
+      formControlName  : 'mcfromdate'
      },
      {
       formName: 'To',
       inputType : 'date',
-      formControlName  : 'to'
+      formControlName  : 'mctodate'
      },
      {
       formName: 'Region',
       inputType : 'dropdown',
-      formControlName  : 'region',
+      formControlName  : 'mregion',
       dataSource : this.regionList
      },{
       formName: 'Stray Loc',
       inputType : 'input',
-      formControlName  : 'strayLoc'
+      formControlName  : 'mcstrayloc'
      },
      {
       formName: 'Status',
       inputType : 'dropdown',
-      formControlName  : 'status',
+      formControlName  : 'mcstatus',
       dataSource : this.statusList
      },{
       formName: 'Vehicle Origin',
       inputType : 'input',
-      formControlName  : 'vehicleOrigin'
+      formControlName  : 'mcvehicleorigin'
      },
      {
       formName: 'Route',
       inputType : 'input',
-      formControlName  : 'route'
+      formControlName  : 'mcroute'
      },
      {
       formName: 'Commodity',
       inputType : 'input',
-      formControlName  : 'commodity'
+      formControlName  : 'mcommodity'
      }
    ]
-   
-   
+
+
 
 
 
@@ -123,7 +123,11 @@ dropdownFields = { text: 'name', value: 'id' };
     this.strayForm1.forEach(ele =>{
       FormControlObject[ele.formControlName]= new FormControl('')
     })
-    this.strayForm = this.formBuilder.group(FormControlObject)
+    this.strayForm = this.formBuilder.group(FormControlObject);
+    this.strayForm.addControl('mcpackdesc', new FormControl(''));
+    this.strayForm.addControl('mcvehicleno', new FormControl(''));
+    this.strayForm.addControl('mcawbno', new FormControl(''));
+
   }
 
 

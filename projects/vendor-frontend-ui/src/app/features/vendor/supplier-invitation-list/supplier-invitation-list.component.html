@@ -10,7 +10,7 @@
                   <button  class="e-control e-btn e-lib e-primary" (click)="addRecord()">Add New Stray</button>
               </div>
           </div>
-          
+
       </div>
   </div>
 
@@ -20,9 +20,9 @@
 
 <div class="row ">
   <div class="col-lg-12">
-    
-         
-         
+
+
+
               <div *ngIf="showFilter">
                 <div id="dailogbox" >
                    <vendor-supplier-list-filter  [dialogVisible]='true' (dialogClosed)="hideFilter($event)" (queryChange) = "onQueryChange($event)"></vendor-supplier-list-filter>
@@ -35,16 +35,16 @@
               <div class="row">
                 <div class="col-12 mt-3 mb-4">
                   <div tabindex="0" class="e-card">
-                    <vendor-supplier-list-grid></vendor-supplier-list-grid>
+                    <vendor-supplier-list-grid [data]=strayData></vendor-supplier-list-grid>
                   </div>
                 </div>
               </div>
 
 
-           
-         
-   
- 
+
+
+
+
   </div>
 </div>
 

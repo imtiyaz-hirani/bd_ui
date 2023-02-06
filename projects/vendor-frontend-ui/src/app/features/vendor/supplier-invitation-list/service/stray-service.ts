@@ -9,10 +9,14 @@ export class StrayService {
   constructor(private http: HttpClient) { }
 
   public addNewStray(stray){
-    return this.http.post('http://localhost:8080/stray',stray)
+    return this.http.post('http://localhost:9090/stray',stray)
   }
 
   public upload(formData: FormData){
-    return this.http.post('http://localhost:8080/upload',formData)
+    return this.http.post('http://localhost:9090/upload',formData)
+  }
+
+  public getStrayDate(strayQuery: any){
+        return this.http.post('http://localhost:9090/getstray',strayQuery )
   }
 }

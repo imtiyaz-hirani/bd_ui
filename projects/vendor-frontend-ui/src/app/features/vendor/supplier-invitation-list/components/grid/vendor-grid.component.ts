@@ -1,7 +1,7 @@
 
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 import { GridComponent, InfiniteScrollSettingsModel } from '@syncfusion/ej2-angular-grids';
-import { griddata } from './data';
+ import { griddata } from './data';
 
 @Component({
   selector: 'vendor-supplier-list-grid',
@@ -22,7 +22,9 @@ export class VendorGridComponent implements OnInit {
   group = false;
   currentActiveTool = 'search';
   toolbar = [];
-  data=griddata;
+
+  @Input("data")
+  data:any;
 
   //We do not have specific type definition for this.
 /* jshint ignore:start*/
