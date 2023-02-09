@@ -7,44 +7,41 @@
       <div class="row serra-form mb-6">
       <div class="col-12" >
           <div class="e-card serra-card p-4 serrala-card-form">
-              <form class="form-horizontal" [formGroup]="strayForm">
-                  <div class="row" [ngSwitch]="item.inputType" *ngFor="let item of strayForm1">
-                      <div class="col-12" *ngSwitchCase = "'date'" >
-                          <div class="form-group">
-                              <div class="row">
-                                  <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-                                      <ejs-datepicker  [placeholder]="item.formName" [formControlName]="item.formControlName" format = "dd/MM/yyyy"></ejs-datepicker>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
+              <form class="" [formGroup]="strayForm">
 
-                      <div class="col-12" *ngSwitchCase = "'input'">
-                          <div class="form-group">
-                              <div class="row">
-                                  <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-                                      <ejs-textbox [placeholder]="item.formName" [formControlName]="item.formControlName"
-                                          floatLabelType="Auto" ></ejs-textbox>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <div class="col-6" *ngSwitchCase = "'dropdown'">
-                        <div class="form-group">
-                            <div class="row">
-                                <div class="col-12 col-lg-12 col-md-12 col-sm-12">
-                                    <ejs-dropdownlist 
-                                        [dataSource]="item.dataSource" floatLabelType="Auto"
-                                        [formControlName]="item.formControlName" [fields]='dropdownFields'
-                                        [placeholder]="item.formName"
-                                        [showClearButton]="true">
-                                    </ejs-dropdownlist>
-                                </div>
-                            </div>
+                <div class="row">
+
+
+                  <ng-container  [ngSwitch]="item.inputType" *ngFor="let item of strayForm1">
+                    <div class="col-6" *ngSwitchCase = "'date'" >
+                        <div class="form-group mt-2">
+                                    <ejs-datepicker  [placeholder]="item.formName" [formControlName]="item.formControlName" format = "dd-MMM-yyyy"></ejs-datepicker> 
                         </div>
                     </div>
-              
+
+                    <div class="col-6" *ngSwitchCase = "'input'">
+                        <div class="form-group">
+                                    <ejs-textbox [placeholder]="item.formName" [formControlName]="item.formControlName"
+                                        floatLabelType="Auto" ></ejs-textbox>
+                        </div>
+                    </div>
+
+                    <div class="col-6" *ngSwitchCase = "'dropdown'">
+                      <div class="form-group">
+                                  <ejs-dropdownlist 
+                                      [dataSource]="item.dataSource" floatLabelType="Auto"
+                                      [formControlName]="item.formControlName" [fields]='dropdownFields'
+                                      [placeholder]="item.formName"
+                                      [showClearButton]="true">
+                                  </ejs-dropdownlist>
+                      </div>
                   </div>
+            
+                </ng-container>
+
+                </div>
+
+                  
 
                  
 

@@ -19,4 +19,13 @@ export class StrayService {
   public getStrayDate(strayQuery: any){
         return this.http.post('http://localhost:9090/getstray',strayQuery )
   }
+
+  public getImage(strayNo :string){
+     return this.http.get("http://localhost:8080/stray/image"+strayNo)
+  }
+
+  getData() {
+    "projects\vendor-frontend-ui\src\app\features\vendor\supplier-invitation-list\service\image.json"
+    return this.http.get('/assets/image.json');
+  }
 }
