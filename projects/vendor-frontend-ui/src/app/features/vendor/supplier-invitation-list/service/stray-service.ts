@@ -21,7 +21,7 @@ export class StrayService {
   }
 
   public getImage(strayNo :string){
-     return this.http.get("http://localhost:9090/stray/image"+strayNo)
+     return this.http.get("http://localhost:9090/stray/image/"+strayNo)
   }
 
   getData() {
