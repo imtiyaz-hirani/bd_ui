@@ -287,8 +287,9 @@ image:any;
   viewImage(strayNo: string){
     console.log(strayNo)
     this.strayService.getImage(strayNo).subscribe((data)=>{
-      console.log(data)
-      let objectURL = URL.createObjectURL(data['mbimagefile']);       
+      console.log(data);
+
+      let objectURL = 'data:image/jpeg;base64,' + data['mbimagefile'];
       this.image = this.sanitizer.bypassSecurityTrustUrl(objectURL);
     })
 
@@ -298,7 +299,7 @@ image:any;
 
         this.image = this.sanitizer.bypassSecurityTrustUrl(objectURL);
       })
-      
+
     }*/
 
     this.strayImageDialog.show()
@@ -317,7 +318,7 @@ image:any;
       if(isUpadte){
         console.log(this.strayMassUpdate)
          this.strayDialog.content = this.strayMassUpdate;
-         
+
       }
 
       this.strayDialog.show()

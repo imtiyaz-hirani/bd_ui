@@ -76,13 +76,13 @@
                     <a (click)="clearRows()">{{'SHARED.GRID.TOOLBAR.RECORD_SELECTION.CLEAR' | translate}}</a>
                 </div>
                 <div class="mr-2">
-                    <button [disabled]="isDisableButtons" class="e-control e-btn e-lib e-small e-primary" (click)="strayDialogOpen(true)">Stray Mass Update</button>
+                    <button class="e-control e-btn e-lib e-small e-primary" (click)="strayDialogOpen(true)">Stray Mass Update</button>
                 </div>
             </div>
 
             </ng-container>
           </div>
-  
+
   </div>
 </ng-template>
 
@@ -125,8 +125,8 @@
 </ng-template>
 
 <ejs-dialog class="status-message-dialog" #strayImageDialog [position]="strayDialogPosition"
-    [visible]="hidden" [width]="700" [height]="'auto'"  [target]="target"
-    [header]="'Image'" 
+    [visible]="hidden" [width]="'auto'" [height]="'auto'"  [target]="target"
+    [header]="'Image'"
     [showCloseIcon]="true" (overlayClick)="staryImageClose()">
   <ng-template #content>
      <img [src] = "image"/>
@@ -135,7 +135,7 @@
 
 <ejs-dialog class="status-message-dialog" #strayDialog [position]="strayDialogPosition"
     [visible]="hidden" [width]="700" [height]="'auto'"  [target]="target"
-    [header]="'Stray Mass Update'" 
+    [header]="'Stray Mass Update'"
     [showCloseIcon]="true" (overlayClick)="staryDialogClose()">
     <ng-template #content>
     <div class="row serra-form mb-6">
@@ -153,7 +153,7 @@
 
             <div class="col-6" *ngSwitchCase = "'dropdown'">
               <div class="form-group">
-                          <ejs-dropdownlist 
+                          <ejs-dropdownlist
                               [dataSource]="item.dataSource" floatLabelType="Auto"
                               [formControlName]="item.formControlName" [fields]='dropdownFields'
                               [placeholder]="item.formName"
@@ -189,6 +189,6 @@
   </ejs-dialog>
 
 
-   
+
 
 

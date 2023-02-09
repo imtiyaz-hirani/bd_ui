@@ -10,12 +10,10 @@
               <form class="" [formGroup]="strayForm">
 
                 <div class="row">
-
-
                   <ng-container  [ngSwitch]="item.inputType" *ngFor="let item of strayForm1">
                     <div class="col-6" *ngSwitchCase = "'date'" >
                         <div class="form-group mt-2">
-                                    <ejs-datepicker  [placeholder]="item.formName" [formControlName]="item.formControlName" format = "dd-MMM-yyyy"></ejs-datepicker> 
+                                    <ejs-datepicker  [placeholder]="item.formName" [formControlName]="item.formControlName" format = "dd-MMM-yyyy"></ejs-datepicker>
                         </div>
                     </div>
 
@@ -28,7 +26,7 @@
 
                     <div class="col-6" *ngSwitchCase = "'dropdown'">
                       <div class="form-group">
-                                  <ejs-dropdownlist 
+                                  <ejs-dropdownlist
                                       [dataSource]="item.dataSource" floatLabelType="Auto"
                                       [formControlName]="item.formControlName" [fields]='dropdownFields'
                                       [placeholder]="item.formName"
@@ -36,22 +34,22 @@
                                   </ejs-dropdownlist>
                       </div>
                   </div>
-            
+
                 </ng-container>
 
                 </div>
 
-                  
 
-                 
+
+
 
 
 
               </form>
 
 
-                  
-              
+
+
           </div>
       </div>
 
@@ -64,10 +62,10 @@
                   Save Stray
                 </button>
               </div>
-             
+
           </div>
         </div>
-     
+
   </div> -->
 
 </div>
