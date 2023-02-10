@@ -3,7 +3,7 @@
         <div class="col-12">
             <div class="d-flex flex-row">
                 <div>
-                    <h3 class="main-title">Add Stray</h3>
+                    <h3 class="main-title">Edit Stray</h3>
                 </div>
             </div>
         </div>
@@ -43,17 +43,6 @@
                         <div class="col-12">
                             <div class="form-group">
                                 <div class="row">
-                                    <span class="ml-2">
-                                    <button class="e-control e-btn e-lib e-primary" onclick="document.getElementById('getFile').click()">Upload Image</button>
-                                    <input type='file' id="getFile" style="display:none" (change)="onFileChange($event)" >
-                                </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="form-group">
-                                <div class="row">
                                     <div class="col-12 col-lg-6 col-md-12 col-sm-12">
                                         <ejs-textbox placeholder="Pack Desc"
                                             floatLabelType="Auto" formControlName="cpackdesc"></ejs-textbox>
@@ -79,18 +68,6 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-                                        <ejs-textbox placeholder="Vehicle Origin" formControlName="cvehicleorigin"
-                                            floatLabelType="Auto"></ejs-textbox>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-12">
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
                                         <ejs-textbox placeholder="Route" formControlName="croute"
                                             floatLabelType="Auto"></ejs-textbox>
 
@@ -103,7 +80,56 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-                                        <ejs-textbox placeholder="Commodity" formControlName="commodity"
+                                        <ejs-textbox placeholder="Awb No" formControlName="cawbno"
+                                            floatLabelType="Auto"></ejs-textbox>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                                        <ejs-textbox placeholder="Remarks" formControlName="cremarks"
+                                            floatLabelType="Auto"></ejs-textbox>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                                        <ejs-textbox placeholder="Remarks 2" formControlName="cremarksTwo"
+                                            floatLabelType="Auto"></ejs-textbox>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                                        <ejs-textbox placeholder="Status" formControlName="cstatus"
+                                            floatLabelType="Auto"></ejs-textbox>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12 col-lg-6 col-md-12 col-sm-12">
+                                        <ejs-textbox placeholder="Submit" formControlName="csubmit"
                                             floatLabelType="Auto"></ejs-textbox>
 
                                     </div>
@@ -127,8 +153,8 @@
             <div class="form-action-footer-section d-flex align-items-center pl-8">
               <div class="d-flex flex-row">
                 <div>
-                  <button  class="e-control e-btn e-lib e-primary" [disabled]="!strayForm.valid ||  !file "
-                    (click)="saveStray()">
+                  <button  class="e-control e-btn e-lib e-primary" [disabled]="!strayForm.valid"
+                    (click)="updateStray()">
                     Save Stray
                   </button>
                 </div>

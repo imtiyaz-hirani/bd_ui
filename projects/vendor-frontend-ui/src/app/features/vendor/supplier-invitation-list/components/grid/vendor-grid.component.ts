@@ -118,7 +118,7 @@ image:any;
     })
     this.strayMassUpdateForm = this.formBuilder.group(FormControlObject);
 
-    this.data = griddata
+    //this.data = griddata
   }
 
   setGridSettings(): void {
