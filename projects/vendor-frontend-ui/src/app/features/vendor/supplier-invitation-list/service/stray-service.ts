@@ -24,6 +24,12 @@ export class StrayService {
      return this.http.get("http://localhost:9090/stray/image/"+strayNo)
   }
 
+  public updateStray(stray){
+    return this.http.post('http://localhost:9090/stray/update',stray)
+  }
+
+
+
   getData() {
     "projects\vendor-frontend-ui\src\app\features\vendor\supplier-invitation-list\service\image.json"
     return this.http.get('/assets/image.json');

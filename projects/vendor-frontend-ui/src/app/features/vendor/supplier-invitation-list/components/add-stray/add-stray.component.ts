@@ -1,6 +1,6 @@
 import { Component, OnInit,  } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { StrayService } from '../../service/stray-service';
 @Component({
     selector: 'app-add-stary',
@@ -12,6 +12,7 @@ import { StrayService } from '../../service/stray-service';
    
 
     file:File = null;
+    cstrayno : string;
 
 
     
@@ -27,10 +28,16 @@ import { StrayService } from '../../service/stray-service';
         cstrayno: new FormControl('')
     })
 
-    constructor(private service : StrayService, private router: Router){}
+    constructor(private service : StrayService, private router: Router, private activatedRoute: ActivatedRoute){}
 
     ngOnInit(): void {
-       
+       this.cstrayno = this.activatedRoute.snapshot.paramMap.get('cstrayno');
+
+       if(this.cstrayno){
+        const stray = JSON.parse(localStorage.getItem("editStray"))
+        console.log(stray)
+        this.strayForm.patchValue(stray)
+       }
     }
 
 
@@ -39,7 +46,13 @@ import { StrayService } from '../../service/stray-service';
     }
 
     saveStray(){
-        console.log(this.strayForm.value)
+
+        if(this.cstrayno){
+           console.log(this.strayForm.value)
+           this.service.updateStray(this.strayForm.value).subscribe((data)=>{
+            this.router.navigate(['/vendor']);
+           })
+        } else {
 
         this.service.addNewStray(this.strayForm.value).subscribe((data)=>{
             const formData = new FormData();
@@ -50,11 +63,13 @@ import { StrayService } from '../../service/stray-service';
             console.log(data['strayNo'])
 
             this.service.upload(formData).subscribe(()=>{
-                console.log("done")
+    
                 this.router.navigate(['/vendor']);
             })
         })
     }
+
+}
 
 
   }

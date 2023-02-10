@@ -7,6 +7,7 @@ import { GridComponent, InfiniteScrollSettingsModel } from '@syncfusion/ej2-angu
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { StrayService } from '../../service/stray-service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'vendor-supplier-list-grid',
@@ -107,7 +108,7 @@ strayMassUpdate;
 
 image:any;
 
-  constructor(private formBuilder: FormBuilder, private strayService:StrayService,private sanitizer: DomSanitizer) { }
+  constructor(private formBuilder: FormBuilder, private strayService:StrayService,private sanitizer: DomSanitizer, private router: Router) { }
 
   ngOnInit(): void {
     this.setGridSettings();
@@ -116,6 +117,8 @@ image:any;
       FormControlObject[ele.formControlName]= new FormControl('',[Validators.required])
     })
     this.strayMassUpdateForm = this.formBuilder.group(FormControlObject);
+
+    this.data = griddata
   }
 
   setGridSettings(): void {
@@ -326,6 +329,11 @@ image:any;
 
   update(){
 
+  }
+
+  editStray(data){
+    localStorage.setItem("editStray", JSON.stringify(data))
+    this.router.navigate(['/vendor/add-stray', data['cstrayno']])
   }
 
 }

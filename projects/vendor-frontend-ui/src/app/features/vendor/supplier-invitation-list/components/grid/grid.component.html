@@ -7,7 +7,7 @@
     [showColumnMenu]="true" [allowReordering]="true"
     [allowFiltering]="true" [allowExcelExport]="true"
     [allowPdfExport]="true"
-    [allowSelection]="true"
+    [allowSelection]="isBulkSelect"
     [selectionSettings]="selectOption"
     [showColumnChooser]="true"
     [infiniteScrollSettings]="infiniteOptions"
@@ -20,7 +20,7 @@
     <e-columns>
       <e-column  headerText="Stray No" field="cstrayno" width='150'></e-column>
       <e-column  headerText="Stray Date" field="dstraydate"></e-column>
-      <e-column  headerText="Stray Loc" field="Stray Loc"></e-column>
+      <e-column  headerText="Stray Loc" field="cstrayloc"></e-column>
       <e-column  headerText="Emp Code" field="centemplcode"></e-column>
       <e-column  headerText="Emp Name" field="cemplname"></e-column>
       <e-column  headerText="PackDesc" field="cpackdesc"></e-column>
@@ -33,13 +33,17 @@
       <e-column  headerText="Commodity" field="commodity"></e-column>
       <e-column  headerText="Update Date" field="cupdatedate"></e-column>
       <e-column  headerText="Update Emp" field="cupdateemp"></e-column>
-      <e-column  headerText="Display Image" field="Display Image" [template]="actionTemplate" [allowEditing]="false"  [showInColumnChooser]="false">
+      <e-column  headerText="Actions" field="Display Image" [template]="actionTemplate" [allowEditing]="false"  [showInColumnChooser]="false">
         <ng-template #actionTemplate let-data>
           <div class="actions d-flex flex-row">
             <ng-container >
               <div [class.disable-btn]="isBulkSelect" title="View Image">
                   <em class="se-view" (click)="viewImage(data.cstrayno)"></em>
               </div>
+              <div class="edit-btn" [class.disable-btn]="isBulkSelect" title="{{'SHARED.ACTIONS.EDIT' | translate}}" (click)="editStray(data)">
+                <em class="se-edit"></em>
+            </div>
+
           </ng-container>
 
           </div>

@@ -20,7 +20,7 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-12 col-lg-6 col-md-12 col-sm-12">
-                                        <ejs-datepicker  placeholder='Stray date' formControlName="dstraydate" format = "dd/MM/yyyy"></ejs-datepicker>
+                                        <ejs-datepicker  placeholder='Stray date' formControlName="dstraydate" format = "dd-MMM-yyyy"></ejs-datepicker>
                                     </div>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                             </div>
                         </div>
 
-                        <div class="col-12">
+                        <div class="col-12" *ngIf="!cstrayno">
                             <div class="form-group">
                                 <div class="row">
                                     <span class="ml-2">
@@ -127,7 +127,7 @@
             <div class="form-action-footer-section d-flex align-items-center pl-8">
               <div class="d-flex flex-row">
                 <div>
-                  <button  class="e-control e-btn e-lib e-primary" [disabled]="!strayForm.valid || !file"
+                  <button  class="e-control e-btn e-lib e-primary" [disabled]="!strayForm.valid || (!cstrayno && !file)"
                     (click)="saveStray()">
                     Save Stray
                   </button>

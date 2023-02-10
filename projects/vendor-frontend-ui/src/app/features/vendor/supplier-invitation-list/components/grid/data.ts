@@ -1,7 +1,7 @@
 export const griddata = [{
     "cstrayno": "13-741-7873",
     "dstraydate": "6/18/2022",
-    "Stray Loc": "PAAL",
+    "cstrayloc": "PAAL",
     "centemplcode": "kwiggett0@mail.ru",
     "cemplname": "Karrah",
     "cpackdesc": "Encounter for dental examination and cleaning",
@@ -19,7 +19,7 @@ export const griddata = [{
   {
     "cstrayno": "13-741-7873",
     "dstraydate": "6/18/2022",
-    "Stray Loc": "PAAL",
+    "cstrayloc": "PAAL",
     "centemplcode": "kwiggett0@mail.ru",
     "cemplname": "Karrah",
     "cpackdesc": "Encounter for dental examination and cleaning",
@@ -37,7 +37,7 @@ export const griddata = [{
   {
     "cstrayno": "13-741-7873",
     "dstraydate": "6/18/2022",
-    "Stray Loc": "PAAL",
+    "cstrayloc": "PAAL",
     "centemplcode": "kwiggett0@mail.ru",
     "cemplname": "Karrah",
     "cpackdesc": "Encounter for dental examination and cleaning",

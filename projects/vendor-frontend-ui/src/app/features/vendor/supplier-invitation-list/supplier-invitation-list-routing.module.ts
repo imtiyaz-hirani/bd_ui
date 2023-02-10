@@ -7,7 +7,8 @@ import { SupplierInvitationListComponent } from './supplier-invitation-list.comp
 
 const routes: Routes = [
   { path: '', component: SupplierInvitationListComponent },
-  { path : 'add-stray', component: AddStray }
+  { path : 'add-stray', component: AddStray },
+  { path : 'add-stray/:cstrayno', component: AddStray }
 ];
 
 @NgModule({
