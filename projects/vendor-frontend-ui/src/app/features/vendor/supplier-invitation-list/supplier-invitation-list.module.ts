@@ -12,12 +12,19 @@ import { FilterComponent } from './components/filter/filter.component';
 import { QueryBuilderModule } from '@syncfusion/ej2-angular-querybuilder';
 import { AddStray } from './components/add-stray/add-stray.component';
 import { EditStray } from './components/edit-stray/edit-stray.component';
+import {ToastModule} from 'primeng/toast';
+import {RippleModule} from 'primeng/ripple';
+import {MessageService} from 'primeng/api';
+
 @NgModule({
   declarations: [SupplierInvitationListComponent, ToolbarComponent, VendorGridComponent, FilterComponent,
   AddStray,EditStray],
   imports: [
     CommonModule,
-    SupplierInvitationListRoutingModule,TabModule,SyncfusionModules,SharedModule,QueryBuilderModule
-  ]
+    SupplierInvitationListRoutingModule,TabModule,SyncfusionModules,SharedModule,QueryBuilderModule,
+    ToastModule,
+    RippleModule
+  ],
+  providers : [MessageService]
 })
 export class SupplierInvitationListModule { }

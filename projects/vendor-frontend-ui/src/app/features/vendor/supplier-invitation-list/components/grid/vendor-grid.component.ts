@@ -8,6 +8,7 @@ import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms'
 import { StrayService } from '../../service/stray-service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'vendor-supplier-list-grid',
@@ -108,7 +109,7 @@ strayMassUpdate;
 
 image:any;
 
-  constructor(private formBuilder: FormBuilder, private strayService:StrayService,private sanitizer: DomSanitizer, private router: Router) { }
+  constructor(private formBuilder: FormBuilder, private strayService:StrayService,private sanitizer: DomSanitizer, private router: Router, private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.setGridSettings();
@@ -341,6 +342,7 @@ image:any;
 
     this.strayService.updateMassStray(strayMassUpdateRequest).subscribe((data)=>{
       this.strayDialog.hide();
+      this.messageService.add({severity:'success', summary: 'Success', detail: 'Updated Strays'})
       this.clearRows()
      })
   }

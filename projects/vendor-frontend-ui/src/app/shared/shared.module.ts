@@ -38,7 +38,8 @@ import { LoaderService } from './services/loader.service';
     HttpClientModule,
     TranslateModule,
     SyncfusionModules,
-    NgxSkeletonLoaderModule
+    NgxSkeletonLoaderModule,
+    
   ],
 
   exports: [

@@ -1,7 +1,8 @@
-import { Component, OnInit,  } from '@angular/core';
+import { Component, OnInit, ViewChild,  } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import {  Router } from '@angular/router';
 import { StrayService } from '../../service/stray-service';
+import {MessageService} from 'primeng/api';
 @Component({
     selector: 'app-add-stary',
     templateUrl: './add-stray.component.html',
@@ -28,7 +29,9 @@ import { StrayService } from '../../service/stray-service';
         cstrayno: new FormControl('')
     })
 
-    constructor(private service : StrayService, private router: Router){}
+  
+
+    constructor(private service : StrayService, private router: Router, private messageService: MessageService){}
 
     ngOnInit(): void {
        
@@ -41,7 +44,7 @@ import { StrayService } from '../../service/stray-service';
 
     saveStray(){
 
-       
+
 
         this.service.addNewStray(this.strayForm.value).subscribe((data)=>{
             const formData = new FormData();
@@ -51,9 +54,17 @@ import { StrayService } from '../../service/stray-service';
 
             console.log(data['strayNo'])
 
+           
+
             this.service.upload(formData).subscribe(()=>{
+
+                this.messageService.add({severity:'success', summary: 'Success', detail: 'Added Stray'})
+
+                setTimeout(()=>{
+                    this.router.navigate(['/vendor']);
+                }, 2000)
     
-                this.router.navigate(['/vendor']);
+               
             })
         })
     

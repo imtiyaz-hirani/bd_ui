@@ -2,6 +2,8 @@ import { Component, OnInit,  } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StrayService } from '../../service/stray-service';
+import {MessageService} from 'primeng/api';
+
 @Component({
     selector: 'app-edit-stary',
     templateUrl: './edit-stray.component.html',
@@ -9,7 +11,7 @@ import { StrayService } from '../../service/stray-service';
   })
   export class EditStray implements OnInit {
 
-    constructor(private activatedRoute: ActivatedRoute, private router: Router, private service : StrayService){}
+    constructor(private activatedRoute: ActivatedRoute, private router: Router, private service : StrayService, private messageService: MessageService){}
 
     strayForm:FormGroup = new FormGroup({
         dstraydate : new FormControl(''),
@@ -59,7 +61,12 @@ import { StrayService } from '../../service/stray-service';
             }
             console.log(strayUpdateData)
             this.service.updateStray(strayUpdateData).subscribe((data)=>{
-             this.router.navigate(['/vendor']);
+            
+                this.messageService.add({severity:'success', summary: 'Success', detail: 'Updated Stray'})
+
+                setTimeout(()=>{
+                    this.router.navigate(['/vendor']);
+                }, 2000)
             })
          } 
     }
