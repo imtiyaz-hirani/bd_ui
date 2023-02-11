@@ -28,6 +28,10 @@ export class StrayService {
     return this.http.put('http://localhost:9090/stray/update',stray)
   }
 
+  public updateMassStray(strayMassUpdateRequest){
+    return this.http.post('http://localhost:9090/stray/mass/update',strayMassUpdateRequest)
+  }
+
 
 
   getData() {
