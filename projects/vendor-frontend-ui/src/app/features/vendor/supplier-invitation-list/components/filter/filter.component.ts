@@ -4,6 +4,8 @@ import { QueryBuilderComponent, RuleModel, ShowButtonsModel } from '@syncfusion/
 import { PositionDataModel } from '@syncfusion/ej2-popups';
 import { DialogComponent } from '@syncfusion/ej2-angular-popups';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { StrayQuery } from '../../model/model';
+import { Utils } from '@app/shared/utils/utils';
 
 @Component({
   selector: 'vendor-supplier-list-filter',
@@ -121,56 +123,33 @@ dropdownFields = { text: 'name', value: 'id' };
   ngOnInit(): void {
     const FormControlObject = {}
     this.strayForm1.forEach(ele =>{
-      FormControlObject[ele.formControlName]= new FormControl('')
+      if(ele.formControlName === 'mregion'){
+        FormControlObject[ele.formControlName]= new FormControl('ALL')
+      }else{
+        FormControlObject[ele.formControlName]= new FormControl('')
+      }
+      
     })
     this.strayForm = this.formBuilder.group(FormControlObject);
     this.strayForm.addControl('mcpackdesc', new FormControl(''));
     this.strayForm.addControl('mcvehicleno', new FormControl(''));
     this.strayForm.addControl('mcawbno', new FormControl(''));
 
+    const strayQuery:StrayQuery = JSON.parse(localStorage.getItem("strayQuery"));
+
+    if(strayQuery){
+      this.strayForm.patchValue(strayQuery);
+      this.queryChange.emit(strayQuery);
+    }
+
   }
 
 
 
-    dataSource: any = [
-      {
-        'EmployeeID'   : 101,
-        'Title' : 'PM'
-      },
-      {
-        'EmployeeID'   : 102,
-        'Title' : 'AM'
-      },
-      {
-        'EmployeeID'   : 103,
-        'Title' : 'CM'
-      }
-    ];
-    values: string[] = ['Mr.', 'Mrs.'];
+    
 
-    importRules: RuleModel = {
-        'condition': 'and',
-        'rules': [{
-                'label': 'Employee ID',
-                'field': 'EmployeeID',
-                'type': 'number',
-                'operator': 'equal',
-                'value': 1
-            },
-            {
-                'label': 'Title',
-                'field': 'Title',
-                'type': 'string',
-                'operator': 'equal',
-                'value': 'Sales Manager'
-            }]
-        };
-
-        createdControl(): void {
-          if (Browser.isDevice) {
-              this.qryBldrObj.summaryView = true;
-            }
-        }
+    
+    
 
     // Hide the Dialog when click the footer button.
   hideDialog: EmitType<object> = () => {
@@ -183,8 +162,12 @@ dropdownFields = { text: 'name', value: 'id' };
   };
 
   onApply() {
-    console.log(this.strayForm.value)
-    this.queryChange.emit(this.strayForm.value);
+    let strayQuery:StrayQuery =this.strayForm.value;
+    strayQuery.mcfromdate = Utils.formatDate(strayQuery.mcfromdate);
+    strayQuery.mctodate = Utils.formatDate(strayQuery.mctodate);
+    localStorage.setItem("strayQuery",JSON.stringify(strayQuery))
+    console.log(strayQuery)
+    this.queryChange.emit(strayQuery);
   }
 
     // Enables the footer buttons
@@ -215,8 +198,9 @@ dropdownFields = { text: 'name', value: 'id' };
   };
 
   resetFilter() {
-    this.qryBldrObj.reset();
-    this.qryBldrObj.refresh();
+   localStorage.removeItem("strayQuery");
+   this.strayForm.reset()
+   this.strayForm.controls.mregion.setValue("ALL")
   }
 
   dialogClosed() {

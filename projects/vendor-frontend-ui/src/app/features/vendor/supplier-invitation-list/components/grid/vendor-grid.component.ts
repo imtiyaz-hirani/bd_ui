@@ -1,5 +1,5 @@
 
-import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Input,Output,EventEmitter } from '@angular/core';
 import { GRID_SELECTION_MODES, GRID_SELECTION_TYPES } from '@app/core/constants';
 import { GridComponent, InfiniteScrollSettingsModel, SelectionSettingsModel } from '@syncfusion/ej2-angular-grids';
  import { griddata } from './data';
@@ -9,6 +9,7 @@ import { StrayService } from '../../service/stray-service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import {MessageService} from 'primeng/api';
+import { StrayQuery } from '../../model/model';
 
 @Component({
   selector: 'vendor-supplier-list-grid',
@@ -22,6 +23,8 @@ export class VendorGridComponent implements OnInit {
     initialBlocks: 2,
   };
   isInitial: true;
+
+  @Output() queryChange = new EventEmitter();
 
   @ViewChild('grid', { static: true })
   grid: GridComponent;
@@ -118,8 +121,6 @@ image:any;
       FormControlObject[ele.formControlName]= new FormControl('',[Validators.required])
     })
     this.strayMassUpdateForm = this.formBuilder.group(FormControlObject);
-
-    this.data = griddata
   }
 
   setGridSettings(): void {
@@ -342,8 +343,14 @@ image:any;
 
     this.strayService.updateMassStray(strayMassUpdateRequest).subscribe((data)=>{
       this.strayDialog.hide();
-      this.messageService.add({severity:'success', summary: 'Success', detail: 'Updated Strays'})
-      this.clearRows()
+      this.messageService.add({severity:'success', summary: 'Success', detail: 'Mass Updated Strays'})
+      this.clearRows();
+      const strayQuery:StrayQuery = JSON.parse(localStorage.getItem("strayQuery"));
+
+      if(strayQuery){
+        
+        this.queryChange.emit(strayQuery);
+      }
      })
   }
 

@@ -3,6 +3,8 @@ import { FormGroup,FormControl,Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StrayService } from '../../service/stray-service';
 import {MessageService} from 'primeng/api';
+import { StrayUpdate } from '../../model/model';
+import { Utils } from '@app/shared/utils/utils';
 
 @Component({
     selector: 'app-edit-stary',
@@ -45,9 +47,9 @@ import {MessageService} from 'primeng/api';
     updateStray(){
         if(this.cstrayno){
             
-            let strayUpdateData = {
+            let strayUpdateData:StrayUpdate = {
                 mcstrayno : this.strayForm.value.cstrayno,
-                mdstraydate : this.strayForm.value.dstraydate,
+                mdstraydate : Utils.formatDate(this.strayForm.value.dstraydate),
                 mcstrayloc : this.strayForm.value.cstrayloc,
                 mcpackdesc : this.strayForm.value.cpackdesc,
                 mcvehicleno : this.strayForm.value.cvehicleno,

@@ -35,7 +35,7 @@
               <div class="row">
                 <div class="col-12 mt-3 mb-4">
                   <div tabindex="0" class="e-card">
-                    <vendor-supplier-list-grid [data]=strayData></vendor-supplier-list-grid>
+                    <vendor-supplier-list-grid [data]="strayData" (queryChange) = "onQueryChange($event)"></vendor-supplier-list-grid>
                   </div>
                 </div>
               </div>

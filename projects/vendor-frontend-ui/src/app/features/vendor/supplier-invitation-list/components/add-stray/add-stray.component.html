@@ -46,6 +46,7 @@
                                     <span class="ml-2">
                                     <button class="e-control e-btn e-lib e-primary" onclick="document.getElementById('getFile').click()">Upload Image</button>
                                     <input type='file' id="getFile" style="display:none" (change)="onFileChange($event)" >
+                                    {{file?.name}}
                                 </span>
                                 </div>
                             </div>

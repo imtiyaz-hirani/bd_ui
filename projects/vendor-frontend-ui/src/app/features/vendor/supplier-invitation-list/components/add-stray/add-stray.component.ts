@@ -1,8 +1,10 @@
-import { Component, OnInit, ViewChild,  } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import { FormGroup,FormControl,Validators } from '@angular/forms';
 import {  Router } from '@angular/router';
 import { StrayService } from '../../service/stray-service';
 import {MessageService} from 'primeng/api';
+import { AddNewStray } from '../../model/model';
+import { Utils } from '@app/shared/utils/utils';
 @Component({
     selector: 'app-add-stary',
     templateUrl: './add-stray.component.html',
@@ -45,9 +47,14 @@ import {MessageService} from 'primeng/api';
     saveStray(){
 
 
+        let addNewStray :AddNewStray = this.strayForm.value
+
+        addNewStray.dstraydate = Utils.formatDate(addNewStray.dstraydate)
 
         this.service.addNewStray(this.strayForm.value).subscribe((data)=>{
             const formData = new FormData();
+
+            
 
             formData.append('file',this.file)
             formData.append('mcstrayno',data['strayNo'])

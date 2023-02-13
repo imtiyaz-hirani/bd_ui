@@ -4,6 +4,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { StrayService } from './service/stray-service';
+import { StrayQuery } from './model/model';
 
 
  @Component({
@@ -50,7 +51,11 @@ export class SupplierInvitationListComponent implements OnInit {
 
 
 
+      const strayQuery:StrayQuery = JSON.parse(localStorage.getItem("strayQuery"));
 
+      if(strayQuery){
+        this.onQueryChange(strayQuery)
+      }
 
 
   }
@@ -87,6 +92,7 @@ hideFilter(event: string): void {
 
 onQueryChange(event){
    this.strayService.getStrayDate(event).subscribe(data=>{
+    this.strayData = [];
       this.strayData = data;
       console.log(this.strayData);
    });
