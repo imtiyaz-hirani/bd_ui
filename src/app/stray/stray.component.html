@@ -1,0 +1,8 @@
+<app-stray-query (queryChange) = "onQueryChange($event)"></app-stray-query>
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <app-stray-grid [strayData]="strayData" (queryChange) = "onQueryChange($event)"></app-stray-grid>
+        </div>
+    </div>
+</div>

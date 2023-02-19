@@ -1,0 +1,44 @@
+
+<div class="grid">
+    <div class="col-12">
+        <div class="card">
+            <div class="flex justify-content-between flex-column sm:flex-row">
+                <i class="pi pi-filter mt-2" (click) = "openQuery()"></i>
+                <button pButton icon="pi pi-plus" (click)="addRecord()" label="Add New Stray" class="p-button-outlined"></button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<p-dialog header="Stray Query" [(visible)]="showQuery"  [style]="{width: '600px'}">
+
+    <div class="grid">
+        <div class="col-12">
+            <form [formGroup]="strayQueryForm">
+            <div class="grid">
+                <div class="field col-6" [ngSwitch]="control.inputType" *ngFor="let control of strayQueryFormControls">
+                    <ng-container *ngSwitchCase="'input'">
+                        <label [htmlFor]="control.formControlName">{{control.formName}}</label><br>
+                        <input pInputText [id]="control.formControlName" type="text" [formControlName]="control.formControlName" />
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'date'">
+                        <label [htmlFor]="control.formControlName">{{control.formName}}</label><br>
+                        <p-calendar [id]="control.formControlName" dateFormat="dd-M-yy" [formControlName]="control.formControlName"></p-calendar>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'dropdown'">
+                        <label [for]="control.formControlName">{{control.formName}}</label><br>
+                        <p-dropdown [options]="control.options" [inputId]="control.formControlName" optionLabel="name"  [formControlName]="control.formControlName"></p-dropdown>
+                    </ng-container>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+   
+    <ng-template pTemplate="footer">
+        <button pButton icon="pi pi-refresh" (click)="resetStrayQuery()" label="Reset" class="p-button-outlined"></button>
+        <button pButton icon="pi pi-times" (click)="showQuery = false" label="Cancel" class="p-button-outlined"></button>
+        <button pButton icon="pi pi-check" (click)="onApply()" label="Apply" class="p-button-outlined"></button>
+    </ng-template>
+</p-dialog>

@@ -1,0 +1,148 @@
+<p-table [value]="strayData" 
+dataKey="cstrayno" [rows]="10" 
+[rowHover]="true" styleClass="p-datatable-gridlines" 
+[paginator]="true" [globalFilterFields]="[]" 
+responsiveLayout="scroll" [scrollable]="true" 
+[scrollDirection]="'both'" [(selection)]="selectedStrays">
+    <ng-template pTemplate="caption">
+        <div class="flex justify-content-between flex-column sm:flex-row">
+            <span class="p-input-icon-left mb-2">
+               <i class="pi pi-search"></i>
+                <input pInputText type="text" #filter  placeholder="Search Keyword" class="w-full"/>
+            </span>
+            <div class="flex justify-content-center gap-2">
+                <button pButton pRipple icon="pi pi-file-excel" class="p-button-success mr-2" (click)="exportExcel()"></button>
+                <button pButton   label="Mass Stray Update" class="p-button-outlined" (click)="openStrayMassUpdate()" *ngIf="selectedStrays.length > 0"></button>
+            </div>
+            </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th style="width: 3rem" pFrozenColumn alignFrozen="left">
+                <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
+            </th>
+            <ng-container  [ngSwitch]="column.type" *ngFor="let column of strayGridInfo">
+                <th style="min-width: 12rem" *ngIf="!column.frozen">
+                <ng-container *ngSwitchCase="'text'">
+                    <div class="flex justify-content-between align-items-center">
+                        {{column.header}}
+                        <p-columnFilter type="text" [field]="column.columnName" display="menu" placeholder="Search"></p-columnFilter>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngSwitchCase="'date'">
+                    <div class="flex justify-content-between align-items-center">
+                        {{column.header}}
+                        <p-columnFilter type="date" [field]="column.columnName" display="menu" placeholder="Search"></p-columnFilter>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngSwitchCase="'template'">
+                    <div class="flex justify-content-between align-items-center">
+                        {{column.header}}
+                    </div>
+                </ng-container>
+
+               </th>
+
+               <th style="min-width: 12rem" pFrozenColumn [alignFrozen]="column.frozenPostion" *ngIf="column.frozen">
+                <ng-container *ngSwitchCase="'text'">
+                    <div class="flex justify-content-between align-items-center">
+                        {{column.header}}
+                        <p-columnFilter type="text" [field]="column.columnName" display="menu" placeholder="Search"></p-columnFilter>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngSwitchCase="'date'">
+                    <div class="flex justify-content-between align-items-center">
+                        {{column.header}}
+                        <p-columnFilter type="date" [field]="column.columnName" display="menu" placeholder="Search"></p-columnFilter>
+                    </div>
+                </ng-container>
+
+                <ng-container *ngSwitchCase="'template'">
+                    <div class="flex justify-content-between align-items-center">
+                        {{column.header}}
+                    </div>
+                </ng-container>
+
+               </th>
+                
+            </ng-container>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-stray>
+        <tr>
+            <td pFrozenColumn alignFrozen="left">
+                <p-tableCheckbox [value]="stray"></p-tableCheckbox>
+            </td>
+        <ng-container [ngSwitch]="column.type" *ngFor="let column of strayGridInfo">
+            <td *ngIf="!column.frozen">
+                <ng-container *ngSwitchCase="'text'">
+                    {{stray[column.columnName]}}
+                </ng-container> 
+                <ng-container *ngSwitchCase="'date'">
+                    {{stray[column.columnName] | date:'dd-MMM-yyyy'}}
+                </ng-container> 
+
+                <ng-container *ngSwitchCase="'template'">
+                   <ng-container [ngTemplateOutlet]="column.templateRef" [ngTemplateOutletContext]="stray"></ng-container>
+                </ng-container>
+            </td>
+
+            <td *ngIf="column.frozen" pFrozenColumn [alignFrozen]="column.frozenPostion">
+                <ng-container *ngSwitchCase="'text'">
+                    {{stray[column.columnName]}}
+                </ng-container> 
+                <ng-container *ngSwitchCase="'date'">
+                    {{stray[column.columnName] | date:'dd-MMM-yyyy'}}
+                </ng-container> 
+                <ng-container *ngSwitchCase="'template'">
+                    <ng-container [ngTemplateOutlet]="column.templateRef" [ngTemplateOutletContext]="{stray:stray}"></ng-container>
+                 </ng-container>      
+            </td>
+        </ng-container>
+        </tr>
+    </ng-template>
+</p-table>
+
+<ng-template #actionColumn let-stray="stray">
+    <div class="flex justify-content-center gap-2">
+        <i class="pi pi-image" (click)="viewImage(stray.cstrayno, $event)"></i>
+        <i class="pi pi-pencil" (click)="editStray(stray)"></i>
+    </div>
+</ng-template>
+
+<p-overlayPanel [showCloseIcon]="true" #imagePanel [style]="{width: '450px'}">
+    <img [src] = "image" alt="Image" style="width:100%"/>
+</p-overlayPanel>
+
+<p-dialog header="Stray Mass Update" [(visible)]="showMassUpdate"  [style]="{width: '600px'}">
+    <div class="grid">
+        <div class="col-12">
+            <form [formGroup]="strayMassUpdateForm">
+            <div class="grid">
+                <div class="field col-6" [ngSwitch]="control.inputType" *ngFor="let control of strayMassUpdateFormControl">
+                    <ng-container *ngSwitchCase="'input'">
+                        <label [htmlFor]="control.formControlName">{{control.formName}}</label><br>
+                        <input pInputText [id]="control.formControlName" type="text" [formControlName]="control.formControlName" />
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'date'">
+                        <label [htmlFor]="control.formControlName">{{control.formName}}</label><br>
+                        <p-calendar [id]="control.formControlName" dateFormat="dd-M-yy" [formControlName]="control.formControlName"></p-calendar>
+                    </ng-container>
+                    <ng-container *ngSwitchCase="'dropdown'">
+                        <label [for]="control.formControlName">{{control.formName}}</label><br>
+                        <p-dropdown [options]="control.options" [inputId]="control.formControlName" optionLabel="name"  [formControlName]="control.formControlName"></p-dropdown>
+                    </ng-container>
+                </div>
+            </div>
+        </form>
+        </div>
+    </div>
+
+    <ng-template pTemplate="footer">
+        <button pButton icon="pi pi-times" (click)="showMassUpdate = false" label="Cancel" class="p-button-outlined"></button>
+        <button pButton icon="pi pi-check" (click)="update()" label="Update" class="p-button-outlined"></button>
+    </ng-template>
+</p-dialog>

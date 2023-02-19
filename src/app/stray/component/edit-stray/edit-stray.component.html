@@ -1,0 +1,30 @@
+<div class="grid">
+    <div class="col-12">
+        <div class="card p-fluid">
+            <h5>Edit Stray</h5>
+            <form [formGroup]="editStrayForm">
+                <div class="p-formgrid grid">
+                    <div class="field col-12" [ngSwitch]="control.inputType" *ngFor="let control of editStrayFormControls">
+                        <ng-container *ngSwitchCase="'input'">
+                            <label [htmlFor]="control.formControlName">{{control.formName}}</label><br>
+                            <input pInputText [id]="control.formControlName" type="text" [formControlName]="control.formControlName" />
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'date'">
+                            <label [htmlFor]="control.formControlName">{{control.formName}}</label><br>
+                            <p-calendar [id]="control.formControlName" dateFormat="dd-M-yy" [formControlName]="control.formControlName"></p-calendar>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="'dropdown'">
+                            <label [for]="control.formControlName">{{control.formName}}</label><br>
+                            <p-dropdown [options]="control.options" [inputId]="control.formControlName" optionLabel="name"  [formControlName]="control.formControlName"></p-dropdown>
+                        </ng-container>
+                    </div>
+                </div>
+            </form>
+
+            <p-button label="Save" (onClick)="updateStray()" [disabled]="!editStrayForm.valid"></p-button>
+        </div>
+    </div>
+</div>
+
+<p-toast position="bottom-center"></p-toast>
+
